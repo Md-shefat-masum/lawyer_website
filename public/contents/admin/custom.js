@@ -83,6 +83,18 @@ $(document).ready(function () {
                 });
         })
 
+        $('.data_view_btn').on('click',function(e){
+            e.preventDefault();
+            var url = $(this).attr('href');
+            axios.get(url)
+                .then((response)=>{
+                    console.log(response);
+                    $('#data_view_modal .modal-body').html(response.data);
+                    $('#data_view_modal').modal('show');
+                })
+            console.log(url);
+        })
+
         return false;
     }
 
@@ -118,6 +130,9 @@ $(document).ready(function () {
             });
 
     });
+
+
+
 
     function toast(title) {
         const Toast = Swal.mixin({
