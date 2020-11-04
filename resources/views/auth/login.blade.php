@@ -82,13 +82,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="author" content="Md.Shefat" />
     <title>Admin panel</title>
     <!-- loader-->
     <link href="{{ asset('contents/admin') }}/assets/css/pace.min.css" rel="stylesheet" />
     <script src="{{ asset('contents/admin') }}/assets/js/pace.min.js"></script>
     <!--favicon-->
-    <link rel="icon" href="{{ asset('contents/admin') }}/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/contents/website/images/fav.png" type="image/x-icon">
     <!-- Bootstrap core CSS-->
     <link href="{{ asset('contents/admin') }}/assets/css/bootstrap.min.css" rel="stylesheet" />
     <!-- animate CSS-->
@@ -117,7 +117,7 @@
                 <div class="card-body">
                     <div class="card-content p-2">
                         <div class="text-center">
-                            <img src="/icon.png" alt="logo icon">
+                            <img src="/contents/website/images/fav.png" style="width: 80px;" alt="logo icon">
                         </div>
                         <div class="card-title text-uppercase text-center py-3">Sign In</div>
                         <form method="POST" action="{{ route('login') }}">
@@ -180,10 +180,10 @@
                     </div>
                 </div>
                 <div class="card-footer text-center py-3">
-                    <p class="text-warning mb-0">
+                    {{-- <p class="text-warning mb-0">
                         Do not have an account?
                         <a href="{{ route('register') }}"> Sign Up  here</a>
-                    </p>
+                    </p> --}}
                 </div>
             </div>
         </div>

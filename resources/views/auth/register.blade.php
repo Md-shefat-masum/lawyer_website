@@ -123,7 +123,7 @@
                         </div>
                         <div class="card-title text-uppercase text-center py-3">Sign Up</div>
                         <form method="POST" action="{{ route('register') }}">
-                            @csrf
+                            {{-- @csrf --}}
                             <div class="form-group">
                                 <label for="exampleInputName" class="sr-only">Name</label>
                                 <div class="position-relative has-icon-right">

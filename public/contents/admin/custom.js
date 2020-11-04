@@ -3,7 +3,7 @@ $(document).ready(function () {
     const configs = {
         onUploadProgress: function (progressEvent) {
             var percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total)
-            console.log(percentCompleted);
+            // console.log(percentCompleted);
             $('.form_progress_bar').css('width',percentCompleted+'%');
         }
     }
@@ -88,11 +88,11 @@ $(document).ready(function () {
             var url = $(this).attr('href');
             axios.get(url)
                 .then((response)=>{
-                    console.log(response);
+                    // console.log(response);
                     $('#data_view_modal .modal-body').html(response.data);
                     $('#data_view_modal').modal('show');
                 })
-            console.log(url);
+            // console.log(url);
         })
 
         return false;

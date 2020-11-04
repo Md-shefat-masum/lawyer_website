@@ -24,6 +24,10 @@
                             @csrf
                             <div class="form_content">
                                 <div class="form-group">
+                                    <label for="input-1">Full Name</label> <span class="text-danger"></span>
+                                    <input type="text" name="full_name" class="form-control" placeholder="full Name" value="{{ $information->full_name }}">
+                                </div>
+                                <div class="form-group">
                                     <div class="row">
                                         <div class="col-8">
                                             <label for="input-1">Logo</label> <span class="text-danger"></span>
@@ -81,6 +85,30 @@
                                 <div class="form-group">
                                     <label for="input-1">copy right</label> <span class="text-danger"></span>
                                     <input type="text" name="copy_right" class="form-control" placeholder="copy_right" value="{{ $information->copy_right }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="input-1">Facebook</label> <span class="text-danger"></span>
+                                    <input type="text" name="facebook" class="form-control" placeholder="facebook" value="{{ $information->facebook }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="input-1">twitter</label> <span class="text-danger"></span>
+                                    <input type="text" name="twitter" class="form-control" placeholder="twitter" value="{{ $information->twitter }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="input-1">pinterest</label> <span class="text-danger"></span>
+                                    <input type="text" name="pinterest" class="form-control" placeholder="pinterest" value="{{ $information->pinterest }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="input-1">linkedin</label> <span class="text-danger"></span>
+                                    <input type="text" name="linkedin" class="form-control" placeholder="linkedin" value="{{ $information->linkedin }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="input-1">youtube</label> <span class="text-danger"></span>
+                                    <input type="text" name="youtube" class="form-control" placeholder="youtube" value="{{ $information->youtube }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="input-1">skype</label> <span class="text-danger"></span>
+                                    <input type="text" name="skype" class="form-control" placeholder="skype" value="{{ $information->skype }}">
                                 </div>
                             </div>
                             <div class="form-group">

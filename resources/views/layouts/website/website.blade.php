@@ -46,6 +46,7 @@
     <!-- This stylesheet dynamically changed from style.less -->
     <!-- responsive css -->
     <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/css/custom.css">
     <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -55,11 +56,15 @@
 
 <body class="defult-home">
     @include('include.flash')
-    <!-- Preloader area start here   -->
-    <div id="loading" class="image-preloader">
-        <div class="loader"><img src="{{asset('contents/website')}}/images/logo.png" alt=""></div>
-    </div>
-    <!--End preloader here -->
+
+    @if (Request::path() == '/')
+        <!-- Preloader area start here   -->
+        <div id="loading" class="image-preloader">
+            <div class="loader"><img src="{{ asset(''.$basic_information->logo) }}" alt="Logo"></div>
+        </div>
+        <!--End preloader here -->
+    @endif
+
 
     <!--Full width header Start-->
     <div class="full-width-header header-transparent">
@@ -70,19 +75,19 @@
                     <div class="col-lg-6 col-md-7 col-sm-12">
                         <div class="toolbar-contact">
                             <ul>
-                                <li><i class="fa fa-envelope-o"></i><a href="#">njahan.nusrat@gmail.com</a></li>
-                                <li><i class="fa fa-phone"></i><a href="#">647-226-1614</a></li>
+                                <li><i class="fa fa-envelope-o"></i><a href="#">{{ $basic_information->email_1 }}</a></li>
+                                <li><i class="fa fa-phone"></i><a href="#">{{ $basic_information->mobile_no_1 }}</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-5 col-sm-12">
                         <div class="toolbar-sl-share">
                             <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li class="get-btn"><a href="#">Free Consultation</a></li>
+                                <li><a href="{{ $basic_information->facebook }}"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="{{ $basic_information->twitter }}"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="{{ $basic_information->pinterest }}"><i class="fa fa-pinterest-p"></i></a></li>
+                                <li><a href="{{ $basic_information->linkedin }}"><i class="fa fa-linkedin"></i></a></li>
+                                <li class="get-btn"><a href="#free-consultation">Free Consultation</a></li>
                             </ul>
                         </div>
                     </div>
@@ -99,8 +104,8 @@
                     <div class="row">
                         <div class="col-lg-3">
                             <div class="logo-area">
-                                <a class="light" href="index.html"><img src="{{asset('contents/website')}}/images/white-logo.png" alt="logo"></a>
-                                <a class="dark" href="index.html"><img src="{{asset('contents/website')}}/images/logo.png" alt="logo"></a>
+                                <a class="light" href="/"><img src="{{asset(''.$basic_information->logo)}}" alt="logo"></a>
+                                <a class="dark" href="/"><img src="{{asset(''.$basic_information->logo)}}" alt="logo"></a>
                             </div>
                         </div>
                         <div class="col-lg-9 text-right">
@@ -113,29 +118,17 @@
                                     </div>
                                     <nav class="rs-menu">
                                         <ul class="nav-menu">
-                                            <li class="rs-mega-menu mega-rs menu-item-has-children current-menu-item">
-                                                <a href="index.html">Home</a>
+                                            <li class="rs-mega-menu mega-rs menu-item-has-children {{ Request::path() == '/'? 'current-menu-item':'' }} ">
+                                                <a href="/">Home </a>
                                             </li>
-
-
-                                            <li><a href="about.html">About us</a></li>
-                                            <li><a href="service.html">Services</a></li>
-                                            <li><a href="team-lead.html">Team lead</a></li>
-                                            <li><a href="our-privilege.html">OurPrivilege</a></li>
-                                            <li><a href="contact.html">Contact us</a></li>
+                                            <li class="{{ Request::path() == 'about'? 'current-menu-item':'' }}"><a href="/about">About us</a></li>
+                                            <li class="{{ Request::path() == 'service'? 'current-menu-item':'' }}"><a href="/service">Services</a></li>
+                                            <li class="{{ Request::path() == 'team-lead'? 'current-menu-item':'' }}"><a href="/team-lead">Team lead</a></li>
+                                            <li class="{{ Request::path() == 'our-privilege'? 'current-menu-item':'' }}"><a href="/our-privilege">OurPrivilege</a></li>
+                                            <li class="{{ Request::path() == 'contact'? 'current-menu-item':'' }}"><a href="/contact">Contact us</a></li>
                                         </ul>
                                         <!-- //.nav-menu -->
                                     </nav>
-                                </div>
-                                <!-- //.main-menu -->
-                                <div class="expand-btn-inner">
-                                    <ul>
-                                        <li>
-                                            <a class="hidden-xs rs-search" data-target=".search-modal" data-toggle="modal" href="#">
-                                                <i class="flaticon-search"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -143,34 +136,6 @@
                 </div>
             </div>
             <!-- Menu End -->
-
-            <!-- Canvas Menu start -->
-            <nav class="right_menu_togle hidden-md">
-                <div class="close-btn"><span id="nav-close" class="text-center"><i class="fa fa-close"></i></span></div>
-                <div class="canvas-logo">
-                    <a href="index.html"><img src="{{asset('contents/website')}}/images/logo.png" alt="logo"></a>
-                </div>
-                <div class="offcanvas-text">
-                    <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.</p>
-                </div>
-                <div class="canvas-contact">
-                    <h5 class="canvas-contact-title">Contact Info</h5>
-                    <ul class="contact">
-                        <li><i class="fa fa-globe"></i>Middle Badda, Dhaka, BD</li>
-                        <li><i class="fa fa-phone"></i>+123445789</li>
-                        <li><i class="fa fa-envelope"></i><a href="mailto:info@yourcompany.com">info@yourcompany.com</a>
-                        </li>
-                        <li><i class="fa fa-clock-o"></i>10:00 AM - 11:30 PM</li>
-                    </ul>
-                    <ul class="social">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
-            </nav>
-            <!-- Canvas Menu end -->
         </header>
         <!--Header End-->
     </div>
@@ -189,61 +154,30 @@
                     <div class="col-lg-3 col-md-12 col-sm-12 footer-widget-one md-mb-50 ">
                         <div class="about-widget ">
                             <a href="index.html ">
-                                <img src="{{asset('contents/website')}}/images/white-logo.png " alt="Footer Logo ">
+                                <img src="{{asset(''.$basic_information->logo)}}" alt="Footer Logo ">
                             </a>
                             <div class="footer-info ">
-                                <p class="footer-desc ">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms.</p>
-                                <p class="footer-desc ">Righteous indignation and dislike men who are so the charms.</p>
+                                <p>
+                                    {{ $basic_information->footer_short_about }}
+                                </p>
                             </div>
                             <ul class="social-links ">
-                                <li><a href="# "><i class="fa fa-facebook "></i></a></li>
-                                <li><a href="# "><i class="fa fa-twitter "></i></a></li>
-                                <li><a href="# "><i class="fa fa-pinterest-p "></i></a></li>
-                                <li><a href="# "><i class="fa fa-linkedin "></i></a></li>
+                                <li><a href="{{ $basic_information->facebook }} "><i class="fa fa-facebook "></i></a></li>
+                                <li><a href="{{ $basic_information->twitter }}  "><i class="fa fa-twitter "></i></a></li>
+                                <li><a href="{{ $basic_information->pinterest }} "><i class="fa fa-pinterest-p "></i></a></li>
+                                <li><a href="{{ $basic_information->linkedin }}  "><i class="fa fa-linkedin "></i></a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget-two md-mb-50 ">
+                    <div class="col-lg-6 col-md-12 col-sm-12 footer-widget-two md-mb-50 ">
                         <h5 class="footer-title ">Quick Contact Info</h5>
                         <div class="desc mb-24 ">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms.</div>
                         <ul class="footer-address ">
-                            <li><i class="fa fa-globe "></i><span>11, MacdufCres, Toronto, ON, M1M 1X6</span></li>
-                            <li><i class="fa fa-phone "></i><a href="# ">+1-647-720-3983 (office), 647-226-1614 (cell) </a></li>
-                            <li><i class="fa fa-envelope-o "></i><a href="# ">njahan.nusrat@gmail.com , info@njahan.ca</a></li>
-                            <li><i class="fa fa-clock-o "></i>Mon – Fri: 09:00 - 15:00</li>
+                            <li><i class="fa fa-globe "></i><span>{{ $basic_information->address }} </span></li>
+                            <li><i class="fa fa-phone "></i><a href="# ">{{ $basic_information->mobile_no_1 }}  (office), {{ $basic_information->mobile_no_2 }}  (cell) </a></li>
+                            <li><i class="fa fa-envelope-o "></i><a href="# ">{{ $basic_information->email_1 }}  , {{ $basic_information->email_2 }} </a></li>
+                            <li><i class="fa fa-clock-o "></i>{{ $basic_information->work_time }} </li>
                         </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget-three md-mb-50 ">
-                        <h5 class="footer-title ">Latest News</h5>
-                        <div class="footer-news ">
-                            <div class="news-item ">
-                                <div class="image-part ">
-                                    <img src="{{asset('contents/website')}}/images/blog/footer-blog/1.jpg " alt=" ">
-                                </div>
-                                <div class="content-part ">
-                                    <a class="title " href="# ">Best Education Law and Training</a>
-                                    <span class="date ">June 15, 2019</span>
-                                </div>
-                            </div>
-                            <div class="news-item ">
-                                <div class="image-part ">
-                                    <img src="{{asset('contents/website')}}/images/blog/footer-blog/2.jpg " alt=" ">
-                                </div>
-                                <div class="content-part ">
-                                    <a class="title " href="# ">Flexible working Hours</a>
-                                    <span class="date ">June 15, 2019</span>
-                                </div>
-                            </div>
-                            <div class="news-item ">
-                                <div class="image-part ">
-                                    <img src="{{asset('contents/website')}}/images/blog/footer-blog/3.jpg " alt=" ">
-                                </div>
-                                <div class="content-part ">
-                                    <a class="title " href="# ">The Top Law Students</a>
-                                    <span class="date ">June 15, 2019</span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="col-lg-3 col-md-12 col-sm-12 footer-widget-four ">
                         <h5 class="footer-title ">Subscribe to Our Newsletter</h5>

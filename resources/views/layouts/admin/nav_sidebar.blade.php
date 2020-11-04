@@ -103,25 +103,25 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="{{ route('admin_service_index') }}">
                     <i class="zmdi zmdi-dot-circle-alt"></i>
                     Service Details
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ route('admin_team_lead_index') }}">
                     <i class="zmdi zmdi-dot-circle-alt"></i>
                     Team Lead
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ route('admin_our_privilege_index') }}">
                     <i class="zmdi zmdi-dot-circle-alt"></i>
                     Our Privilege
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ route('admin_contact_us_message_index') }}">
                     <i class="zmdi zmdi-dot-circle-alt"></i>
                     Contact Messages
                 </a>

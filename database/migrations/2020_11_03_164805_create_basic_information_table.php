@@ -15,12 +15,19 @@ class CreateBasicInformationTable extends Migration
     {
         Schema::create('basic_information', function (Blueprint $table) {
             $table->id();
+            $table->string('full_name',150)->nullable();
             $table->string('logo',100)->nullable();
             $table->string('profile_pic',100)->nullable();
             $table->string('email_1',100)->nullable();
             $table->string('email_2',100)->nullable();
             $table->string('mobile_no_1',100)->nullable();
             $table->string('mobile_no_2',100)->nullable();
+            $table->string('facebook',100)->nullable();
+            $table->string('twitter',100)->nullable();
+            $table->string('linkedin',100)->nullable();
+            $table->string('youtube',100)->nullable();
+            $table->string('pinterest',100)->nullable();
+            $table->string('skype',100)->nullable();
             $table->text('footer_short_about')->nullable();
             $table->text('address')->nullable();
             $table->text('work_time')->nullable();

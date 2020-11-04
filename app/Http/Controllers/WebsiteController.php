@@ -6,11 +6,32 @@ use Illuminate\Http\Request;
 use App\FreeConsultation;
 use Carbon\Carbon;
 use App\Subscriber;
+use App\ContactUs;
 
 class WebsiteController extends Controller
 {
     public function index(Request $request){
         return view('website.index');
+    }
+
+    public function contact(Request $request){
+        return view('website.contact');
+    }
+
+    public function our_privilege(Request $request){
+        return view('website.our_privilege');
+    }
+
+    public function team_lead(Request $request){
+        return view('website.team_lead');
+    }
+
+    public function service(Request $request){
+        return view('website.service');
+    }
+
+    public function about(Request $request){
+        return view('website.about');
     }
 
     public function free_consultation_submit(Request $request){
@@ -48,6 +69,27 @@ class WebsiteController extends Controller
         $subscriber->save();
 
         return redirect()->back()->with('success','subscribed successfully.');
+    }
+
+    public function contact_message_submit(Request $request){
+        $this->validate($request,[
+            'name' => ['required'],
+            'email' => ['required'],
+            'phone' => ['required'],
+            'message' => ['required'],
+        ]);
+
+        $message = new ContactUs();
+        $message->name = $request->name;
+        $message->email = $request->email;
+        $message->phone = $request->phone;
+        $message->website = $request->website;
+        $message->message = $request->message;
+        $message->created_at = Carbon::now()->toDateTimeString();
+        $message->save();
+        $message->slug = $message->id.uniqid(10);
+        $message->save();
+        return redirect()->back()->with('success','thanks for your valueable feedback.');
     }
 
     public static function convert($mytime)

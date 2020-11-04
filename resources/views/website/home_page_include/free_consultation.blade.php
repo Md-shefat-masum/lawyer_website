@@ -1,4 +1,4 @@
-<div class="free-consultation ">
+<div class="free-consultation " id="free-consultation">
     <div class="sec-title mb-45 xs-mb-31 ">
         <div class="sub-title primary ">Schedule For</div>
         <h2 class="title white-color mb-0 ">Free Consultation</h2>

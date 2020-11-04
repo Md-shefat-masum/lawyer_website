@@ -13,7 +13,7 @@
         <link href="{{ asset('contents/admin') }}/assets/css/pace.min.css" rel="stylesheet" />
         <script src="{{ asset('contents/admin') }}/assets/js/pace.min.js"></script>
         <!--favicon-->
-        <link rel="icon" href="/icon2.png" type="image/x-icon" />
+        <link rel="icon" href="http://hsblco.com/uploads/favicon_1588291670.jpg" type="image/x-icon" />
         <!-- simplebar CSS-->
         @stack('cssplugin')
         <link href="{{ asset('contents/admin') }}/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
