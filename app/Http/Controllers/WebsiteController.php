@@ -82,7 +82,26 @@ class WebsiteController extends Controller
     }
 
     public function contact_message_submit(Request $request){
+        dd($request);
         $cirtificate = [];
+        $experience = [];
+        $english_speak = [
+            'high' => '',
+            'modarate' => '',
+            'basic' => '',
+            'none' => '',
+            'ielts' => '',
+            'cel' => '',
+        ];
+        $english_listen = [
+            'high' => '',
+            'modarate' => '',
+            'basic' => '',
+            'none' => '',
+            'ielts' => '',
+            'cel' => '',
+        ];
+
         foreach ($request->from_month_or_year as $key => $item) {
             if($item != null){
                 $data = [
@@ -95,6 +114,37 @@ class WebsiteController extends Controller
                 array_push($cirtificate,$data);
             }
         }
+
+        // foreach ($request->experience_from_month_or_year as $key => $item) {
+        //     if($item != null){
+        //         $data = [
+        //             'from' => $request->experience_from_month_or_year[$key],
+        //             'to' => $request->experience_to_month_or_year[$key],
+        //             'duties' => $request->experience_name_of_institution[$key],
+        //             'city' => $request->experience_city_country[$key],
+        //             'name' => $request->experience_certificate_degree[$key],
+        //         ];
+        //         array_push($experience,$data);
+        //     }
+        // }
+
+        // save english record
+        // for($i=0;$i<5;$i++){
+        //     if(isset($request->english_speak) && isset($request->english_speak[$i])){
+        //         $english_speak->heigh = $request->english_speak[$i];
+        //     }
+        // }
+        
+
+        // foreach ($request->english_speak as $key => $item) {
+        //     if($item != null){
+        //         $data = [
+        //             'hight' => $request->english_speak[$key],
+        //         ];
+        //         array_push($experience,$data);
+        //     }
+        // }
+
         // dd($request,json_encode($cirtificate));
         $this->validate($request,[
             'email' => ['required'],
