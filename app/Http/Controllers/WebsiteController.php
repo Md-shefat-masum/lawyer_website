@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use App\Subscriber;
 use App\ContactUs;
 use App\AreaOfPractice;
+use function GuzzleHttp\json_encode;
 
 class WebsiteController extends Controller
 {
@@ -81,9 +82,21 @@ class WebsiteController extends Controller
     }
 
     public function contact_message_submit(Request $request){
-        dd($request);
+        $cirtificate = [];
+        foreach ($request->from_month_or_year as $key => $item) {
+            if($item != null){
+                $data = [
+                    'from' => $request->from_month_or_year[$key],
+                    'to' => $request->to_month_or_year[$key],
+                    'name_of_institue' => $request->name_of_institution[$key],
+                    'city_country' => $request->city_country[$key],
+                    'certificate_degree' => $request->certificate_degree[$key],
+                ];
+                array_push($cirtificate,$data);
+            }
+        }
+        // dd($request,json_encode($cirtificate));
         $this->validate($request,[
-            'name' => ['required'],
             'email' => ['required'],
             'phone' => ['required'],
             'message' => ['required'],
@@ -106,17 +119,16 @@ class WebsiteController extends Controller
         $message->phone = $request->phone;
         $message->citizenship = $request->citizenship;
         $message->residential_address = $request->residential_address;
-        $message->residential_address = $request->residential_address;
-
-        $message->email = $request->email;
-        $message->phone = $request->phone;
+        $message->legal_status = $request->legal_status;
         $message->website = $request->website;
         $message->message = $request->message;
+        $message->cirtificate = json_encode($cirtificate);
+
         $message->created_at = Carbon::now()->toDateTimeString();
         $message->save();
         $message->slug = $message->id.uniqid(10);
         $message->save();
-        return redirect()->back()->with('success','thanks for your valueable feedback.');
+        return redirect()->back()->with('success','thanks for your valueable response.');
     }
 
     public static function convert($mytime)
