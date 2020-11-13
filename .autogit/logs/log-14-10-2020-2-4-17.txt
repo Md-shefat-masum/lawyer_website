@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Sat Nov 14 2020 02:04:17 GMT+0600 (Bangladesh Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/WebsiteController.php
+* database/migrations/2020_11_03_221117_create_contact_us_table.php
+* resources/views/admin/website/contact_us_message/view.blade.php
+* resources/views/website/contact.blade.php
+
+
+Created files:
+* .autogit/logs/log-14-10-2020-0-59-6.txt
+
+
+Deleted files:
+
+
+Renamed files:

@@ -102,27 +102,30 @@
                 <th colspan="5">work experience</th>
             </tr>
             <tr>
-                <th>From <br> Month/Year</th>
-                <th>To <br> Month/Year</th>
-                <th>Name of the institution <br> (start with the recent eduction)</th>
+                <th>From M/D/Y</th>
+                <th>To M/D/Y  Present</th>
+                <th>Title, duties and responsibilities (number of hours worked per week)</th>
                 <th>City,Country</th>
-                <th>Certificate, Diploma or degree issued, <br> field of study and major <br>(as it is indicated in your diploma)</th>
+                <th>Name of the employer</th>
             </tr>
             @php
                 $experiences = json_decode($data->experience);
             @endphp
             @foreach ($experiences as $experience)
                 <tr>
-                    <td>{{ $cirtificate->from }}</td>
-                    <td>{{ $cirtificate->to }}</td>
-                    <td>{{ $cirtificate->name_of_institue }}</td>
-                    <td>{{ $cirtificate->city_country }}</td>
-                    <td>{{ $cirtificate->certificate_degree }}</td>
+                    <td>{{ $experience->from }}</td>
+                    <td>{{ $experience->to }}</td>
+                    <td>{{ $experience->duties }}</td>
+                    <td>{{ $experience->city }}</td>
+                    <td>{{ $experience->name }}</td>
                 </tr>
             @endforeach
         </table>
 
         <table class="table text-center">
+            <tr>
+                <th colspan="5">Eduction</th>
+            </tr>
             <tr>
                 <th>From <br> Month/Year</th>
                 <th>To <br> Month/Year</th>
@@ -143,6 +146,8 @@
                 </tr>
             @endforeach
         </table>
+
+        {{ json_decode($data->english_speak) }}
 
         <style>
             .table td, .table th{

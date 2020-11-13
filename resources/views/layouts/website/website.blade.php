@@ -172,7 +172,7 @@
                     <div class="col-lg-4"></div>
                     <div class="col-lg-5 col-md-12 col-sm-12 footer-widget-two md-mb-50 ">
                         <h5 class="footer-title ">Quick Contact Info</h5>
-                        <div class="desc mb-24 ">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms.</div>
+                        <div class="desc mb-24 "></div>
                         <ul class="footer-address ">
                             <li><i class="fa fa-globe "></i><span>{{ $basic_information->address }} </span></li>
                             <li><i class="fa fa-phone "></i><a href="# ">{{ $basic_information->mobile_no_1 }}  (office), {{ $basic_information->mobile_no_2 }}  (cell) </a></li>
