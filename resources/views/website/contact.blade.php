@@ -72,23 +72,29 @@
                             @csrf
                             <div class="row">
                                 <div class="col-md-6">
+                                    <label for="">First Name</label>
                                     <input type="text" name="name" placeholder="First Name ( in capital letters )" required>
                                 </div>
                                 <div class="col-md-6">
+                                    <label for="">Middle Name</label>
                                     <input type="text" name="name" placeholder="Middle Name ( in capital letters )" required>
                                 </div>
                                 <div class="col-md-6">
+                                    <label for="">Last Name</label>
                                     <input type="text" name="name" placeholder="Last Name ( in capital letters )" required>
                                 </div>
                                 <div class="col-md-6 col-sm-0"></div>
 
                                 <div class="col-md-6">
+                                    <label for="">Spouse First Name</label>
                                     <input type="text" name="name" placeholder="Spouse,s First Name ( in capital letters )" required>
                                 </div>
                                 <div class="col-md-6">
+                                    <label for="">Spouse Middle Name</label>
                                     <input type="text" name="name" placeholder="Spouse,s Middle Name ( in capital letters )" required>
                                 </div>
                                 <div class="col-md-6">
+                                    <label for="">Spouse Last Name</label>
                                     <input type="text" name="name" placeholder="Spouse,s Last Name ( in capital letters )" required>
                                 </div>
                                 <div class="col-md-6 col-sm-0"></div>
@@ -110,24 +116,71 @@
                                 <div class="col-md-6">
                                     <label for="">Marital Status</label>
                                     <select name="" id="" class="form-control">
-                                        <option value="male">Single</option>
-                                        <option value="male">Married</option>
-                                        <option value="male">Devorced</option>
-                                        <option value="female">In a common-law relation</option>
+                                        <option value="single">Single</option>
+                                        <option value="married">Married</option>
+                                        <option value="devorced">Devorced</option>
+                                        <option value="in_a_commom_law relation">In a common-law relation</option>
                                     </select>
                                 </div>
 
                                 <div class="col-md-6">
+                                    <label for="">Number Of Children</label>
+                                    <input type="text" name="number_of_children" placeholder="Number Of Children">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="">Email</label>
                                     <input type="email" name="email" placeholder="Your Email" required>
                                 </div>
                                 <div class="col-md-6">
+                                    <label for="">Phone</label>
                                     <input type="text" name="phone" placeholder="Your Phone" required>
                                 </div>
                                 <div class="col-md-6">
+                                    <label for="">Citizenship</label>
+                                    <input type="text" name="citizenship" placeholder="Your citizenship" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="">Residential Address</label>
+                                    <input type="text" name="residential_address" placeholder="Your residential address ( city &amp; country )" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="">
+                                        Your legal status in the country of residence (please provide the date of your initial
+                                        arrival, types of visas, dates of documented and undocumented periods of stay, if applicable)
+                                    </label>
+                                    <input type="text" name="website" placeholder="Your legal status">
+                                </div>
+                                <div class="col-12">
+                                    <label for="">
+                                        Your highest education achieved (High School Certificate, Collage Diploma, Bachelor’s or Master’s degree, PhD)
+                                    </label>
+                                </div>
+                                <div class="col-12">
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <th>From <br> Month/Year</th>
+                                            <th>To <br> Month/Year</th>
+                                            <th>Name of the institution <br> (start with the recent eduction)</th>
+                                            <th>City,Country</th>
+                                            <th>Certificate, Diploma or degree issued, field of study and major (as it is indicated in your diploma)</th>
+                                        </tr>
+                                        @for ($i = 0; $i < 5; $i++)
+                                            <tr>
+                                                <td><input type="text" name="from_month_or_year[]"></td>
+                                                <td><input type="text" name="to_month_or_year[]"></td>
+                                                <td><input type="text" name="name_of_institution[]"></td>
+                                                <td><input type="text" name="city_country[]"></td>
+                                                <td><input type="text" name="certificate_degree[]"></td>
+                                            </tr>
+                                        @endfor
+                                    </table>
+                                </div>
+                                <div class="col-md-12">
                                     <input type="text" name="website" placeholder="Your Website">
                                 </div>
                                 <div class="col-md-12">
-                                    <textarea placeholder="Your Message" name="message" required></textarea>
+                                    <textarea placeholder="Addional Message" name="message" required></textarea>
                                     <button type="submit" class="readon upper">Submit Request</button>
                                 </div>
                             </div>
@@ -140,6 +193,12 @@
             <iframe src="{{ $basic_information->map }}"
                 width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
+        <style>
+            label{
+                color: black;
+                font-weight: 600;
+            }
+        </style>
     </div>
     <!-- Contact Inner Sction End -->
 
