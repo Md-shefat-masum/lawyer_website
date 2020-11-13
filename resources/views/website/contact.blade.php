@@ -156,6 +156,7 @@
                                         Your highest education achieved (High School Certificate, Collage Diploma, Bachelor’s or Master’s degree, PhD)
                                     </label>
                                 </div>
+
                                 <div class="col-12">
                                     <table class="table table-bordered">
                                         <tr>
@@ -163,7 +164,7 @@
                                             <th>To <br> Month/Year</th>
                                             <th>Name of the institution <br> (start with the recent eduction)</th>
                                             <th>City,Country</th>
-                                            <th>Certificate, Diploma or degree issued, field of study and major (as it is indicated in your diploma)</th>
+                                            <th>Certificate, Diploma <br> or degree issued, <br>field of study and major <br>(as it is indicated in your diploma)</th>
                                         </tr>
                                         @for ($i = 0; $i < 5; $i++)
                                             <tr>
@@ -176,6 +177,33 @@
                                         @endfor
                                     </table>
                                 </div>
+
+                                <div class="col-12">
+                                    <label for="">
+                                        Please describe your work experience only during the last 10 years (title, duties and responsibilities you have been discharging at every jobs). 
+                                        An applicant is accountable for every 
+                                        day of his or her life since 18 years of age (if you were unemployed or travelling, please indicate so, as no time gaps are permitted).
+                                    </label>
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <th>From <br> M/D/Y</th>
+                                            <th>To <br> M/D/Y <br></th>
+                                            <th>Name of the institution <br> (start with the recent eduction)</th>
+                                            <th>City,Country</th>
+                                            <th>Certificate, Diploma <br> or degree issued, <br>field of study and major <br>(as it is indicated in your diploma)</th>
+                                        </tr>
+                                        @for ($i = 0; $i < 5; $i++)
+                                            <tr>
+                                                <td><input type="text" placeholder="from year" name="from_month_or_year[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="to year" name="to_month_or_year[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="institute" name="name_of_institution[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="city" name="city_country[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="result" name="certificate_degree[]" {{$i==0?'required':''}}></td>
+                                            </tr>
+                                        @endfor
+                                    </table>
+                                </div>
+
                                 <div class="col-md-12">
                                     <input type="text" name="website" placeholder="Your Website">
                                 </div>

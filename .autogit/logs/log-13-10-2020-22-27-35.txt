@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Fri Nov 13 2020 22:27:35 GMT+0600 (Bangladesh Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/WebsiteController.php
+* resources/views/admin/website/contact_us_message/view.blade.php
+* resources/views/website/contact.blade.php
+
+
+Created files:
+* .autogit/logs/log-13-10-2020-21-57-18.txt
+
+
+Deleted files:
+
+
+Renamed files:

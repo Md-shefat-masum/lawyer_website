@@ -87,7 +87,7 @@
                                 <li><a href="{{ $basic_information->twitter }}"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="{{ $basic_information->pinterest }}"><i class="fa fa-pinterest-p"></i></a></li>
                                 <li><a href="{{ $basic_information->linkedin }}"><i class="fa fa-linkedin"></i></a></li> --}}
-                                <li class="get-btn"><a href="#free-consultation">Free Consultation</a></li>
+                                <li class="get-btn"><a href="/contact#free-consultation">Free Consultation</a></li>
                             </ul>
                         </div>
                     </div>
