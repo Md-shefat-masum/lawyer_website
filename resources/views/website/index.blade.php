@@ -95,7 +95,7 @@
         <!-- Faq Section End -->
 
         <!-- Testimonia Section Start -->
-        <div class="rs-testimonia bg1 pt-120 pb-274 md-pt-84 md-pb-80 " style="padding-bottom: 90px;">
+        {{-- <div class="rs-testimonia bg1 pt-120 pb-274 md-pt-84 md-pb-80 " style="padding-bottom: 90px;">
             <div class="sec-title top-line text-center mb-51 xs-mb-31 ">
                 <div class="sub-title primary ">What Clients Say</div>
             </div>
@@ -122,9 +122,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Testimonia Section End -->
     </div>
 
 @endsection
-

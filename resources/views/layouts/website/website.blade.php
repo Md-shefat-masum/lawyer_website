@@ -83,10 +83,10 @@
                     <div class="col-lg-6 col-md-5 col-sm-12">
                         <div class="toolbar-sl-share">
                             <ul>
-                                <li><a href="{{ $basic_information->facebook }}"><i class="fa fa-facebook"></i></a></li>
+                                {{-- <li><a href="{{ $basic_information->facebook }}"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="{{ $basic_information->twitter }}"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="{{ $basic_information->pinterest }}"><i class="fa fa-pinterest-p"></i></a></li>
-                                <li><a href="{{ $basic_information->linkedin }}"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="{{ $basic_information->linkedin }}"><i class="fa fa-linkedin"></i></a></li> --}}
                                 <li class="get-btn"><a href="#free-consultation">Free Consultation</a></li>
                             </ul>
                         </div>
@@ -124,7 +124,7 @@
                                             <li class="{{ Request::path() == 'about'? 'current-menu-item':'' }}"><a href="/about">About us</a></li>
                                             <li class="{{ Request::path() == 'service'? 'current-menu-item':'' }}"><a href="/service">Services</a></li>
                                             <li class="{{ Request::path() == 'team-lead'? 'current-menu-item':'' }}"><a href="/team-lead">Team lead</a></li>
-                                            <li class="{{ Request::path() == 'our-privilege'? 'current-menu-item':'' }}"><a href="/our-privilege">OurPrivilege</a></li>
+                                            <li class="{{ Request::path() == 'our-privilege'? 'current-menu-item':'' }}"><a href="/our-privilege">Our Privilege</a></li>
                                             <li class="{{ Request::path() == 'contact'? 'current-menu-item':'' }}"><a href="/contact">Contact us</a></li>
                                         </ul>
                                         <!-- //.nav-menu -->
@@ -161,15 +161,16 @@
                                     {{ $basic_information->footer_short_about }}
                                 </p>
                             </div>
-                            <ul class="social-links ">
+                            {{-- <ul class="social-links ">
                                 <li><a href="{{ $basic_information->facebook }} "><i class="fa fa-facebook "></i></a></li>
                                 <li><a href="{{ $basic_information->twitter }}  "><i class="fa fa-twitter "></i></a></li>
                                 <li><a href="{{ $basic_information->pinterest }} "><i class="fa fa-pinterest-p "></i></a></li>
                                 <li><a href="{{ $basic_information->linkedin }}  "><i class="fa fa-linkedin "></i></a></li>
-                            </ul>
+                            </ul> --}}
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 footer-widget-two md-mb-50 ">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-5 col-md-12 col-sm-12 footer-widget-two md-mb-50 ">
                         <h5 class="footer-title ">Quick Contact Info</h5>
                         <div class="desc mb-24 ">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms.</div>
                         <ul class="footer-address ">
@@ -179,7 +180,7 @@
                             <li><i class="fa fa-clock-o "></i>{{ $basic_information->work_time }} </li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 col-md-12 col-sm-12 footer-widget-four ">
+                    {{-- <div class="col-lg-3 col-md-12 col-sm-12 footer-widget-four ">
                         <h5 class="footer-title ">Subscribe to Our Newsletter</h5>
                         <p class="desc ">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms.</p>
                         <p class="desc ">Righteous indignation and dislike men who are so the charms.</p>
@@ -188,14 +189,17 @@
                             <input type="email" name="email" placeholder="Email Address " required>
                             <button type="submit"><i class="fa fa-paper-plane "></i></button>
                         </form>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
         <div class="footer-bottom ">
             <div class="container ">
+                @php
+                    $basic = \App\BasicInformation::first();
+                @endphp
                 <div class="copyright text-center ">
-                    <p>&copy; 2020 All Rights Reserved</p>
+                    <p>{{ $basic->copy_right }}</p>
                 </div>
             </div>
         </div>
@@ -270,6 +274,3 @@
 </html>
 
 </html>
-
-
-

@@ -621,6 +621,9 @@ button.readon:active {
 .white-color {
     color: #ffffff !important;
 }
+.black-color {
+    color: #000000 !important;
+}
 
 .title-color {
     color: #1f2839 !important;
@@ -794,10 +797,11 @@ ul.listing-style.modify li:before {
 
 .full-width-header .toolbar-area {
     background: rgba(31, 40, 57, 0.47);
+    background: black;
 }
 
 .full-width-header .toolbar-area .toolbar-contact {
-    padding: 15px 0;
+    padding: 12px 0;
 }
 
 .full-width-header .toolbar-area .toolbar-contact ul {
@@ -868,7 +872,7 @@ ul.listing-style.modify li:before {
 
 .full-width-header .toolbar-area .toolbar-sl-share ul li.get-btn a {
     font-size: 14px;
-    padding: 15px 15px;
+    padding: 8px 15px;
     line-height: 27px;
     letter-spacing: 1px;
     font-family: 'Playfair Display', serif;
@@ -883,6 +887,7 @@ ul.listing-style.modify li:before {
 
 .full-width-header .rs-header {
     z-index: 99;
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .full-width-header .rs-header .menu-area {
@@ -1676,11 +1681,29 @@ body .modal-backdrop {
 
 .rs-slider.slider1 .content-part {
     margin-left: 0px;
-    margin-top: -50px;
+    /*margin-top: -50px;
+    */display: flex;
+    /*justify-content: center;
+    */align-items: center;
+    flex-wrap: wrap;
+    /*margin-top: 30%;
+    */background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.rs-slider.slider1 .content-part h4,
+.rs-slider.slider1 .content-part h2{
+    color: white!important;
 }
 
 .rs-slider.slider1 .nivoSlider .nivo-main-image {
     max-height: 1000px;
+    object-fit: cover;
 }
 
 .rs-slider.slider1 .nivoSlider .sl-ly-img {
@@ -5982,7 +6005,7 @@ body .modal-backdrop {
 
 
 /* -------------------------------------
-    29. Error 404 CSS 
+    29. Error 404 CSS
 --------------------------------------*/
 
 .rs-page-error {

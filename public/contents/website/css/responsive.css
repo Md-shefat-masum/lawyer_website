@@ -36,7 +36,7 @@
         max-height: 655px;
     }
     .rs-slider.slider1 .content-part {
-        margin-top: 250px;
+        /* margin-top: 250px; */
     }
     .rs-slider.slider1 .nivoSlider .sl-ly-img {
         margin-left: 50px;
