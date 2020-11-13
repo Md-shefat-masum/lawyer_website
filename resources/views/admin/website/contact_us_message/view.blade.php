@@ -92,16 +92,36 @@
                 <th style="white-space: break-spaces">{{ $data->message }}</th>
             </tr>
             <tr>
-                <th>message</th>
-                <th>:</th>
-                <th style="white-space: break-spaces">{{ $data->message }}</th>
-            </tr>
-            <tr>
                 <th>Created at</th>
                 <th>:</th>
                 <th>{{ $data->created_at->format('d,M Y h:s:i a') }}</th>
             </tr>
         </table>
+        <table class="table text-center">
+            <tr>
+                <th colspan="5">work experience</th>
+            </tr>
+            <tr>
+                <th>From <br> Month/Year</th>
+                <th>To <br> Month/Year</th>
+                <th>Name of the institution <br> (start with the recent eduction)</th>
+                <th>City,Country</th>
+                <th>Certificate, Diploma or degree issued, <br> field of study and major <br>(as it is indicated in your diploma)</th>
+            </tr>
+            @php
+                $experiences = json_decode($data->experience);
+            @endphp
+            @foreach ($experiences as $experience)
+                <tr>
+                    <td>{{ $cirtificate->from }}</td>
+                    <td>{{ $cirtificate->to }}</td>
+                    <td>{{ $cirtificate->name_of_institue }}</td>
+                    <td>{{ $cirtificate->city_country }}</td>
+                    <td>{{ $cirtificate->certificate_degree }}</td>
+                </tr>
+            @endforeach
+        </table>
+
         <table class="table text-center">
             <tr>
                 <th>From <br> Month/Year</th>
@@ -123,6 +143,7 @@
                 </tr>
             @endforeach
         </table>
+
         <style>
             .table td, .table th{
                 text-transform: capitalize;

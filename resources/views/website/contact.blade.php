@@ -232,7 +232,7 @@
                                             <td><input type="text" placeholder="" name="english_listen[]"></td>
                                             <td><input type="text" placeholder="" name="english_listen[]"></td>
                                             <td><input type="text" placeholder="" name="english_listen[]"></td>
-                                            <td><input type="text" placeholder="" name="english_listen"></td>
+                                            <td><input type="text" placeholder="" name="english_listen[]"></td>
                                             <td><input type="text" placeholder="" name="english_listen[]"></td>
                                             <td><input type="text" placeholder="" name="english_listen[]"></td>
                                         </tr>

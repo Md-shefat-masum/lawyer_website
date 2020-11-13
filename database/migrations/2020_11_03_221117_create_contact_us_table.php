@@ -36,6 +36,9 @@ class CreateContactUsTable extends Migration
 
             $table->text('cirtificate')->nullable();
             $table->text('experience')->nullable();
+            $table->text('english_speak')->nullable();
+            $table->text('french_speak')->nullable();
+            $table->text('questions')->nullable();
 
             $table->string('website',100)->nullable();
             $table->text('message')->nullable();

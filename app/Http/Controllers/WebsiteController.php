@@ -82,25 +82,13 @@ class WebsiteController extends Controller
     }
 
     public function contact_message_submit(Request $request){
-        dd($request);
+        
         $cirtificate = [];
         $experience = [];
-        $english_speak = [
-            'high' => '',
-            'modarate' => '',
-            'basic' => '',
-            'none' => '',
-            'ielts' => '',
-            'cel' => '',
-        ];
-        $english_listen = [
-            'high' => '',
-            'modarate' => '',
-            'basic' => '',
-            'none' => '',
-            'ielts' => '',
-            'cel' => '',
-        ];
+
+        $english_speak = [];
+        $french_speak = [];
+        $questions = [];
 
         foreach ($request->from_month_or_year as $key => $item) {
             if($item != null){
@@ -115,37 +103,44 @@ class WebsiteController extends Controller
             }
         }
 
-        // foreach ($request->experience_from_month_or_year as $key => $item) {
-        //     if($item != null){
-        //         $data = [
-        //             'from' => $request->experience_from_month_or_year[$key],
-        //             'to' => $request->experience_to_month_or_year[$key],
-        //             'duties' => $request->experience_name_of_institution[$key],
-        //             'city' => $request->experience_city_country[$key],
-        //             'name' => $request->experience_certificate_degree[$key],
-        //         ];
-        //         array_push($experience,$data);
-        //     }
-        // }
+        foreach ($request->experience_from_month_or_year as $key => $item) {
+            if($item != null){
+                $data = [
+                    'from' => $request->experience_from_month_or_year[$key],
+                    'to' => $request->experience_to_month_or_year[$key],
+                    'duties' => $request->experience_name_of_institution[$key],
+                    'city' => $request->experience_city_country[$key],
+                    'name' => $request->experience_certificate_degree[$key],
+                ];
+                array_push($experience,$data);
+            }
+        }
 
-        // save english record
-        // for($i=0;$i<5;$i++){
-        //     if(isset($request->english_speak) && isset($request->english_speak[$i])){
-        //         $english_speak->heigh = $request->english_speak[$i];
-        //     }
-        // }
-        
+        array_push($english_speak,json_encode($request->english_speak));
+        array_push($english_speak,json_encode($request->english_listen));
+        array_push($english_speak,json_encode($request->english_read));
+        array_push($english_speak,json_encode($request->english_write));
 
-        // foreach ($request->english_speak as $key => $item) {
-        //     if($item != null){
-        //         $data = [
-        //             'hight' => $request->english_speak[$key],
-        //         ];
-        //         array_push($experience,$data);
-        //     }
-        // }
+        array_push($french_speak,json_encode($request->french_date));
+        array_push($french_speak,json_encode($request->french_speak));
+        array_push($french_speak,json_encode($request->french_listen));
+        array_push($french_speak,json_encode($request->french_read));
+        array_push($french_speak,json_encode($request->french_write));
 
-        // dd($request,json_encode($cirtificate));
+        array_push($questions,json_encode($request->question_date));
+        array_push($questions,json_encode($request->question_1));
+        array_push($questions,json_encode($request->question_2));
+        array_push($questions,json_encode($request->question_3));
+        array_push($questions,json_encode($request->question_4));
+        array_push($questions,json_encode($request->question_5));
+        array_push($questions,json_encode($request->question_6));
+        array_push($questions,json_encode($request->question_7));
+        array_push($questions,json_encode($request->question_8));
+        array_push($questions,json_encode($request->question_9));
+        array_push($questions,json_encode($request->question_from));
+
+        // dd($request,json_encode($english_speak,JSON_PRETTY_PRINT),$experience);
+
         $this->validate($request,[
             'email' => ['required'],
             'phone' => ['required'],
@@ -172,7 +167,12 @@ class WebsiteController extends Controller
         $message->legal_status = $request->legal_status;
         $message->website = $request->website;
         $message->message = $request->message;
+
         $message->cirtificate = json_encode($cirtificate);
+        $message->experience = json_encode($experience);
+        $message->english_speak = json_encode($english_speak);
+        $message->french_speak = json_encode($french_speak);
+        $message->questions = json_encode($questions);
 
         $message->created_at = Carbon::now()->toDateTimeString();
         $message->save();
