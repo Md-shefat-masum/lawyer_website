@@ -21,7 +21,7 @@
     <div class="rs-faq inner pt-120 pb-120 md-pt-80 md-pb-80">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 md-mb-20">
+                <div class="col-lg-7 md-mb-20">
                     <div class="white-bg mb-60">
                         <div class="content-wrap">
 
@@ -30,15 +30,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-5">
 
                     <div class="contact-part">
                         <div class="row">
-                            <div class="col-lg-8 col-md-4">
+                            <div class="col-lg-6 col-md-6">
                                 <h3 class="">For Consultation
                                 </h3>
                             </div>
-                            <div class="col-lg-4 col-md-4">
+                            <div class="col-lg-6 col-md-6">
                                 <div class="btn-area">
                                     <a href="/contact" class="readon">Contact Us</a>
                                 </div>
@@ -55,5 +55,27 @@
         </div>
     </div>
     <!--Faq Section End-->
+
+    <style>
+        .content-wrap img{
+            margin: 10px 0px !important;
+        }
+        .content-wrap p, .content-wrap span{
+            font-size: 16px!important;
+            line-height: 24px!important;
+            margin: 0!important;
+            padding: 0!important;
+        }
+        .content-wrap h4{
+            font-size: 24px!important;
+            line-height: 24px!important;
+            margin: 0!important;
+        }
+        .content-wrap h4 span{
+            margin: 0!important;
+            font-size: 24px!important;
+            line-height: 24px!important;
+        }
+    </style>
 
 @endsection

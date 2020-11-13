@@ -18,6 +18,7 @@ class CreateAreaOfPracticesTable extends Migration
             $table->integer('serial')->nullable();
             $table->string('icon',100)->nullable();
             $table->string('title',100)->nullable();
+            $table->string('image',100)->nullable();
             $table->text('description')->nullable();
             $table->integer('creator')->nullable();
             $table->string('slug',35)->nullable();

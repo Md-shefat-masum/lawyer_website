@@ -42,6 +42,12 @@
                                     <input type="file" name="icon" class="form-control" placeholder="icon" value="">
                                 </div>
                             </div>
+                            <div class="form_content">
+                                <div class="form-group">
+                                    <label for="input-1">Related Image</label> <span class="text-danger"></span>
+                                    <input type="file" name="image" class="form-control" placeholder="image" value="">
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <label for="input-1">Description</label> <span class="text-danger"></span>
                                 <textarea name="description" id="" class="form-control description"></textarea>

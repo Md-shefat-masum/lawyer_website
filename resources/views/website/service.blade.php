@@ -21,19 +21,8 @@
     <div class="rs-faq inner pt-120 pb-120 md-pt-80 md-pb-80">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 md-mb-20">
-                    <div class="white-bg mb-60">
-                        <div class="content-wrap">
-
-                            {{-- {!! App\ServiceDetais::first()->description !!} --}}
-                            @php 
-                                $services = App\AreaOfPractice:: 
-                            @endphp
-                        </div>
-                    </div>
-                </div>
+                {{-- <div class="col-sm-0 col-lg-6 col-md-0"></div>
                 <div class="col-lg-6">
-
                     <div class="contact-part">
                         <div class="row">
                             <div class="col-lg-8 col-md-4">
@@ -51,8 +40,36 @@
                                 We are here to answer your questions, map out a plan and solve problems.</p>
                         </div>
                     </div>
+                </div> --}}
 
-                </div>
+                @php 
+                    $services = App\AreaOfPractice::orderBy('serial','ASC')->where('status',1)->get();
+                @endphp
+                @foreach ($services as $item)
+                    <div class="col-lg-6 md-mb-20">
+                        <div class="white-bg mb-60">
+                            <div class="content-wrap">
+
+                                {{-- {!! App\ServiceDetais::first()->description !!} --}}
+                                
+                                    <h3>{{ $item->title }}</h3>
+                                    {!! $item->description !!}
+                                    <br>
+                                    <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        @if ($item->image)
+                            <img src="/{{ $item->image }}" alt="image" class="img-fluid">
+                        @else
+                        @endif
+                        <br>
+                        <br>
+                    </div>
+                @endforeach
+
+                
             </div>
         </div>
     </div>

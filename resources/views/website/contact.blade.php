@@ -43,7 +43,8 @@
                                 </div>
                                 <div class="address-text">
                                     <h5 class="contact-title">Mail Us</h5>
-                                    <a href="#">{{ $basic_information->email_1 }}</a>
+                                    {{-- <a href="#">{{ $basic_information->email_1 }}</a>? --}}
+                                    <a href="mailto:info@njahanlaw.ca" >info@njahanlaw.ca</a>
                                 </div>
                             </div>
                             <div class="address-item ml--5">
@@ -62,14 +63,60 @@
                     <div class="contact-wrap">
                         <div class="sec-title mb-50">
                             <h2 class="title mb-33">Get In Touch</h2>
-                            <div class="desc">We denounce with righteous indignation and dislike men who are so beguiled perfectly simple. <br> and demoralized by the charms of pleasure of the moment, so blinded by desire.</div>
+                            <h2 class="title mb-33">NJLPC</h2>
+                            <div class="desc">
+                                Your solutions start here. You have come to the right firm. We are privileged to accept the responsibility of serving you.
+                            </div>
                         </div>
                         <form class="contact-inner-page" action="{{ route('website_contact_message_submit') }}" method="POST">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" name="name" placeholder="Your Name" required>
+                                    <input type="text" name="name" placeholder="First Name ( in capital letters )" required>
                                 </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="name" placeholder="Middle Name ( in capital letters )" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="name" placeholder="Last Name ( in capital letters )" required>
+                                </div>
+                                <div class="col-md-6 col-sm-0"></div>
+
+                                <div class="col-md-6">
+                                    <input type="text" name="name" placeholder="Spouse,s First Name ( in capital letters )" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="name" placeholder="Spouse,s Middle Name ( in capital letters )" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="name" placeholder="Spouse,s Last Name ( in capital letters )" required>
+                                </div>
+                                <div class="col-md-6 col-sm-0"></div>
+
+                                <div class="col-md-6">
+                                    <label for="">Gender</label>
+                                    <select name="" id="" class="form-control">
+                                        <option value="male">male</option>
+                                        <option value="female">female</option>
+                                        <option value="other">other</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="">Date Of Birth</label>
+                                    <input type="date" name="date_of_birth" placeholder="date of birth" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="">Marital Status</label>
+                                    <select name="" id="" class="form-control">
+                                        <option value="male">Single</option>
+                                        <option value="male">Married</option>
+                                        <option value="male">Devorced</option>
+                                        <option value="female">In a common-law relation</option>
+                                    </select>
+                                </div>
+
                                 <div class="col-md-6">
                                     <input type="email" name="email" placeholder="Your Email" required>
                                 </div>

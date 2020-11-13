@@ -50,6 +50,19 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="form_content">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <label for="input-1">Related Image</label> <span class="text-danger"></span>
+                                            <input type="file" name="image" class="form-control" placeholder="image" value="">
+                                        </div>
+                                        <div class="col-4">
+                                            <img src="{{ asset(''.$data->image) }}" alt="image" style="height: 40px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <label for="input-1">Description</label> <span class="text-danger"></span>
                                 <textarea name="description" id="" class="form-control description">{{ $data->description }}</textarea>

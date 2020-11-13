@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use Image;
 use App\AreaOfPractice;
+use Illuminate\Support\Facades\Storage;
 
 class AreaOfPracticeController extends Controller
 {
@@ -64,6 +65,12 @@ class AreaOfPracticeController extends Controller
             $img_canvas->save(public_path('uploads/icon/' . $imageName));
         }
 
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $path = Storage::put('uploads/area_of_service/', $file);
+            $area_of_practice->image = $path;
+        }
+
         $area_of_practice->save();
         $area_of_practice->slug = $area_of_practice->id.uniqid(10);
         $area_of_practice->save();
@@ -101,6 +108,12 @@ class AreaOfPracticeController extends Controller
             $img_canvas = Image::canvas(128, 128);
             $img_canvas->insert($image, 'center');
             $img_canvas->save(public_path('uploads/icon/' . $imageName));
+        }
+
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $path = Storage::put('uploads/area_of_service/', $file);
+            $area_of_practice->image = $path;
         }
 
         $area_of_practice->save();

@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Fri Nov 13 2020 19:56:03 GMT+0600 (Bangladesh Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/website/faq/index.blade.php
+* resources/views/admin/website/faq/view.blade.php
+* resources/views/website/home_page_include/practice_area.blade.php
+* resources/views/website/service.blade.php
+* resources/views/website/service_single.blade.php
+
+
+Created files:
+* .autogit/logs/log-13-10-2020-19-25-46.txt
+
+
+Deleted files:
+
+
+Renamed files:

@@ -25,6 +25,7 @@
                                     <tr>
                                         <th scope="col">#</th>
                                         <th scope="col">Icon</th>
+                                        <th scope="col">Related Image</th>
                                         <th scope="col">Serial Of View</th>
                                         <th scope="col">Title</th>
                                         <th scope="col">Created at</th>
@@ -38,6 +39,7 @@
                                         <tr>
                                             <th scope="row">{{ $i++ }}</th>
                                             <td> <img src="/{{ $item->icon }}" style="height: 40px;" alt=""></td>
+                                            <td> <img src="/{{ $item->image }}" style="height: 40px;" alt=""></td>
                                             <td>{{ $item->serial }}</td>
                                             <td>{{ $item->title }}</td>
                                             <td>{{ $item->created_at->format('d-M-Y h:i:s a') }}</td>
