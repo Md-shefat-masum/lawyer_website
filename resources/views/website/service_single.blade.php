@@ -26,7 +26,7 @@
                         <div class="content-wrap">
                             <h3 class="fs-30">{{ $service->title }}</h3>
                             <p class="desc">
-                                {{ $service->description }}
+                                {!! $service->description !!}
                             </p>
                         </div>
                     </div>

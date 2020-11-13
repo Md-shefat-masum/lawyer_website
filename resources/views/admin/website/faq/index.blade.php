@@ -38,7 +38,7 @@
                                         <tr>
                                             <th scope="row">{{ $i++ }}</th>
                                             <td>{{ $item->question }}</td>
-                                            <td>{{ $item->answer }}</td>
+                                            <td>{{ Str::limit($item->answer, 30, '...')}}</td>
                                             <td>{{ $item->created_at->format('d-M-Y h:i:s a') }}</td>
                                             <td>
                                                 <ul class="d-flex justify-content-center table_action_list">

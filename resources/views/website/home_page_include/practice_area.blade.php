@@ -14,9 +14,9 @@
                         </div>
                         <div class="content-part">
                             <h4 class="title">
-                                <a href="/service/{{$item->id}}/{{$item->title}}">{{ $item->title }}</a></h4>
+                                <a href="/service/{{$item->id}}/{{str_replace(' ','-',strtolower($item->title))}}">{{ $item->title }}</a></h4>
                             <div class=" desc ">
-                                <a href="/service" class="readon2 readon-two2 ">learn More</a>
+                                <a href="/service/{{$item->id}}/{{str_replace(' ','-',strtolower($item->title))}})" class="readon2 readon-two2 ">learn More</a>
                             </div>
                         </div>
                     </div>

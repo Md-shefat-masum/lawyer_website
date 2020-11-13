@@ -25,8 +25,10 @@
                     <div class="white-bg mb-60">
                         <div class="content-wrap">
 
-                            {!! App\ServiceDetais::first()->description !!}
-
+                            {{-- {!! App\ServiceDetais::first()->description !!} --}}
+                            @php 
+                                $services = App\AreaOfPractice:: 
+                            @endphp
                         </div>
                     </div>
                 </div>

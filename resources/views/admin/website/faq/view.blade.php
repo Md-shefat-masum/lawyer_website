@@ -9,7 +9,7 @@
             <tr>
                 <th>Answer</th>
                 <th>:</th>
-                <th>{{ $data->answer }}</th>
+                <th style="white-space: break-spaces;width:70%;">{{ $data->answer }}</th>
             </tr>
             <tr>
                 <th>Creator</th>

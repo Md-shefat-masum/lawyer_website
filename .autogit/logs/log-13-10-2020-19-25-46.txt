@@ -1,0 +1,25 @@
+-------------------- Auto-Git Log --------------------
+		Fri Nov 13 2020 19:25:46 GMT+0600 (Bangladesh Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/WebsiteController.php
+* app/Http/Controllers/WebsiteManagement/AreaOfPracticeController.php
+* database/migrations/2020_11_03_185711_create_area_of_practices_table.php
+* resources/views/admin/website/area_of_practice/add.blade.php
+* resources/views/admin/website/area_of_practice/edit.blade.php
+* resources/views/admin/website/area_of_practice/index.blade.php
+* resources/views/website/home_page_include/practice_area.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-13-10-2020-18-55-34.txt
+* public/uploads/icon/1605272943.png
+* resources/views/website/service_single.blade.php
+
+
+Deleted files:
+
+
+Renamed files:
