@@ -28,6 +28,7 @@ Route::get('/contact', 'WebsiteController@contact')->name('website_contact');
 Route::get('/our-privilege', 'WebsiteController@our_privilege')->name('website_our_privilege');
 Route::get('/team-lead', 'WebsiteController@team_lead')->name('website_team_lead');
 Route::get('/service', 'WebsiteController@service')->name('website_service');
+Route::get('/service/{id}/{name}', 'WebsiteController@service_single')->name('service_single');
 Route::get('/about', 'WebsiteController@about')->name('website_about');
 
 Route::post('/free-consultation-submit', 'WebsiteController@free_consultation_submit')->name('website_free_consultation_submit');

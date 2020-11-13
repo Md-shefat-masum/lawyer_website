@@ -1,0 +1,27 @@
+-------------------- Auto-Git Log --------------------
+		Fri Nov 13 2020 18:55:34 GMT+0600 (Bangladesh Standard Time)
+------------------------------------------------------
+
+Modified files:
+* public/contents/website/css/custom.css
+* public/contents/website/css/custom.less
+* public/contents/website/css/responsive.css
+* public/contents/website/style.css
+* resources/views/layouts/website/website.blade.php
+* resources/views/website/home_page_include/slider.blade.php
+* resources/views/website/index.blade.php
+* resources/views/website/team_lead.blade.php
+
+
+Created files:
+* .autogit/autogit.json
+* .htaccess
+* public/error_log
+* public/uploads/banner/1605270545.png
+* "well-known (2).zip"
+
+
+Deleted files:
+
+
+Renamed files:

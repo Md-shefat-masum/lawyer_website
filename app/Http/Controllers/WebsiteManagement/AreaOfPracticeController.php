@@ -43,6 +43,7 @@ class AreaOfPracticeController extends Controller
 
         $area_of_practice = new AreaOfPractice();
         $area_of_practice->title = $request->title;
+        $area_of_practice->serial = $request->serial;
         $area_of_practice->description = $request->description;
         $area_of_practice->creator = Auth::user()->id;
         $area_of_practice->created_at = Carbon::now()->toDateTimeString();
@@ -81,6 +82,7 @@ class AreaOfPracticeController extends Controller
 
         // dd($area_of_practice, $request->request);
         $area_of_practice->title = $request->title;
+        $area_of_practice->serial = $request->serial;
         $area_of_practice->description = $request->description;
         $area_of_practice->creator = Auth::user()->id;
         $area_of_practice->created_at = Carbon::now()->toDateTimeString();

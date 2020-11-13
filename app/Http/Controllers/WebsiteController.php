@@ -7,6 +7,7 @@ use App\FreeConsultation;
 use Carbon\Carbon;
 use App\Subscriber;
 use App\ContactUs;
+use App\AreaOfPractice;
 
 class WebsiteController extends Controller
 {
@@ -28,6 +29,11 @@ class WebsiteController extends Controller
 
     public function service(Request $request){
         return view('website.service');
+    }
+
+    public function service_single(Request $request,$id,$name){
+        $service = AreaOfPractice::findOrFail($id);
+        return view('website.service_single',compact('service'));
     }
 
     public function about(Request $request){

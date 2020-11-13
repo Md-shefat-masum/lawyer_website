@@ -27,6 +27,12 @@
                             @csrf
                             <div class="form_content">
                                 <div class="form-group">
+                                    <label for="input-1">Serial of view</label> <span class="text-danger"></span>
+                                    <input type="number" name="serial" class="form-control" placeholder="serial" value="{{ $data->serial }}">
+                                </div>
+                            </div>
+                            <div class="form_content">
+                                <div class="form-group">
                                     <label for="input-1">Title</label> <span class="text-danger"></span>
                                     <input type="text" name="title" class="form-control" placeholder="title" value="{{ $data->title }}">
                                 </div>
