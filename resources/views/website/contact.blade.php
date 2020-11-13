@@ -187,20 +187,255 @@
                                     <table class="table table-bordered">
                                         <tr>
                                             <th>From <br> M/D/Y</th>
-                                            <th>To <br> M/D/Y <br></th>
-                                            <th>Name of the institution <br> (start with the recent eduction)</th>
+                                            <th>To <br> M/D/Y <br> Present</th>
+                                            <th>Title, duties and <br> responsibilities <br> (number of hours worked per week)</th>
                                             <th>City,Country</th>
-                                            <th>Certificate, Diploma <br> or degree issued, <br>field of study and major <br>(as it is indicated in your diploma)</th>
+                                            <th>Name of the employer </th>
                                         </tr>
                                         @for ($i = 0; $i < 5; $i++)
                                             <tr>
-                                                <td><input type="text" placeholder="from year" name="from_month_or_year[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="to year" name="to_month_or_year[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="institute" name="name_of_institution[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="city" name="city_country[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="result" name="certificate_degree[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="from year" name="experience_from_month_or_year[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="to year" name="experience_to_month_or_year[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="institute" name="experience_name_of_institution[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="city" name="experience_city_country[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="result" name="experience_certificate_degree[]" {{$i==0?'required':''}}></td>
                                             </tr>
                                         @endfor
+                                    </table>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="">
+                                        Knowledge of English (Please mark “X” or indicate your IELTS-General or CELPIP-G score)
+                                    </label>
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <th></th>
+                                            <th>High</th>
+                                            <th>Moderate</th>
+                                            <th>Basic</th>
+                                            <th>None</th>
+                                            <th>IELTS-G</th>
+                                            <th>CELPIP-G</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Speak</td>
+                                            <td><input type="text" placeholder="from year" name="speak_high[]"></td>
+                                            <td><input type="text" placeholder="to year" name="speak_modarate[]"></td>
+                                            <td><input type="text" placeholder="institute" name="speak_basic[]"></td>
+                                            <td><input type="text" placeholder="city" name="speak_none[]"></td>
+                                            <td><input type="text" placeholder="result" name="speak_ielts_g[]"></td>
+                                            <td><input type="text" placeholder="result" name="speak_celpip_g[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Listen</td>
+                                            <td><input type="text" placeholder="from year" name="listen_high[]"></td>
+                                            <td><input type="text" placeholder="to year" name="listen_modarate[]"></td>
+                                            <td><input type="text" placeholder="institute" name="listen_basic[]"></td>
+                                            <td><input type="text" placeholder="city" name="listen_none[]"></td>
+                                            <td><input type="text" placeholder="result" name="listen_ielts_g[]"></td>
+                                            <td><input type="text" placeholder="result" name="listen_celpip_g[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Read</td>
+                                            <td><input type="text" placeholder="from year" name="read_high[]"></td>
+                                            <td><input type="text" placeholder="to year" name="read_modarate[]"></td>
+                                            <td><input type="text" placeholder="institute" name="read_basic[]"></td>
+                                            <td><input type="text" placeholder="city" name="read_none[]"></td>
+                                            <td><input type="text" placeholder="result" name="read_ielts_g[]"></td>
+                                            <td><input type="text" placeholder="result" name="read_celpip_g[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Write</td>
+                                            <td><input type="text" placeholder="from year" name="write_high[]"></td>
+                                            <td><input type="text" placeholder="to year" name="write_modarate[]"></td>
+                                            <td><input type="text" placeholder="institute" name="write_basic[]"></td>
+                                            <td><input type="text" placeholder="city" name="write_none[]"></td>
+                                            <td><input type="text" placeholder="result" name="write_ielts_g[]"></td>
+                                            <td><input type="text" placeholder="result" name="write_celpip_g[]"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="">
+                                        If you indicated the score, please provide the date you took the test and copy of the test.
+                                    </label>
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <td colspan="4"></td>
+                                            <td colspan="3">
+                                                <input type="text" placeholder="from year" name="french_date[]">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th></th>
+                                            <th>High</th>
+                                            <th>Moderate</th>
+                                            <th>Basic</th>
+                                            <th>None</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <td>Speak</td>
+                                            <td><input type="text" placeholder="from year" name="french_speak_high[]"></td>
+                                            <td><input type="text" placeholder="to year" name="french_speak_modarate[]"></td>
+                                            <td><input type="text" placeholder="institute" name="french_speak_basic[]"></td>
+                                            <td><input type="text" placeholder="city" name="french_speak_none[]"></td>
+                                            <td><input type="text" placeholder="result" name="french_speak_ielts_g[]"></td>
+                                            <td><input type="text" placeholder="result" name="french_speak_celpip_g[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Listen</td>
+                                            <td><input type="text" placeholder="from year" name="french_listen_high[]"></td>
+                                            <td><input type="text" placeholder="to year" name="french_listen_modarate[]"></td>
+                                            <td><input type="text" placeholder="institute" name="french_listen_basic[]"></td>
+                                            <td><input type="text" placeholder="city" name="french_listen_none[]"></td>
+                                            <td><input type="text" placeholder="result" name="french_listen_ielts_g[]"></td>
+                                            <td><input type="text" placeholder="result" name="french_listen_celpip_g[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Read</td>
+                                            <td><input type="text" placeholder="from year" name="french_read_high[]"></td>
+                                            <td><input type="text" placeholder="to year" name="french_read_modarate[]"></td>
+                                            <td><input type="text" placeholder="institute" name="french_read_basic[]"></td>
+                                            <td><input type="text" placeholder="city" name="french_read_none[]"></td>
+                                            <td><input type="text" placeholder="result" name="french_read_ielts_g[]"></td>
+                                            <td><input type="text" placeholder="result" name="french_read_celpip_g[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Write</td>
+                                            <td><input type="text" placeholder="from year" name="french_write_high[]"></td>
+                                            <td><input type="text" placeholder="to year" name="french_write_modarate[]"></td>
+                                            <td><input type="text" placeholder="institute" name="french_write_basic[]"></td>
+                                            <td><input type="text" placeholder="city" name="french_write_none[]"></td>
+                                            <td><input type="text" placeholder="result" name="french_write_ielts_g[]"></td>
+                                            <td><input type="text" placeholder="result" name="french_write_celpip_g[]"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="">
+                                        If you indicated the score, please provide the date you took the test and copy of the test.
+                                    </label>
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <td style="width: 70%"></td>
+                                            <td>
+                                                <input type="date" placeholder="from year" name="question_date[]">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <td style="width: 70%">
+                                                <textarea disabled class="form-control" type="text" placeholder="to year" value="" name="question_1[]">Have you ever remained beyond the validity of your status, attended school or worked without authorization in Canada or any other country? If “yes”, please provide details</textarea>
+                                            </td>
+                                            <td style="width: 15%">YES</td>
+                                            <td style="width: 15%">NO</td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_1_yes[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_1_no[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 70%">
+                                                Have you ever remained beyond the validity of your status, attended school or worked without authorization in Canada or any other country? If “yes”, please provide details
+                                            </th>
+                                            <td style="width: 15%">YES</td>
+                                            <td style="width: 15%">NO</td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 70%">
+                                                Have you ever been refused any kind of visa, admission, or been ordered to leave Canada or any other country? If “yes”, please provide details. 
+                                            </th>
+                                            <td style="width: 15%"><input type="checkbox" name="question_1_yes[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_1_no[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 70%">
+                                                Have you legally worked in Canada for one year or longer? If so, how long?
+                                            </th>
+                                            <td style="width: 15%"><input type="checkbox" name="question_2_yes[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_2_no[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 70%">
+                                                Have you ever committed an offence or been charged with an offence in any country?
+                                            </th>
+                                            <td style="width: 15%"><input type="checkbox" name="question_3_yes[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_3_no[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 70%">
+                                                What is your verifiable personal net worth in Canadian Dollar?
+                                            </th>
+                                            <td style="width: 15%"><input type="checkbox" name="question_4_yes[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_4_no[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 70%">
+                                                Have you ever submitted an application for immigration to Canada in the past? If yes, please provide details.
+                                            </th>
+                                            <td style="width: 15%"><input type="checkbox" name="question_5_yes[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_5_no[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 70%">
+                                                How much money you are able to bring for settling in Canada (Canadian Currency)?
+                                            </th>
+                                            <td style="width: 15%"><input type="checkbox" name="question_6_yes[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_6_no[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 70%">
+                                                Do you have a relative or relatives in Canada, such as a parent, grandparent, child, grandchild, child of a parent (Sibling), child of a grandparent (aunt or uncle), or grandchild of parents (niece or nephew), who is 18 years or older and living in Canada, and who is a Canadian citizen or permanent resident)?
+                                                If so, what is their status in Canada and where do they reside?
+                                            </th>
+                                            <td style="width: 15%"><input type="checkbox" name="question_7_yes[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_7_no[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 70%">
+                                                Do you have friends in Canada? If so, please indicate their city of residence.
+                                            </th>
+                                            <td style="width: 15%"><input type="checkbox" name="question_8_yes[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_8_no[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 70%">
+                                                Any other information that you think might be of assistance?
+                                            </th>
+                                            <td style="width: 15%"><input type="checkbox" name="question_9_yes[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_9_no[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="3" style="text-align: center;">How did you hear about us?</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 70%">
+                                                Facebook:
+                                            </th>
+                                            <td style="width: 15%" colspan="2"><input type="checkbox" name="question_from_print_no[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 70%">                                      
+                                                Friends:
+                                            </th>
+                                            <td style="width: 15%" colspan="2"><input type="checkbox" name="question_from_friend_no[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 70%">
+                                                Printed flyers:
+                                            </th>
+                                            <td style="width: 15%" colspan="2"><input type="checkbox" name="question_from_print_flayer_no[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 70%">
+                                                Other:
+                                            </th>
+                                            <td style="width: 15%" colspan="2"><input type="text" name="question_10_no[]"></td>
+                                        </tr>
                                     </table>
                                 </div>
 

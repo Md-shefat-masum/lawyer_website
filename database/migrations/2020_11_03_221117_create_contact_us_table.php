@@ -33,7 +33,9 @@ class CreateContactUsTable extends Migration
             $table->string('citizenship',100)->nullable();
             $table->text('residential_address')->nullable();
             $table->text('legal_status')->nullable();
+
             $table->text('cirtificate')->nullable();
+            $table->text('experience')->nullable();
 
             $table->string('website',100)->nullable();
             $table->text('message')->nullable();
