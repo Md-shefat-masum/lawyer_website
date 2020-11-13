@@ -217,9 +217,9 @@
                     // dd($datas[0])
                 @endphp
                 <td>Speak</td>
-                @for ($i = 0; $i < 6; $i++)
-                    @if (isset($datas[0][$i]))
-                        <td style="text-align: center;">{{ $datas[0][$i] }}</td>
+                @for ($i = 1; $i < 7; $i++)
+                    @if (isset($datas[1][$i]))
+                        <td style="text-align: center;">{{ $datas[1][$i] }}</td>
                     @endif
                 @endfor
             </tr>
@@ -247,6 +247,34 @@
                     @endif
                 @endfor
             </tr>
+        </table>
+
+        <table class="table text-center table-bordered">
+            <tr>
+                <th colspan="5">Questions</th>
+            </tr>
+            <tr>
+                <th>Question</th>
+                <th>Answer</th>
+            </tr>
+            @php 
+                $datas = json_decode($data->questions);
+                // dd($datas)
+            @endphp
+            @for ($i = 1; $i < 10; $i++)
+                <tr>
+                    {{-- @for ($j = 0; $j < 2; $j++) --}}
+                        @if (isset($datas[$i][0]))
+                            <td style="text-align: center;width:70%;text-align: left;white-space: break-spaces;">{{ $datas[$i][0] }}</td>
+                            <td style="text-align: center;width:30%">{{ $datas[$i][1] }}</td>
+                        @endif
+                    {{-- @endfor --}}
+                </tr>
+            @endfor
+            <tr>
+                td
+            </tr>
+
         </table>
 
         

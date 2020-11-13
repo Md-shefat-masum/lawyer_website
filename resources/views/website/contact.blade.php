@@ -336,7 +336,7 @@
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_1[]" class="form-control" disabled>Have you ever been refused any kind of visa, admission, or been ordered to leave Canada or any other country? If “yes”, please provide details. 
+                                                <textarea name="question_1[]" class="form-control" readonly>Have you ever been refused any kind of visa, admission, or been ordered to leave Canada or any other country? If “yes”, please provide details. 
                                                 </textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_1[]"></td>
@@ -344,7 +344,7 @@
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_2[]" class="form-control" disabled>Have you legally worked in Canada for one year or longer? If so, how long?
+                                                <textarea name="question_2[]" class="form-control" readonly>Have you legally worked in Canada for one year or longer? If so, how long?
                                                 </textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_2[]"></td>
@@ -352,7 +352,7 @@
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_3[]" class="form-control" disabled>Have you ever committed an offence or been charged with an offence in any country?
+                                                <textarea name="question_3[]" class="form-control" readonly>Have you ever committed an offence or been charged with an offence in any country?
                                                 </textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_3[]"></td>
@@ -360,7 +360,7 @@
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_4[]" class="form-control" disabled>What is your verifiable personal net worth in Canadian Dollar?
+                                                <textarea name="question_4[]" class="form-control" readonly>What is your verifiable personal net worth in Canadian Dollar?
                                                 </textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_4[]"></td>
@@ -368,7 +368,7 @@
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_5[]" class="form-control" disabled>Have you ever submitted an application for immigration to Canada in the past? If yes, please provide details.
+                                                <textarea name="question_5[]" class="form-control" readonly>Have you ever submitted an application for immigration to Canada in the past? If yes, please provide details.
                                                 </textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_5[]"></td>
@@ -376,7 +376,7 @@
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_6[]" class="form-control" disabled>How much money you are able to bring for settling in Canada (Canadian Currency)?
+                                                <textarea name="question_6[]" class="form-control" readonly>How much money you are able to bring for settling in Canada (Canadian Currency)?
                                                 </textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_6[]"></td>
@@ -384,7 +384,7 @@
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_7[]" class="form-control" disabled>Do you have a relative or relatives in Canada, such as a parent, grandparent, child, grandchild, child of a parent (Sibling), child of a grandparent (aunt or uncle), or grandchild of parents (niece or nephew), who is 18 years or older and living in Canada, and who is a Canadian citizen or permanent resident)?If so, what is their status in Canada and where do they reside?
+                                                <textarea name="question_7[]" class="form-control" readonly>Do you have a relative or relatives in Canada, such as a parent, grandparent, child, grandchild, child of a parent (Sibling), child of a grandparent (aunt or uncle), or grandchild of parents (niece or nephew), who is 18 years or older and living in Canada, and who is a Canadian citizen or permanent resident)?If so, what is their status in Canada and where do they reside?
                                                 </textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_7[]"></td>
@@ -392,7 +392,7 @@
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_8[]" class="form-control" disabled>Do you have friends in Canada? If so, please indicate their city of residence.
+                                                <textarea name="question_8[]" class="form-control" readonly>Do you have friends in Canada? If so, please indicate their city of residence.
                                                 </textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_8[]"></td>
@@ -400,7 +400,7 @@
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_9[]" class="form-control" disabled>Any other information that you think might be of assistance?
+                                                <textarea name="question_9[]" class="form-control" readonly>Any other information that you think might be of assistance?
                                                 </textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_9[]"></td>
@@ -411,27 +411,29 @@
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_from[]" class="form-control" disabled>Facebook:</textarea>
+                                                <textarea name="question_from[]" class="form-control" readonly>Facebook:</textarea>
                                             </th>
                                             <td style="width: 15%" colspan="2"><input type="checkbox" name="question_from[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">   
-                                                <textarea name="question_from[]" class="form-control" disabled>Friends:</textarea>    
+                                                <textarea name="question_from[]" class="form-control" readonly>Friends:</textarea>    
                                             </th>
                                             <td style="width: 15%" colspan="2"><input type="checkbox" name="question_from[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_from[]" class="form-control" disabled>Printed flyers:</textarea>
+                                                <textarea name="question_from[]" class="form-control" readonly>Printed flyers:</textarea>
                                             </th>
                                             <td style="width: 15%" colspan="2"><input type="checkbox" name="question_from[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_from[]" class="form-control" disabled>Other: (pls specify)</textarea>
+                                                <textarea name="question_from[]" class="form-control" readonly>Other: (pls specify)</textarea>
                                             </th>
-                                            <td style="width: 15%" colspan="2"><input type="text" name="question_from[]"></td>
+                                            <td style="width: 15%" colspan="2">
+                                                <input type="text" name="question_from[]">
+                                            </td>
                                         </tr>
                                     </table>
                                 </div>
