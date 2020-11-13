@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="address-text">
                                     <h5 class="contact-title">Office Phone</h5>
-                                    <a href="#">{{ $basic_information->mobile_no_1  }}</a>
+                                    <a href="#">{{ $basic_information->mobile_1  }}</a>
                                 </div>
                             </div>
                             <div class="address-item ml--5 mb-20">
@@ -223,7 +223,7 @@
                                             <td><input type="text" placeholder="from year" name="speak_high[]"></td>
                                             <td><input type="text" placeholder="to year" name="speak_modarate[]"></td>
                                             <td><input type="text" placeholder="institute" name="speak_basic[]"></td>
-                                            <td><input type="text" placeholder="city" name="speak_none[]"></td>
+                                            <td><input type="text" placeholder="city" name="speakne[]"></td>
                                             <td><input type="text" placeholder="result" name="speak_ielts_g[]"></td>
                                             <td><input type="text" placeholder="result" name="speak_celpip_g[]"></td>
                                         </tr>
@@ -232,7 +232,7 @@
                                             <td><input type="text" placeholder="from year" name="listen_high[]"></td>
                                             <td><input type="text" placeholder="to year" name="listen_modarate[]"></td>
                                             <td><input type="text" placeholder="institute" name="listen_basic[]"></td>
-                                            <td><input type="text" placeholder="city" name="listen_none[]"></td>
+                                            <td><input type="text" placeholder="city" name="listenne[]"></td>
                                             <td><input type="text" placeholder="result" name="listen_ielts_g[]"></td>
                                             <td><input type="text" placeholder="result" name="listen_celpip_g[]"></td>
                                         </tr>
@@ -241,7 +241,7 @@
                                             <td><input type="text" placeholder="from year" name="read_high[]"></td>
                                             <td><input type="text" placeholder="to year" name="read_modarate[]"></td>
                                             <td><input type="text" placeholder="institute" name="read_basic[]"></td>
-                                            <td><input type="text" placeholder="city" name="read_none[]"></td>
+                                            <td><input type="text" placeholder="city" name="readne[]"></td>
                                             <td><input type="text" placeholder="result" name="read_ielts_g[]"></td>
                                             <td><input type="text" placeholder="result" name="read_celpip_g[]"></td>
                                         </tr>
@@ -250,7 +250,7 @@
                                             <td><input type="text" placeholder="from year" name="write_high[]"></td>
                                             <td><input type="text" placeholder="to year" name="write_modarate[]"></td>
                                             <td><input type="text" placeholder="institute" name="write_basic[]"></td>
-                                            <td><input type="text" placeholder="city" name="write_none[]"></td>
+                                            <td><input type="text" placeholder="city" name="writene[]"></td>
                                             <td><input type="text" placeholder="result" name="write_ielts_g[]"></td>
                                             <td><input type="text" placeholder="result" name="write_celpip_g[]"></td>
                                         </tr>
@@ -282,7 +282,7 @@
                                             <td><input type="text" placeholder="from year" name="french_speak_high[]"></td>
                                             <td><input type="text" placeholder="to year" name="french_speak_modarate[]"></td>
                                             <td><input type="text" placeholder="institute" name="french_speak_basic[]"></td>
-                                            <td><input type="text" placeholder="city" name="french_speak_none[]"></td>
+                                            <td><input type="text" placeholder="city" name="french_speakne[]"></td>
                                             <td><input type="text" placeholder="result" name="french_speak_ielts_g[]"></td>
                                             <td><input type="text" placeholder="result" name="french_speak_celpip_g[]"></td>
                                         </tr>
@@ -291,7 +291,7 @@
                                             <td><input type="text" placeholder="from year" name="french_listen_high[]"></td>
                                             <td><input type="text" placeholder="to year" name="french_listen_modarate[]"></td>
                                             <td><input type="text" placeholder="institute" name="french_listen_basic[]"></td>
-                                            <td><input type="text" placeholder="city" name="french_listen_none[]"></td>
+                                            <td><input type="text" placeholder="city" name="french_listenne[]"></td>
                                             <td><input type="text" placeholder="result" name="french_listen_ielts_g[]"></td>
                                             <td><input type="text" placeholder="result" name="french_listen_celpip_g[]"></td>
                                         </tr>
@@ -300,7 +300,7 @@
                                             <td><input type="text" placeholder="from year" name="french_read_high[]"></td>
                                             <td><input type="text" placeholder="to year" name="french_read_modarate[]"></td>
                                             <td><input type="text" placeholder="institute" name="french_read_basic[]"></td>
-                                            <td><input type="text" placeholder="city" name="french_read_none[]"></td>
+                                            <td><input type="text" placeholder="city" name="french_readne[]"></td>
                                             <td><input type="text" placeholder="result" name="french_read_ielts_g[]"></td>
                                             <td><input type="text" placeholder="result" name="french_read_celpip_g[]"></td>
                                         </tr>
@@ -309,7 +309,7 @@
                                             <td><input type="text" placeholder="from year" name="french_write_high[]"></td>
                                             <td><input type="text" placeholder="to year" name="french_write_modarate[]"></td>
                                             <td><input type="text" placeholder="institute" name="french_write_basic[]"></td>
-                                            <td><input type="text" placeholder="city" name="french_write_none[]"></td>
+                                            <td><input type="text" placeholder="city" name="french_writene[]"></td>
                                             <td><input type="text" placeholder="result" name="french_write_ielts_g[]"></td>
                                             <td><input type="text" placeholder="result" name="french_write_celpip_g[]"></td>
                                         </tr>
@@ -330,15 +330,6 @@
                                     </table>
                                     <table class="table table-bordered">
                                         <tr>
-                                            <td style="width: 70%">
-                                                <textarea disabled class="form-control" type="text" placeholder="to year" value="" name="question_1[]">Have you ever remained beyond the validity of your status, attended school or worked without authorization in Canada or any other country? If “yes”, please provide details</textarea>
-                                            </td>
-                                            <td style="width: 15%">YES</td>
-                                            <td style="width: 15%">NO</td>
-                                            <td style="width: 15%"><input type="checkbox" name="question_1_yes[]"></td>
-                                            <td style="width: 15%"><input type="checkbox" name="question_1_no[]"></td>
-                                        </tr>
-                                        <tr>
                                             <th style="width: 70%">
                                                 Have you ever remained beyond the validity of your status, attended school or worked without authorization in Canada or any other country? If “yes”, please provide details
                                             </th>
@@ -347,94 +338,112 @@
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                Have you ever been refused any kind of visa, admission, or been ordered to leave Canada or any other country? If “yes”, please provide details. 
+                                                <textarea name="question_1[]" disabled>
+                                                    Have you ever been refused any kind of visa, admission, or been ordered to leave Canada or any other country? If “yes”, please provide details. 
+                                                </textarea>
                                             </th>
-                                            <td style="width: 15%"><input type="checkbox" name="question_1_yes[]"></td>
-                                            <td style="width: 15%"><input type="checkbox" name="question_1_no[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_1"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_1"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                Have you legally worked in Canada for one year or longer? If so, how long?
+                                                <textarea name="question_2[]" disabled>
+                                                    Have you legally worked in Canada for one year or longer? If so, how long?
+                                                </textarea>
                                             </th>
-                                            <td style="width: 15%"><input type="checkbox" name="question_2_yes[]"></td>
-                                            <td style="width: 15%"><input type="checkbox" name="question_2_no[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_2[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_2[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                Have you ever committed an offence or been charged with an offence in any country?
+                                                <textarea name="question_3[]" disabled>
+                                                    Have you ever committed an offence or been charged with an offence in any country?
+                                                </textarea>
                                             </th>
-                                            <td style="width: 15%"><input type="checkbox" name="question_3_yes[]"></td>
-                                            <td style="width: 15%"><input type="checkbox" name="question_3_no[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_3[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_3[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                What is your verifiable personal net worth in Canadian Dollar?
+                                                <textarea name="question_4[]" disabled>
+                                                    What is your verifiable personal net worth in Canadian Dollar?
+                                                </textarea>
                                             </th>
-                                            <td style="width: 15%"><input type="checkbox" name="question_4_yes[]"></td>
-                                            <td style="width: 15%"><input type="checkbox" name="question_4_no[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_4[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_4[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                Have you ever submitted an application for immigration to Canada in the past? If yes, please provide details.
+                                                <textarea name="question_5[]" disabled>
+                                                    Have you ever submitted an application for immigration to Canada in the past? If yes, please provide details.
+                                                </textarea>
                                             </th>
-                                            <td style="width: 15%"><input type="checkbox" name="question_5_yes[]"></td>
-                                            <td style="width: 15%"><input type="checkbox" name="question_5_no[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_5[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_5[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                How much money you are able to bring for settling in Canada (Canadian Currency)?
+                                                <textarea name="question_6[]" disabled>
+                                                    How much money you are able to bring for settling in Canada (Canadian Currency)?
+                                                </textarea>
                                             </th>
-                                            <td style="width: 15%"><input type="checkbox" name="question_6_yes[]"></td>
-                                            <td style="width: 15%"><input type="checkbox" name="question_6_no[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_6[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_6[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                Do you have a relative or relatives in Canada, such as a parent, grandparent, child, grandchild, child of a parent (Sibling), child of a grandparent (aunt or uncle), or grandchild of parents (niece or nephew), who is 18 years or older and living in Canada, and who is a Canadian citizen or permanent resident)?
-                                                If so, what is their status in Canada and where do they reside?
+                                                <textarea name="question_7[]" disabled>
+                                                    Do you have a relative or relatives in Canada, such as a parent, grandparent, child, grandchild, child of a parent (Sibling), child of a grandparent (aunt or uncle), or grandchild of parents (niece or nephew), who is 18 years or older and living in Canada, and who is a Canadian citizen or permanent resident)?
+                                                    If so, what is their status in Canada and where do they reside?
+                                                </textarea>
                                             </th>
-                                            <td style="width: 15%"><input type="checkbox" name="question_7_yes[]"></td>
-                                            <td style="width: 15%"><input type="checkbox" name="question_7_no[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_7[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_7[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                Do you have friends in Canada? If so, please indicate their city of residence.
+                                                <textarea name="question_8[]" disabled>
+                                                    Do you have friends in Canada? If so, please indicate their city of residence.
+                                                </textarea>
                                             </th>
-                                            <td style="width: 15%"><input type="checkbox" name="question_8_yes[]"></td>
-                                            <td style="width: 15%"><input type="checkbox" name="question_8_no[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_8[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_8[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                Any other information that you think might be of assistance?
+                                                <textarea name="question_9[]" disabled>
+                                                    Any other information that you think might be of assistance?
+                                                </textarea>
                                             </th>
-                                            <td style="width: 15%"><input type="checkbox" name="question_9_yes[]"></td>
-                                            <td style="width: 15%"><input type="checkbox" name="question_9_no[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_9[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" name="question_9[]"></td>
                                         </tr>
                                         <tr>
                                             <th colspan="3" style="text-align: center;">How did you hear about us?</th>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                Facebook:
+                                                <textarea name="question_from[]" disabled>Facebook:</textarea>
                                             </th>
-                                            <td style="width: 15%" colspan="2"><input type="checkbox" name="question_from_print_no[]"></td>
+                                            <td style="width: 15%" colspan="2"><input type="checkbox" name="question_from[]"></td>
                                         </tr>
                                         <tr>
-                                            <th style="width: 70%">                                      
-                                                Friends:
+                                            <th style="width: 70%">   
+                                                <textarea name="question_from[]" disabled>Friends:</textarea>    
                                             </th>
-                                            <td style="width: 15%" colspan="2"><input type="checkbox" name="question_from_friend_no[]"></td>
-                                        </tr>
-                                        <tr>
-                                            <th style="width: 70%">
-                                                Printed flyers:
-                                            </th>
-                                            <td style="width: 15%" colspan="2"><input type="checkbox" name="question_from_print_flayer_no[]"></td>
+                                            <td style="width: 15%" colspan="2"><input type="checkbox" name="question_from[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                Other:
+                                                <textarea name="question_from[]" disabled>Printed flyers:</textarea>
                                             </th>
-                                            <td style="width: 15%" colspan="2"><input type="text" name="question_10_no[]"></td>
+                                            <td style="width: 15%" colspan="2"><input type="checkbox" name="question_from[]"></td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 70%">
+                                                <textarea name="question_from[]" disabled>Other: (pls specify)</textarea>
+                                            </th>
+                                            <td style="width: 15%" colspan="2"><input type="text" name="question_from[]"></td>
                                         </tr>
                                     </table>
                                 </div>

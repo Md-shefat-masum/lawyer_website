@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Fri Nov 13 2020 23:28:09 GMT+0600 (Bangladesh Standard Time)
+------------------------------------------------------
+
+Modified files:
+* database/migrations/2020_11_03_221117_create_contact_us_table.php
+* resources/views/website/contact.blade.php
+
+
+Created files:
+* .autogit/logs/log-13-10-2020-22-57-52.txt
+
+
+Deleted files:
+
+
+Renamed files:
