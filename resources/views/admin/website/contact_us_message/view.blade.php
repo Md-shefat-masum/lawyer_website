@@ -147,10 +147,109 @@
             @endforeach
         </table>
 
-        @php 
-            $datas = json_decode($data->english_speak);
-            dd($datas[0])
-        @endphp
+        <table class="table text-center">
+            <tr>
+                <th colspan="5">Knowledge of English</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>High</th>
+                <th>Moderate</th>
+                <th>Basic</th>
+                <th>None</th>
+                <th>IELTS-G</th>
+                <th>CELPIP-G</th>
+            </tr>
+            <tr>
+                @php 
+                    $datas = json_decode($data->english_speak);
+                    // dd($datas[0])
+                @endphp
+                <td>Speak</td>
+                @for ($i = 0; $i < 6; $i++)
+                    @if (isset($datas[0][$i]))
+                        <td style="text-align: center;">{{ $datas[0][$i] }}</td>
+                    @endif
+                @endfor
+            </tr>
+            <tr>
+                <td>Listen</td>
+                @for ($i = 0; $i < 6; $i++)
+                    @if (isset($datas[1][$i]))
+                        <td style="text-align: center;">{{ $datas[1][$i] }}</td>
+                    @endif
+                @endfor
+            </tr>
+            <tr>
+                <td>Read</td>
+                @for ($i = 0; $i < 6; $i++)
+                    @if (isset($datas[2][$i]))
+                        <td style="text-align: center;">{{ $datas[2][$i] }}</td>
+                    @endif
+                @endfor
+            </tr>
+            <tr>
+                <td>Write</td>
+                @for ($i = 0; $i < 6; $i++)
+                    @if (isset($datas[3][$i]))
+                        <td style="text-align: center;">{{ $datas[3][$i] }}</td>
+                    @endif
+                @endfor
+            </tr>
+        </table>
+
+        <table class="table text-center">
+            <tr>
+                <th colspan="5">Knowledge of French</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>High</th>
+                <th>Moderate</th>
+                <th>Basic</th>
+                <th>None</th>
+                <th>IELTS-G</th>
+                <th>CELPIP-G</th>
+            </tr>
+            <tr>
+                @php 
+                    $datas = json_decode($data->french_speak);
+                    // dd($datas[0])
+                @endphp
+                <td>Speak</td>
+                @for ($i = 0; $i < 6; $i++)
+                    @if (isset($datas[0][$i]))
+                        <td style="text-align: center;">{{ $datas[0][$i] }}</td>
+                    @endif
+                @endfor
+            </tr>
+            <tr>
+                <td>Listen</td>
+                @for ($i = 0; $i < 6; $i++)
+                    @if (isset($datas[1][$i]))
+                        <td style="text-align: center;">{{ $datas[1][$i] }}</td>
+                    @endif
+                @endfor
+            </tr>
+            <tr>
+                <td>Read</td>
+                @for ($i = 0; $i < 6; $i++)
+                    @if (isset($datas[2][$i]))
+                        <td style="text-align: center;">{{ $datas[2][$i] }}</td>
+                    @endif
+                @endfor
+            </tr>
+            <tr>
+                <td>Write</td>
+                @for ($i = 0; $i < 6; $i++)
+                    @if (isset($datas[3][$i]))
+                        <td style="text-align: center;">{{ $datas[3][$i] }}</td>
+                    @endif
+                @endfor
+            </tr>
+        </table>
+
+        
 
         <style>
             .table td, .table th{

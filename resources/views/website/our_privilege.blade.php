@@ -76,6 +76,11 @@
             font-size: 24px!important;
             line-height: 24px!important;
         }
+        .content-wrap p a{
+            display: inline-block;
+            border: 1px solid #38b64a !important;
+            padding: 5px 28px;
+        }
     </style>
 
 @endsection

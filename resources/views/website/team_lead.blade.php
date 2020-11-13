@@ -21,7 +21,7 @@
                 </div> --}}
                 <div class="col-12">
                     <div class="detail-part">
-                        <img src="{{ asset(''.App\TeamLead::first()->image) }}" style="width: 50%; margin: ;float: left;" alt="">
+                        <img src="{{ asset(''.App\TeamLead::first()->image) }}" style="width: 50%; margin: 15px 30px 20px 0px;float: left;" alt="">
                         <div class="title-part mb-45 md-mb-25">
                             <h3 class="title">{{ $basic_information->full_name }}</h3>
                         </div>
@@ -38,4 +38,4 @@
     </div>
     <!-- Team Single Section End -->
 
-    @endse
+    @endsection

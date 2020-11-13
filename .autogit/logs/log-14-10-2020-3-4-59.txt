@@ -1,0 +1,30 @@
+-------------------- Auto-Git Log --------------------
+		Sat Nov 14 2020 03:04:59 GMT+0600 (Bangladesh Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/WebsiteController.php
+* public/contents/website/css/custom.css
+* public/contents/website/css/custom.less
+* public/uploads/area_of_service/Ec4xLnEOCGdvB2WVqkPP2KDOPlhucfkO38aMGkXc.jpeg
+* resources/views/admin/website/contact_us_message/view.blade.php
+* resources/views/website/about.blade.php
+* resources/views/website/home_page_include/about.blade.php
+* resources/views/website/home_page_include/free_consultation.blade.php
+* resources/views/website/index.blade.php
+* resources/views/website/team_lead.blade.php
+
+
+Created files:
+* .autogit/logs/log-14-10-2020-2-34-36.txt
+* public/contents/website/a.JPG
+* public/contents/website/b.jpg
+* public/contents/website/c.jpg
+* public/uploads/descriptive_about/5ThDCDtZuDxlWC5J5z3GH62yIMZOtQZsjZGoaBzj.jpeg
+* public/uploads/short_about/tmkG7iYqEYPdL5bSLuRmiLn90810y8Shjjz2dK1f.jpeg
+
+
+Deleted files:
+
+
+Renamed files:
