@@ -17,6 +17,7 @@ class CreateFreeConsultationsTable extends Migration
             $table->id();
             $table->string('name',100)->nullable();
             $table->string('email',100)->nullable();
+            $table->string('subject',100)->nullable();
             $table->string('phone',100)->nullable();
             $table->string('law_name',100)->nullable();
             $table->text('message')->nullable();

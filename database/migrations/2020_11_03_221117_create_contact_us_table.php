@@ -15,9 +15,26 @@ class CreateContactUsTable extends Migration
     {
         Schema::create('contact_us', function (Blueprint $table) {
             $table->id();
-            $table->string('name',100)->nullable();
+            $table->string('first_name',100)->nullable();
+            $table->string('middle_name',100)->nullable();
+            $table->string('last_name',100)->nullable();
+
+            $table->string('spouse_first_name',100)->nullable();
+            $table->string('spouse_middle_name',100)->nullable();
+            $table->string('spouse_last_name',100)->nullable();
+
+            $table->string('gender',100)->nullable();
+            $table->string('date_of_birth',100)->nullable();
+            $table->string('marital_status',100)->nullable();
+            $table->string('number_of_children',100)->nullable();
+
             $table->string('email',100)->nullable();
             $table->string('phone',100)->nullable();
+            $table->string('citizenship',100)->nullable();
+            $table->text('residential_address')->nullable();
+            $table->text('legal_status')->nullable();
+            $table->text('cirtificate')->nullable();
+
             $table->string('website',100)->nullable();
             $table->text('message')->nullable();
             $table->integer('creator')->nullable();

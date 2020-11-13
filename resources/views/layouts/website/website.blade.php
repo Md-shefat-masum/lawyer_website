@@ -176,7 +176,7 @@
                         <ul class="footer-address ">
                             <li><i class="fa fa-globe "></i><span>{{ $basic_information->address }} </span></li>
                             <li><i class="fa fa-phone "></i><a href="# ">{{ $basic_information->mobile_no_1 }}  (office), {{ $basic_information->mobile_no_2 }}  (cell) </a></li>
-                            <li><i class="fa fa-envelope-o "></i><a href="# ">{{ $basic_information->email_1 }}  , {{ $basic_information->email_2 }} </a></li>
+                            <li><i class="fa fa-envelope-o "></i><a href="# ">{{ $basic_information->email_2 }} </a></li>
                             <li><i class="fa fa-clock-o "></i>{{ $basic_information->work_time }} </li>
                         </ul>
                     </div>

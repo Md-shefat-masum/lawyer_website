@@ -73,35 +73,35 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label for="">First Name</label>
-                                    <input type="text" name="name" placeholder="First Name ( in capital letters )" required>
+                                    <input type="text" name="first_name" placeholder="First Name ( in capital letters )" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="">Middle Name</label>
-                                    <input type="text" name="name" placeholder="Middle Name ( in capital letters )" required>
+                                    <input type="text" name="middle_name" placeholder="Middle Name ( in capital letters )" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="">Last Name</label>
-                                    <input type="text" name="name" placeholder="Last Name ( in capital letters )" required>
+                                    <input type="text" name="last_name" placeholder="Last Name ( in capital letters )" required>
                                 </div>
                                 <div class="col-md-6 col-sm-0"></div>
 
                                 <div class="col-md-6">
                                     <label for="">Spouse First Name</label>
-                                    <input type="text" name="name" placeholder="Spouse,s First Name ( in capital letters )" required>
+                                    <input type="text" name="spouse_first_name" placeholder="Spouse,s First Name ( in capital letters )" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="">Spouse Middle Name</label>
-                                    <input type="text" name="name" placeholder="Spouse,s Middle Name ( in capital letters )" required>
+                                    <input type="text" name="spouse_middle_name" placeholder="Spouse,s Middle Name ( in capital letters )" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="">Spouse Last Name</label>
-                                    <input type="text" name="name" placeholder="Spouse,s Last Name ( in capital letters )" required>
+                                    <input type="text" name="spouse_last_name" placeholder="Spouse,s Last Name ( in capital letters )" required>
                                 </div>
                                 <div class="col-md-6 col-sm-0"></div>
 
                                 <div class="col-md-6">
                                     <label for="">Gender</label>
-                                    <select name="" id="" class="form-control">
+                                    <select name="gender" id="" class="form-control">
                                         <option value="male">male</option>
                                         <option value="female">female</option>
                                         <option value="other">other</option>
@@ -115,7 +115,7 @@
 
                                 <div class="col-md-6">
                                     <label for="">Marital Status</label>
-                                    <select name="" id="" class="form-control">
+                                    <select name="marital_status" id="" class="form-control">
                                         <option value="single">Single</option>
                                         <option value="married">Married</option>
                                         <option value="devorced">Devorced</option>
@@ -149,7 +149,7 @@
                                         Your legal status in the country of residence (please provide the date of your initial
                                         arrival, types of visas, dates of documented and undocumented periods of stay, if applicable)
                                     </label>
-                                    <input type="text" name="website" placeholder="Your legal status">
+                                    <input type="text" name="legal_status" placeholder="Your legal status">
                                 </div>
                                 <div class="col-12">
                                     <label for="">

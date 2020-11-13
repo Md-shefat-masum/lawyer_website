@@ -41,9 +41,11 @@ class WebsiteController extends Controller
     }
 
     public function free_consultation_submit(Request $request){
+        // dd($request);
         $this->validate($request,[
             'name' => ['required'],
             'email' => ['required'],
+            'subject' => ['required'],
             'phone' => ['required'],
             'message' => ['required'],
         ]);
@@ -52,6 +54,7 @@ class WebsiteController extends Controller
         $free_consultation->name = $request->name;
         $free_consultation->email = $request->email;
         $free_consultation->phone = $request->phone;
+        $free_consultation->subject = $request->subject;
         $free_consultation->law_name = $request->law_name;
         $free_consultation->message = $request->message;
         $free_consultation->created_at = Carbon::now()->toDateTimeString();
@@ -78,6 +81,7 @@ class WebsiteController extends Controller
     }
 
     public function contact_message_submit(Request $request){
+        dd($request);
         $this->validate($request,[
             'name' => ['required'],
             'email' => ['required'],
@@ -86,7 +90,24 @@ class WebsiteController extends Controller
         ]);
 
         $message = new ContactUs();
-        $message->name = $request->name;
+        $message->first_name = $request->first_name;
+        $message->middle_name = $request->middle_name;
+        $message->last_name = $request->last_name;
+
+        $message->spouse_first_name = $request->spouse_first_name;
+        $message->spouse_middle_name = $request->spouse_middle_name;
+        $message->spouse_last_name = $request->spouse_last_name;
+
+        $message->gender = $request->gender;
+        $message->date_of_birth = $request->date_of_birth;
+        $message->marital_status = $request->marital_status;
+        $message->number_of_children = $request->number_of_children;
+        $message->email = $request->email;
+        $message->phone = $request->phone;
+        $message->citizenship = $request->citizenship;
+        $message->residential_address = $request->residential_address;
+        $message->residential_address = $request->residential_address;
+
         $message->email = $request->email;
         $message->phone = $request->phone;
         $message->website = $request->website;
