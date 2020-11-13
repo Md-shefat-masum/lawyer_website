@@ -116,28 +116,28 @@ class WebsiteController extends Controller
             }
         }
 
-        array_push($english_speak,json_encode($request->english_speak));
-        array_push($english_speak,json_encode($request->english_listen));
-        array_push($english_speak,json_encode($request->english_read));
-        array_push($english_speak,json_encode($request->english_write));
+        array_push($english_speak,($request->english_speak));
+        array_push($english_speak,($request->english_listen));
+        array_push($english_speak,($request->english_read));
+        array_push($english_speak,($request->english_write));
 
-        array_push($french_speak,json_encode($request->french_date));
-        array_push($french_speak,json_encode($request->french_speak));
-        array_push($french_speak,json_encode($request->french_listen));
-        array_push($french_speak,json_encode($request->french_read));
-        array_push($french_speak,json_encode($request->french_write));
+        array_push($french_speak,($request->french_date));
+        array_push($french_speak,($request->french_speak));
+        array_push($french_speak,($request->french_listen));
+        array_push($french_speak,($request->french_read));
+        array_push($french_speak,($request->french_write));
 
-        array_push($questions,json_encode($request->question_date));
-        array_push($questions,json_encode($request->question_1));
-        array_push($questions,json_encode($request->question_2));
-        array_push($questions,json_encode($request->question_3));
-        array_push($questions,json_encode($request->question_4));
-        array_push($questions,json_encode($request->question_5));
-        array_push($questions,json_encode($request->question_6));
-        array_push($questions,json_encode($request->question_7));
-        array_push($questions,json_encode($request->question_8));
-        array_push($questions,json_encode($request->question_9));
-        array_push($questions,json_encode($request->question_from));
+        array_push($questions,($request->question_date));
+        array_push($questions,($request->question_1));
+        array_push($questions,($request->question_2));
+        array_push($questions,($request->question_3));
+        array_push($questions,($request->question_4));
+        array_push($questions,($request->question_5));
+        array_push($questions,($request->question_6));
+        array_push($questions,($request->question_7));
+        array_push($questions,($request->question_8));
+        array_push($questions,($request->question_9));
+        array_push($questions,($request->question_from));
 
         // dd($request,json_encode($english_speak,JSON_PRETTY_PRINT),$experience);
 

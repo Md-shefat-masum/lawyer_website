@@ -15,31 +15,49 @@
                     <div class="col-lg-12">
                         <div class="service-inner">
                             <div class="service-box">
-                                <div class="image-part">
+                                <div class="service_image">
+                                    <img src="/contents/website/a.JPG" style="width: 100%" alt="">
+                                    <div class="caption">
+                                        <p>You float like a feather. No more legal worries.</p>
+                                    </div>
+                                </div>
+                                {{-- <div class="image-part">
                                     <img src="{{asset('contents/website')}}/images/services/icons/1.png" alt="">
                                 </div>
                                 <div class="text">
                                     <h4 class="title"><a href="#">100% Success Rate</a></h4>
                                     <div class="desc">Creation timelines for the standard best service passage vary, with some citing the 15th century.</div>
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="service-box dark-bg">
-                                <div class="image-part">
+                                <div class="service_image">
+                                    <img src="/contents/website/b.jpg" style="width: 100%" alt="">
+                                    <div class="caption">
+                                        <p>Timely response is important.</p>
+                                    </div>
+                                </div>
+                                {{-- <div class="image-part">
                                     <img src="{{asset('contents/website')}}/images/services/icons/2.png" alt="">
                                 </div>
                                 <div class="text">
                                     <h4 class="title"><a href="#">Expert Legal Services</a></h4>
                                     <div class="desc">Creation timelines for the standard best service passage vary, with some citing the 15th century.</div>
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="service-box">
-                                <div class="image-part">
+                                <div class="service_image">
+                                    <img src="/contents/website/c.jpg" style="width: 100%" alt="">
+                                    <div class="caption">
+                                        <p>Getting your life on the right path.</p>
+                                    </div>
+                                </div>
+                                {{-- <div class="image-part">
                                     <img src="{{asset('contents/website')}}/images/services/icons/3.png" alt="">
                                 </div>
                                 <div class="text">
                                     <h4 class="title"><a href="#">Highly Recommend</a></h4>
                                     <div class="desc">Creation timelines for the standard best service passage vary, with some citing the 15th century.</div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>

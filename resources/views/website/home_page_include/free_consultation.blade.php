@@ -18,7 +18,7 @@
             <div class="col-md-6 ">
                 <input type="text " name="subject" placeholder="Subject " required>
             </div>
-            <div class="col-md-6 ">
+            <div class="col-md-6 col-0 d-none">
                 <div class="select-option" >
                     <select name="law_name">
                         @foreach (App\LawList::OrderBy('name','ASC')->where('status',1)->get() as $item)

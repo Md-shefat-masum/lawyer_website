@@ -22,7 +22,12 @@
         <div class="container">
             <div class="row rs-vertical-middle">
                 <div class="col-lg-5 md-mb-30">
-                    <img src="{{ asset(''.App\DescriptiveAbout::first()->image) }}" alt="">
+                    <div class="about_image_left">
+                        <img src="{{asset(''.App\DescriptiveAbout::first()->image)}}" alt="">
+                        <div class="caption">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, enim? </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-7 pl-45 md-pl-15">
                     <div class="sec-title mb-24">

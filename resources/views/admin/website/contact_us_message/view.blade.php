@@ -147,7 +147,10 @@
             @endforeach
         </table>
 
-        {{ json_decode($data->english_speak) }}
+        @php 
+            $datas = json_decode($data->english_speak);
+            dd($datas[0])
+        @endphp
 
         <style>
             .table td, .table th{
