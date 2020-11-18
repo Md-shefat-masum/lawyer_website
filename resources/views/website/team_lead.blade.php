@@ -8,6 +8,10 @@
         <div class="container">
             <div class="breadcrumbs-inner text-center">
                 <h1 class="breadcrumbs-title white-color">NUSRAT JAHAN</h1>
+                <ul class="breadcrumbs-meta">
+                    <li><a href="/">Home</a></li>
+                    <li>Founder Lawyer</li>
+                </ul>
             </div>
         </div>
     </div>

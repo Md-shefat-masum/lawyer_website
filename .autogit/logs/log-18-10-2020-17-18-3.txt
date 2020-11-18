@@ -1,0 +1,49 @@
+-------------------- Auto-Git Log --------------------
+		Wed Nov 18 2020 17:18:03 GMT+0600 (Bangladesh Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/HomeController.php
+* app/Http/Controllers/WebsiteController.php
+* public/contents/website/css/custom.css
+* public/contents/website/style.css
+* public/error_log
+* resources/views/admin/website/contact_us_message/view.blade.php
+* resources/views/admin/website/our_privilege/index.blade.php
+* resources/views/layouts/admin/nav_sidebar.blade.php
+* resources/views/layouts/website/website.blade.php
+* resources/views/website/about.blade.php
+* resources/views/website/contact.blade.php
+* resources/views/website/home_page_include/about.blade.php
+* resources/views/website/home_page_include/slider.blade.php
+* resources/views/website/index.blade.php
+* resources/views/website/service.blade.php
+* resources/views/website/team_lead.blade.php
+* routes/web.php
+
+
+Created files:
+* public/uploads/area_of_service/DkeRr1KN72fw7L05Xw3EqiJaWchYMc1sMSYtXKNu.jpeg
+* public/uploads/area_of_service/YyLdWcuXCKTRvf036QsK6SR8t11U6uKzSedNYKvh.jpeg
+* public/uploads/area_of_service/hr4p8ERkccqxGBbhgXMgoF4nYxtylRMw6kfRx5Of.jpeg
+* public/uploads/area_of_service/nvKSfTYjD9gsPEivwutTJQtr99EVib656NJ9hQ0w.jpeg
+* public/uploads/area_of_service/uSC6PPCA5Azr4dvxll4tSXE97WnHU7iInFMDYPmj.jpeg
+* public/uploads/area_of_service/yzYrsS4IEfRlug1sMU1FaD0KophhrSDxajgOhwRL.jpeg
+* public/uploads/banner/1605672168.jpg
+* public/uploads/banner/1605674429.jpeg
+* public/uploads/banner/1605674960.jpeg
+* public/uploads/banner/1605676437.jpeg
+* public/uploads/icon/1605679645.png
+* public/uploads/icon/1605679707.png
+* public/uploads/icon/1605679760.png
+* public/uploads/icon/1605679828.png
+* public/uploads/icon/1605679994.png
+* public/uploads/icon/1605680083.png
+
+
+Deleted files:
+* "well-known (2).zip"
+
+
+Renamed files:
+* [object Object]

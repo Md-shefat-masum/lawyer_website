@@ -125,8 +125,8 @@
                                             </li>
                                             <li class="{{ Request::path() == 'about'? 'current-menu-item':'' }}"><a href="/about">About us</a></li>
                                             <li class="{{ Request::path() == 'service'? 'current-menu-item':'' }}"><a href="/service">Services</a></li>
-                                            <li class="{{ Request::path() == 'team-lead'? 'current-menu-item':'' }}"><a href="/team-lead">Founder Lawyer</a></li>
-                                            <li class="{{ Request::path() == 'our-privilege'? 'current-menu-item':'' }}"><a href="/our-privilege">Team</a></li>
+                                            <li class="{{ Request::path() == 'founder-lawyer'? 'current-menu-item':'' }}"><a href="/founder-lawyer">Founder Lawyer</a></li>
+                                            <li class="{{ Request::path() == 'team'? 'current-menu-item':'' }}"><a href="/team">Team</a></li>
                                             <li class="{{ Request::path() == 'contact'? 'current-menu-item':'' }}"><a href="/contact">Contact us</a></li>
                                         </ul>
                                         <!-- //.nav-menu -->
@@ -271,6 +271,7 @@
     <script src="{{asset('contents/website')}}/js/contact.form.js "></script>
     <!-- main js -->
     <script src="{{asset('contents/website')}}/js/main.js "></script>
+    @stack('cjs')
 </body>
 
 </html>

@@ -7,10 +7,10 @@
     <div class="rs-breadcrumbs innerbg10">
         <div class="container">
             <div class="breadcrumbs-inner text-center">
-                <h1 class="breadcrumbs-title white-color">Our Privilege</h1>
+                <h1 class="breadcrumbs-title white-color">Our Team</h1>
                 <ul class="breadcrumbs-meta">
                     <li><a href="/">Home</a></li>
-                    <li>Our Privilege</li>
+                    <li>Team</li>
                 </ul>
             </div>
         </div>
@@ -21,16 +21,7 @@
     <div class="rs-faq inner pt-120 pb-120 md-pt-80 md-pb-80">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7 md-mb-20">
-                    <div class="white-bg mb-60">
-                        <div class="content-wrap">
-
-                            {!! App\OurPrivilege::first()->description !!}
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5">
+                <div class="col-lg-12 d-flex justify-content-end">
 
                     <div class="contact-part">
                         <div class="row">
@@ -51,6 +42,16 @@
                     </div>
 
                 </div>
+                <div class="col-lg-12 md-mb-20">
+                    <div class="white-bg mb-60">
+                        <div class="content-wrap">
+
+                            {!! App\OurPrivilege::first()->description !!}
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -81,6 +82,29 @@
             border: 1px solid #38b64a !important;
             padding: 5px 28px;
         }
+        .MsoNormal b span{
+            display: block!important;
+            text-align: left
+        }
+
     </style>
+
+    @push('cjs')
+
+        <script>
+            $(window).on('load',function(){
+                setTimeout(() => {
+                    console.log('lg');
+                    $('.content-wrap img').css('width','100%');
+                    $('.content-wrap b').parents('.MsoNormal').css('width','100%');
+                    $('.content-wrap b').parents('.MsoNormal').css('display','30%');
+                    $('.content-wrap img').parents('.MsoNormal').css('width','30%');
+                    $('.content-wrap img').parents('.MsoNormal').css('float','left');
+                }, 300);
+
+            })
+        </script>
+    @endpush
+
 
 @endsection

@@ -25,8 +25,8 @@ View()->share([
 
 Route::get('/', 'WebsiteController@index')->name('website_index');
 Route::get('/contact', 'WebsiteController@contact')->name('website_contact');
-Route::get('/our-privilege', 'WebsiteController@our_privilege')->name('website_our_privilege');
-Route::get('/team-lead', 'WebsiteController@team_lead')->name('website_team_lead');
+Route::get('/team', 'WebsiteController@our_privilege')->name('website_our_privilege');
+Route::get('/founder-lawyer', 'WebsiteController@team_lead')->name('website_team_lead');
 Route::get('/service', 'WebsiteController@service')->name('website_service');
 Route::get('/service/{id}/{name}', 'WebsiteController@service_single')->name('service_single');
 Route::get('/about', 'WebsiteController@about')->name('website_about');
