@@ -413,27 +413,25 @@
                                             <th style="width: 70%">
                                                 <textarea name="question_from[]" class="form-control" readonly>Facebook:</textarea>
                                             </th>
-                                            <td style="width: 15%" colspan="2"><input type="checkbox" name="question_from[]"></td>
+                                            <td style="width: 15%" colspan="2"><input type="checkbox" value="off" name="question_from[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">   
                                                 <textarea name="question_from[]" class="form-control" readonly>Friends:</textarea>    
                                             </th>
-                                            <td style="width: 15%" colspan="2"><input type="checkbox" name="question_from[]"></td>
+                                            <td style="width: 15%" colspan="2"><input type="checkbox" value="off" name="question_from[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
                                                 <textarea name="question_from[]" class="form-control" readonly>Printed flyers:</textarea>
                                             </th>
-                                            <td style="width: 15%" colspan="2"><input type="checkbox" name="question_from[]"></td>
+                                            <td style="width: 15%" colspan="2"><input type="checkbox" value="off" name="question_from[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
                                                 <textarea name="question_from[]" class="form-control" readonly>Other: (pls specify)</textarea>
                                             </th>
-                                            <td style="width: 15%" colspan="2">
-                                                <input type="text" name="question_from[]">
-                                            </td>
+                                            <td style="width: 15%" colspan="2"><input type="text" name="question_from[]"></td>
                                         </tr>
                                     </table>
                                 </div>

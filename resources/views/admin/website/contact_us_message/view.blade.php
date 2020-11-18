@@ -161,7 +161,7 @@
                 <th>CELPIP-G</th>
             </tr>
             <tr>
-                @php 
+                @php
                     $datas = json_decode($data->english_speak);
                     // dd($datas[0])
                 @endphp
@@ -212,7 +212,7 @@
                 <th>CELPIP-G</th>
             </tr>
             <tr>
-                @php 
+                @php
                     $datas = json_decode($data->french_speak);
                     // dd($datas[0])
                 @endphp
@@ -257,7 +257,7 @@
                 <th>Question</th>
                 <th>Answer</th>
             </tr>
-            @php 
+            @php
                 $datas = json_decode($data->questions);
                 // dd($datas)
             @endphp
@@ -271,13 +271,10 @@
                     {{-- @endfor --}}
                 </tr>
             @endfor
-            <tr>
-                td
-            </tr>
 
         </table>
 
-        
+
 
         <style>
             .table td, .table th{

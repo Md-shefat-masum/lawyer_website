@@ -42,16 +42,16 @@
                     </div>
                 </div> --}}
 
-                @php 
+                @php
                     $services = App\AreaOfPractice::orderBy('serial','ASC')->where('status',1)->get();
                 @endphp
                 @foreach ($services as $item)
                     <div class="col-lg-6 md-mb-20">
-                        <div class="white-bg mb-60">
+                        <div class="white-bg">
                             <div class="content-wrap">
 
                                 {{-- {!! App\ServiceDetais::first()->description !!} --}}
-                                
+
                                     <h3>{{ $item->title }}</h3>
                                     {!! $item->description !!}
                                     <br>
@@ -69,7 +69,7 @@
                     </div>
                 @endforeach
 
-                
+
             </div>
         </div>
     </div>

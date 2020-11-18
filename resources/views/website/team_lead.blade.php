@@ -26,7 +26,7 @@
                             <h3 class="title">{{ $basic_information->full_name }}</h3>
                         </div>
                         <ul class="contact-list mb-15">
-                            <li><i class="glyph-icon flaticon-email"></i><a href="mailto:{{ $basic_information->email_1 }}">{{ $basic_information->email_1 }}</a></li>
+                            <li><i class="glyph-icon flaticon-email"></i><a href="mailto:{{ $basic_information->email_2 }}">{{ $basic_information->email_2 }}</a></li>
                             <li><i class="flaticon-call"></i><a href="tel:{{ $basic_information->mobile_no_1 }}">{{ $basic_information->mobile_no_1 }}</a></li>
                         </ul>
                         {!! App\TeamLead::first()->description !!}

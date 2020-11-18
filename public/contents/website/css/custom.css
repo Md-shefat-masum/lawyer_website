@@ -27,7 +27,7 @@
 }
 .service_image {
   position: relative;
-  height: 190px;
+  height: 230px;
   overflow: hidden;
 }
 .service_image img {
@@ -49,4 +49,10 @@
   margin: 0;
   font-size: 19px;
   padding: 0;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+    .service-box {
+        padding-right: 10px !important;
+    }
 }

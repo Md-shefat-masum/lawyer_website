@@ -139,7 +139,7 @@ class WebsiteController extends Controller
         array_push($questions,($request->question_9));
         array_push($questions,($request->question_from));
 
-        // dd($request);
+        // dd($request,json_encode($english_speak,JSON_PRETTY_PRINT),$experience);
 
         $this->validate($request,[
             'email' => ['required'],

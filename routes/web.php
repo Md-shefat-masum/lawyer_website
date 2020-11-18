@@ -38,6 +38,7 @@ Route::post('/contact-message-submit', 'WebsiteController@contact_message_submit
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/logout', 'HomeController@logout')->name('logout');
 
 Route::get('/admin', 'AdminController@index')->name('admin_index')->middleware(['auth', 'admin']);
 

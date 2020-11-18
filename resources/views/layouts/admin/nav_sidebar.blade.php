@@ -105,19 +105,19 @@
             <li>
                 <a href="{{ route('admin_service_index') }}">
                     <i class="zmdi zmdi-dot-circle-alt"></i>
-                    Service Details
+                    Services
                 </a>
             </li>
             <li>
                 <a href="{{ route('admin_team_lead_index') }}">
                     <i class="zmdi zmdi-dot-circle-alt"></i>
-                    Team Lead
+                    Founder Lawer
                 </a>
             </li>
             <li>
                 <a href="{{ route('admin_our_privilege_index') }}">
                     <i class="zmdi zmdi-dot-circle-alt"></i>
-                    Our Privilege
+                    Our Team
                 </a>
             </li>
             <li>

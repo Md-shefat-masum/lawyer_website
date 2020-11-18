@@ -45,6 +45,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/style.css">
     <!-- This stylesheet dynamically changed from style.less -->
     <!-- responsive css -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/css/responsive.css">
     <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/css/custom.css">
     <!--[if lt IE 9]>
@@ -123,8 +125,8 @@
                                             </li>
                                             <li class="{{ Request::path() == 'about'? 'current-menu-item':'' }}"><a href="/about">About us</a></li>
                                             <li class="{{ Request::path() == 'service'? 'current-menu-item':'' }}"><a href="/service">Services</a></li>
-                                            <li class="{{ Request::path() == 'team-lead'? 'current-menu-item':'' }}"><a href="/team-lead">Team lead</a></li>
-                                            <li class="{{ Request::path() == 'our-privilege'? 'current-menu-item':'' }}"><a href="/our-privilege">Our Privilege</a></li>
+                                            <li class="{{ Request::path() == 'team-lead'? 'current-menu-item':'' }}"><a href="/team-lead">Founder Lawyer</a></li>
+                                            <li class="{{ Request::path() == 'our-privilege'? 'current-menu-item':'' }}"><a href="/our-privilege">Team</a></li>
                                             <li class="{{ Request::path() == 'contact'? 'current-menu-item':'' }}"><a href="/contact">Contact us</a></li>
                                         </ul>
                                         <!-- //.nav-menu -->

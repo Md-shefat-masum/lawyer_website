@@ -8,6 +8,9 @@
 
         @include('website.home_page_include.slider')
 
+
+
+        @include('website.home_page_include.about')
         <!-- Services Start -->
         <div id="rs-services" class="rs-services style1 long-gap md-pt-80">
             <div class="container">
@@ -18,7 +21,7 @@
                                 <div class="service_image">
                                     <img src="/contents/website/a.JPG" style="width: 100%" alt="">
                                     <div class="caption">
-                                        <p>You float like a feather. No more legal worries.</p>
+                                        <p>No more legal worries.</p>
                                     </div>
                                 </div>
                                 {{-- <div class="image-part">
@@ -66,8 +69,9 @@
         </div>
         <!-- Services End -->
 
-        @include('website.home_page_include.about')
-
+        <br>
+        <br>
+        
         @include('website.home_page_include.practice_area')
 
 

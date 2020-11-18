@@ -934,7 +934,7 @@ ul.listing-style.modify li:before {
     height: 90px;
     line-height: 90px;
     padding: 0;
-    color: #ffffff;
+    color: #38b64a;
 }
 
 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul.nav-menu li a:hover {
@@ -1035,7 +1035,7 @@ ul.listing-style.modify li:before {
 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul li a:hover,
 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul li.active a,
 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul li.current-menu-item>a {
-    color: #38b64a !important;
+    color: #097d19 !important;
 }
 
 .full-width-header .rs-header .menu-area .main-menu .nav-expander {
@@ -1309,7 +1309,7 @@ ul.listing-style.modify li:before {
 }
 
 .full-width-header.header-transparent .menu-sticky {
-    background: transparent;
+    /* background: transparent; */
 }
 
 .full-width-header.header-transparent.modify {
@@ -2241,7 +2241,7 @@ body .modal-backdrop {
 
 .rs-services.style1 .service-inner .service-box {
     background: #1f2839;
-    padding: 50px;
+    padding: 10px;
     transition: .20s;
     float: left;
     width: 33.33%;

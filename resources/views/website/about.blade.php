@@ -24,8 +24,8 @@
                 <div class="col-lg-5 md-mb-30">
                     <div class="about_image_left">
                         <img src="{{asset(''.App\DescriptiveAbout::first()->image)}}" alt="">
-                        <div class="caption">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, enim? </p>
+                        <div class="caption" style="text-align: center;">
+                            <p>Yes we hear you !</p>
                         </div>
                     </div>
                 </div>

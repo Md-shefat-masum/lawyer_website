@@ -28,7 +28,7 @@
                             <div class="form_content">
                                 <div class="form-group">
                                     <label for="input-1">Description</label> <span class="text-danger"></span>
-                                    <textarea name="description" id="" class="form-control description">{{ $information->description }}</textarea>
+                                    <textarea name="description" id="" class="form-control description">{!! App\OurPrivilege::first()->description !!}</textarea>
                                 </div>
                             </div>
                             <div class="form-group">
