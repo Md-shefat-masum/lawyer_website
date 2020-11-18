@@ -44,11 +44,11 @@
                 </div>
                 <div class="col-lg-12 md-mb-20">
                     <div class="white-bg mb-60">
-                        <div class="content-wrap">
+                        {{-- <div class="content-wrap">
+                        </div> --}}
 
-                            {!! App\OurPrivilege::first()->description !!}
+                        {!! App\OurPrivilege::first()->description !!}
 
-                        </div>
                     </div>
                 </div>
 
@@ -82,29 +82,22 @@
             border: 1px solid #38b64a !important;
             padding: 5px 28px;
         }
-        .MsoNormal b span{
-            display: block!important;
-            text-align: left
+
+        .team_content img{
+            width: 30%!important;
+            margin-right: 30px;
+            margin-bottom: 100px;
+            float: left;
         }
-
+        .team_content p{
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .team_content h4 {
+            font-size: 30px;
+            color: black;
+            font-weight: 600;
+        }
     </style>
-
-    @push('cjs')
-
-        <script>
-            $(window).on('load',function(){
-                setTimeout(() => {
-                    console.log('lg');
-                    $('.content-wrap img').css('width','100%');
-                    $('.content-wrap b').parents('.MsoNormal').css('width','100%');
-                    $('.content-wrap b').parents('.MsoNormal').css('display','30%');
-                    $('.content-wrap img').parents('.MsoNormal').css('width','30%');
-                    $('.content-wrap img').parents('.MsoNormal').css('float','left');
-                }, 300);
-
-            })
-        </script>
-    @endpush
-
 
 @endsection

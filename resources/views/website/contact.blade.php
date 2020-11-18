@@ -62,13 +62,50 @@
                 <div class="col-lg-8 pr-30">
                     <div class="contact-wrap">
                         <div class="sec-title mb-50">
-                            <h2 class="title mb-33">Get In Touch</h2>
+
+                            {{-- <h2 class="title mb-33">Get In Touch</h2>
                             <h2 class="title mb-33">NJLPC</h2>
                             <div class="desc">
                                 Your solutions start here. You have come to the right firm. We are privileged to accept the responsibility of serving you.
+                            </div> --}}
+                            <div class="sec-title mb-45 xs-mb-31 ">
+                                <div class="sub-title primary ">Schedule For</div>
+                                <h2 class="title  mb-0 ">Free Consultation</h2>
                             </div>
                         </div>
-                        <form class="contact-inner-page" action="{{ route('website_contact_message_submit') }}" method="POST">
+                        <form method="POST" class="contact-inner-page" action="{{ route('website_free_consultation_submit') }}">
+                            @csrf
+                            <div class="row ">
+                                <div class="col-md-6 ">
+                                    <input type="text " name="name" placeholder="Your Name " required>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <input type="email " name="email" placeholder="Your Email " required>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <input type="text " name="phone" placeholder="Phone " required>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <input type="text " name="subject" placeholder="Subject " required>
+                                </div>
+                                <div class="col-md-6 col-0 d-none">
+                                    <div class="select-option" >
+                                        <select name="law_name">
+                                            @foreach (App\LawList::OrderBy('name','ASC')->where('status',1)->get() as $item)
+                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 ">
+                                    <textarea name="message" placeholder="Your Message " required></textarea>
+                                </div>
+                            </div>
+                            <div class="sunbmit-btn mt-30 ">
+                                <button class="readon upper " type="submit ">Submit request</button>
+                            </div>
+                        </form>
+                        {{-- <form class="contact-inner-page" action="{{ route('website_contact_message_submit') }}" method="POST">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6">
@@ -180,8 +217,8 @@
 
                                 <div class="col-12">
                                     <label for="">
-                                        Please describe your work experience only during the last 10 years (title, duties and responsibilities you have been discharging at every jobs). 
-                                        An applicant is accountable for every 
+                                        Please describe your work experience only during the last 10 years (title, duties and responsibilities you have been discharging at every jobs).
+                                        An applicant is accountable for every
                                         day of his or her life since 18 years of age (if you were unemployed or travelling, please indicate so, as no time gaps are permitted).
                                     </label>
                                     <table class="table table-bordered">
@@ -336,7 +373,7 @@
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_1[]" class="form-control" readonly>Have you ever been refused any kind of visa, admission, or been ordered to leave Canada or any other country? If “yes”, please provide details. 
+                                                <textarea name="question_1[]" class="form-control" readonly>Have you ever been refused any kind of visa, admission, or been ordered to leave Canada or any other country? If “yes”, please provide details.
                                                 </textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_1[]"></td>
@@ -416,8 +453,8 @@
                                             <td style="width: 15%" colspan="2"><input type="checkbox" value="off" name="question_from[]"></td>
                                         </tr>
                                         <tr>
-                                            <th style="width: 70%">   
-                                                <textarea name="question_from[]" class="form-control" readonly>Friends:</textarea>    
+                                            <th style="width: 70%">
+                                                <textarea name="question_from[]" class="form-control" readonly>Friends:</textarea>
                                             </th>
                                             <td style="width: 15%" colspan="2"><input type="checkbox" value="off" name="question_from[]"></td>
                                         </tr>
@@ -444,7 +481,7 @@
                                     <button type="submit" class="readon upper">Submit Request</button>
                                 </div>
                             </div>
-                        </form>
+                        </form> --}}
                     </div>
                 </div>
             </div>
