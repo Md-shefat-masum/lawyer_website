@@ -23,6 +23,10 @@ View()->share([
     'basic_information' => $basic_information,
 ]);
 
+Route::get('/emails', function(){
+    return view('mail.consultation');
+});
+
 Route::get('/', 'WebsiteController@index')->name('website_index');
 Route::get('/contact', 'WebsiteController@contact')->name('website_contact');
 Route::get('/team', 'WebsiteController@our_privilege')->name('website_our_privilege');

@@ -9,6 +9,8 @@ use App\Subscriber;
 use App\ContactUs;
 use App\AreaOfPractice;
 use function GuzzleHttp\json_encode;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
 
 class WebsiteController extends Controller
 {
@@ -67,12 +69,13 @@ class WebsiteController extends Controller
         $free_consultation->slug = $free_consultation->id.uniqid(10);
         $free_consultation->save();
 
+        Session::put('Consultation',$free_consultation);
         $subject = 'Free Consultation';
-        $to = 'info@http://njahanlaw.ca';
+        $to = 'info@njahanlaw.ca';
         Mail::send('mail.consultation', ['content' => '', 'logo' =>'',' title' => '', 'branch_name' => ''],
         function ($message) use ($subject, $to){
             $message->from($to, 'Free Consultation');
-            $message->to('http://njahanlaw.ca');
+            $message->to('info@njahanlaw.ca');
             $message->subject($subject);
         });
 
