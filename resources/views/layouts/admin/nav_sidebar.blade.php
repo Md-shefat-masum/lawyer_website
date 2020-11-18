@@ -123,7 +123,7 @@
             <li>
                 <a href="{{ route('admin_contact_us_message_index') }}">
                     <i class="zmdi zmdi-dot-circle-alt"></i>
-                    Contact Messages
+                    Free Assesments
                 </a>
             </li>
         </ul>

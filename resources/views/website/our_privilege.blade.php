@@ -7,7 +7,7 @@
     <div class="rs-breadcrumbs innerbg10">
         <div class="container">
             <div class="breadcrumbs-inner text-center">
-                <h1 class="breadcrumbs-title white-color">Our Team</h1>
+                <h1 class="breadcrumbs-title white-color">Team</h1>
                 <ul class="breadcrumbs-meta">
                     <li><a href="/">Home</a></li>
                     <li>Team</li>

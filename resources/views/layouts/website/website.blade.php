@@ -234,6 +234,12 @@
     </div>
     <!-- Search Modal End -->
 
+    <style>
+        .rs-services.style1.long-gap{
+            margin-top: 0;
+        }
+    </style>
+
     <!-- modernizr js -->
     <script src="{{asset('contents/website')}}/js/modernizr-2.8.3.min.js "></script>
     <!-- jquery latest version -->

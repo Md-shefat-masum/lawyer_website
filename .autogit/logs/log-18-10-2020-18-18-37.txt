@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Wed Nov 18 2020 18:18:37 GMT+0600 (Bangladesh Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resources/views/layouts/website/website.blade.php
+* resources/views/website/contact.blade.php
+* resources/views/website/our_privilege.blade.php
+
+
+Created files:
+* .autogit/logs/log-18-10-2020-17-48-12.txt
+
+
+Deleted files:
+
+
+Renamed files:

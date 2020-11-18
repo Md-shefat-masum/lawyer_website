@@ -41,6 +41,10 @@ class WebsiteController extends Controller
         return view('website.about');
     }
 
+    public function online_assesment(Request $request){
+        return view('website.online-assesment');
+    }
+
     public function free_consultation_submit(Request $request){
         // dd($request);
         $this->validate($request,[
@@ -62,6 +66,15 @@ class WebsiteController extends Controller
         $free_consultation->save();
         $free_consultation->slug = $free_consultation->id.uniqid(10);
         $free_consultation->save();
+
+        $subject = 'Free Consultation';
+        $to = 'info@http://njahanlaw.ca';
+        Mail::send('mail.consultation', ['content' => '', 'logo' =>'',' title' => '', 'branch_name' => ''],
+        function ($message) use ($subject, $to){
+            $message->from($to, 'Free Consultation');
+            $message->to('http://njahanlaw.ca');
+            $message->subject($subject);
+        });
 
         return redirect()->back()->with('success','Thanks for your request.');
     }

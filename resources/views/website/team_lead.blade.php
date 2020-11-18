@@ -7,7 +7,7 @@
     <div class="rs-breadcrumbs innerbg5">
         <div class="container">
             <div class="breadcrumbs-inner text-center">
-                <h1 class="breadcrumbs-title white-color">NUSRAT JAHAN</h1>
+                <h1 class="breadcrumbs-title white-color">Founder Lawyer</h1>
                 <ul class="breadcrumbs-meta">
                     <li><a href="/">Home</a></li>
                     <li>Founder Lawyer</li>
