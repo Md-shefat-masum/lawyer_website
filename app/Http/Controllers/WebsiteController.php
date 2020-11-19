@@ -99,6 +99,8 @@ class WebsiteController extends Controller
 
     public function contact_message_submit(Request $request){
 
+        dd($request->request);
+
         $cirtificate = [];
         $experience = [];
 

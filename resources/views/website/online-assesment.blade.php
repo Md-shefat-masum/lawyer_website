@@ -122,6 +122,10 @@
                                     </label>
                                     <input type="text" name="legal_status" value="{{ old('legal_status') }}" placeholder="Your legal status" required>
                                 </div>
+
+                                <div class="col-12">
+                                    <h4 style="border-bottom: 1px solid gray;">Education</h4>
+                                </div>
                                 <div class="col-12">
                                     <label for="">
                                         Your highest education achieved (High School Certificate, Collage Diploma, Bachelor’s or Master’s degree, PhD)
@@ -137,16 +141,20 @@
                                             <th>City,Country</th>
                                             <th>Certificate, Diploma <br> or degree issued, <br>field of study and major <br>(as it is indicated in your diploma)</th>
                                         </tr>
-                                        @for ($i = 0; $i < 5; $i++)
+                                        @for ($i = 0; $i < 2; $i++)
                                             <tr>
-                                                <td><input type="text" placeholder="from year" name="from_month_or_year[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="to year" name="to_month_or_year[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="institute" name="name_of_institution[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="city" name="city_country[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="result" name="certificate_degree[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="" name="from_month_or_year[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="" name="to_month_or_year[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="" name="name_of_institution[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="" name="city_country[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="" name="certificate_degree[]" {{$i==0?'required':''}}></td>
                                             </tr>
                                         @endfor
                                     </table>
+                                </div>
+
+                                <div class="col-12">
+                                    <h4 style="border-bottom: 1px solid gray;">Employment</h4>
                                 </div>
 
                                 <div class="col-12">
@@ -163,23 +171,27 @@
                                             <th>City,Country</th>
                                             <th>Name of the employer </th>
                                         </tr>
-                                        @for ($i = 0; $i < 5; $i++)
+                                        @for ($i = 0; $i < 2; $i++)
                                             <tr>
-                                                <td><input type="text" placeholder="from year" name="experience_from_month_or_year[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="to year" name="experience_to_month_or_year[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="institute" name="experience_name_of_institution[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="city" name="experience_city_country[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="result" name="experience_certificate_degree[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="" name="experience_from_month_or_year[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="" name="experience_to_month_or_year[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="" name="experience_name_of_institution[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="" name="experience_city_country[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="" name="experience_certificate_degree[]" {{$i==0?'required':''}}></td>
                                             </tr>
                                         @endfor
                                     </table>
                                 </div>
 
                                 <div class="col-12">
+                                    <h4 style="border-bottom: 1px solid gray;">English Language Skills</h4>
+                                </div>
+
+                                <div class="col-12">
                                     <label for="">
                                         Knowledge of English (Please mark “X” or indicate your IELTS-General or CELPIP-G score)
                                     </label>
-                                    <table class="table table-bordered">
+                                    <table class="table table-bordered" class="text-center">
                                         <tr>
                                             <th></th>
                                             <th>High</th>
@@ -191,39 +203,39 @@
                                         </tr>
                                         <tr>
                                             <td>Speak</td>
-                                            <td><input type="text" placeholder="" name="english_speak[]"></td>
-                                            <td><input type="text" placeholder="" name="english_speak[]"></td>
-                                            <td><input type="text" placeholder="" name="english_speak[]"></td>
-                                            <td><input type="text" placeholder="" name="english_speak[]"></td>
-                                            <td><input type="text" placeholder="" name="english_speak[]"></td>
-                                            <td><input type="text" placeholder="" name="english_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_speak[]"></td>
                                         </tr>
                                         <tr>
                                             <td>Listen</td>
-                                            <td><input type="text" placeholder="" name="english_listen[]"></td>
-                                            <td><input type="text" placeholder="" name="english_listen[]"></td>
-                                            <td><input type="text" placeholder="" name="english_listen[]"></td>
-                                            <td><input type="text" placeholder="" name="english_listen[]"></td>
-                                            <td><input type="text" placeholder="" name="english_listen[]"></td>
-                                            <td><input type="text" placeholder="" name="english_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_listen[]"></td>
                                         </tr>
                                         <tr>
                                             <td>Read</td>
-                                            <td><input type="text" placeholder="" name="english_read[]"></td>
-                                            <td><input type="text" placeholder="" name="english_read[]"></td>
-                                            <td><input type="text" placeholder="" name="english_read[]"></td>
-                                            <td><input type="text" placeholder="" name="english_read[]"></td>
-                                            <td><input type="text" placeholder="" name="english_read[]"></td>
-                                            <td><input type="text" placeholder="" name="english_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_read[]"></td>
                                         </tr>
                                         <tr>
                                             <td>Write</td>
-                                            <td><input type="text" placeholder="" name="english_write[]"></td>
-                                            <td><input type="text" placeholder="" name="english_write[]"></td>
-                                            <td><input type="text" placeholder="" name="english_write[]"></td>
-                                            <td><input type="text" placeholder="" name="english_write[]"></td>
-                                            <td><input type="text" placeholder="" name="english_write[]"></td>
-                                            <td><input type="text" placeholder="" name="english_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="english_write[]"></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -234,70 +246,111 @@
                                     </label>
                                     <table class="table table-bordered">
                                         <tr>
-                                            <td colspan="4"></td>
-                                            <td colspan="3">
-                                                <input type="date" placeholder="" name="french_date[]">
-                                            </td>
+                                            <th>Test Name</th>
+                                            <th>Date</th>
+                                            <th>Speak</th>
+                                            <th>Listen</th>
+                                            <th>Read Write</th>
                                         </tr>
+                                        @for ($i = 0; $i < 2; $i++)
+                                            <tr>
+                                                <td><input type="text" placeholder="" name="english_test_name[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="" name="english_test_date[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="" name="english_test_speak[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="" name="english_test_listen[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="" name="english_test_read_write[]" {{$i==0?'required':''}}></td>
+                                            </tr>
+                                        @endfor
+                                    </table>
+                                </div>
+
+                                <div class="col-12">
+                                    <h4 style="border-bottom: 1px solid gray;">French Language Skills</h4>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="">
+                                        Knowledge of English (Please mark “X” or indicate your IELTS-General or CELPIP-G score)
+                                    </label>
+                                    <table class="table table-bordered" class="text-center">
                                         <tr>
                                             <th></th>
                                             <th>High</th>
                                             <th>Moderate</th>
                                             <th>Basic</th>
                                             <th>None</th>
-                                            <th></th>
-                                            <th></th>
+                                            <th>IELTS-G</th>
+                                            <th>CELPIP-G</th>
                                         </tr>
                                         <tr>
                                             <td>Speak</td>
-                                            <td><input type="text" placeholder="" name="french_speak[]"></td>
-                                            <td><input type="text" placeholder="" name="french_speak[]"></td>
-                                            <td><input type="text" placeholder="" name="french_speak[]"></td>
-                                            <td><input type="text" placeholder="" name="french_speak[]"></td>
-                                            <td><input type="text" placeholder="" name="french_speak[]"></td>
-                                            <td><input type="text" placeholder="" name="french_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_speak[]"></td>
                                         </tr>
                                         <tr>
                                             <td>Listen</td>
-                                            <td><input type="text" placeholder="" name="french_listen[]"></td>
-                                            <td><input type="text" placeholder="" name="french_listen[]"></td>
-                                            <td><input type="text" placeholder="" name="french_listen[]"></td>
-                                            <td><input type="text" placeholder="" name="french_listen[]"></td>
-                                            <td><input type="text" placeholder="" name="french_listen[]"></td>
-                                            <td><input type="text" placeholder="" name="french_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_listen[]"></td>
                                         </tr>
                                         <tr>
                                             <td>Read</td>
-                                            <td><input type="text" placeholder="" name="french_read[]"></td>
-                                            <td><input type="text" placeholder="" name="french_read[]"></td>
-                                            <td><input type="text" placeholder="" name="french_read[]"></td>
-                                            <td><input type="text" placeholder="" name="french_read[]"></td>
-                                            <td><input type="text" placeholder="" name="french_read[]"></td>
-                                            <td><input type="text" placeholder="" name="french_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_read[]"></td>
                                         </tr>
                                         <tr>
                                             <td>Write</td>
-                                            <td><input type="text" placeholder="" name="french_write[]"></td>
-                                            <td><input type="text" placeholder="" name="french_write[]"></td>
-                                            <td><input type="text" placeholder="" name="french_write[]"></td>
-                                            <td><input type="text" placeholder="" name="french_write[]"></td>
-                                            <td><input type="text" placeholder="" name="french_write[]"></td>
-                                            <td><input type="text" placeholder="" name="french_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" name="french_write[]"></td>
                                         </tr>
                                     </table>
                                 </div>
 
                                 <div class="col-12">
-                                    <label for="">If you indicated the score, please provide the date you took the test and copy of the test.
+                                    <label for="">
+                                        If you indicated the score, please provide the date you took the test and copy of the test.
                                     </label>
                                     <table class="table table-bordered">
                                         <tr>
-                                            <td style="width: 70%"></td>
-                                            <td>
-                                                <input type="date" placeholder="from year" name="question_date[]">
-                                            </td>
+                                            <th>Test Name</th>
+                                            <th>Date</th>
+                                            <th>Speak</th>
+                                            <th>Listen</th>
+                                            <th>Read Write</th>
                                         </tr>
+                                        @for ($i = 0; $i < 2; $i++)
+                                            <tr>
+                                                <td><input type="text" placeholder="" name="french_test_name[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="" name="french_test_date[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="" name="french_test_speak[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="" name="french_test_listen[]" {{$i==0?'required':''}}></td>
+                                                <td><input type="text" placeholder="" name="french_test_read_write[]" {{$i==0?'required':''}}></td>
+                                            </tr>
+                                        @endfor
                                     </table>
+                                </div>
+
+
+                                <div class="col-12">
+                                    <h4 style="border-bottom: 1px solid gray;">Other</h4>
+                                </div>
+
+                                <div class="col-12">
                                     <table class="table table-bordered">
                                         <tr>
                                             <th style="width: 70%">Have you ever remained beyond the validity of your status, attended school or worked without authorization in Canada or any other country? If “yes”, please provide details
@@ -307,72 +360,75 @@
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_1[]" class="form-control" >Have you ever been refused any kind of visa, admission, or been ordered to leave Canada or any other country? If “yes”, please provide details.
-                                                </textarea>
+                                                <label for="" class="text-left">Have you ever been refused any kind of visa, admission, or
+                                                    been ordered to leave Canada or any other country? If “yes”, please provide details.</label>
+                                                <textarea name="question_1[]" class="form-control" ></textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_1[]"></td>
                                             <td style="width: 15%"><input type="checkbox" value="no" name="question_1[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_2[]" class="form-control" >Have you legally worked in Canada for one year or longer? If so, how long?
-                                                </textarea>
+                                                <label for="" class="text-left">Have you legally worked in Canada for one year or longer? If so, how long?</label>
+                                                <textarea name="question_2[]" class="form-control" ></textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_2[]"></td>
                                             <td style="width: 15%"><input type="checkbox" value="no" name="question_2[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_3[]" class="form-control" >Have you ever committed an offence or been charged with an offence in any country?
-                                                </textarea>
+                                                <label for="" class="text-left">Have you ever committed an offence or been charged with an offence in any country?</label>
+                                                <textarea name="question_3[]" class="form-control" ></textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_3[]"></td>
                                             <td style="width: 15%"><input type="checkbox" value="no" name="question_3[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_4[]" class="form-control" >What is your verifiable personal net worth in Canadian Dollar?
-                                                </textarea>
+                                                <label for="" class="text-left">What is your verifiable personal net worth in Canadian Dollar?</label>
+                                                <textarea name="question_4[]" class="form-control" ></textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_4[]"></td>
                                             <td style="width: 15%"><input type="checkbox" value="no" name="question_4[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_5[]" class="form-control" >Have you ever submitted an application for immigration to Canada in the past? If yes, please provide details.
-                                                </textarea>
+                                                <label for="" class="text-left">Have you ever submitted an application for immigration to Canada in the past? If yes, please provide details.</label>
+                                                <textarea name="question_5[]" class="form-control" ></textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_5[]"></td>
                                             <td style="width: 15%"><input type="checkbox" value="no" name="question_5[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_6[]" class="form-control" >How much money you are able to bring for settling in Canada (Canadian Currency)?
-                                                </textarea>
+                                                <label for="" class="text-left">How much money you are able to bring for settling in Canada (Canadian Currency)?</label>
+                                                <textarea name="question_6[]" class="form-control" ></textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_6[]"></td>
                                             <td style="width: 15%"><input type="checkbox" value="no" name="question_6[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_7[]" class="form-control" >Do you have a relative or relatives in Canada, such as a parent, grandparent, child, grandchild, child of a parent (Sibling), child of a grandparent (aunt or uncle), or grandchild of parents (niece or nephew), who is 18 years or older and living in Canada, and who is a Canadian citizen or permanent resident)?If so, what is their status in Canada and where do they reside?
-                                                </textarea>
+                                                <label for="" class="text-left">Do you have a relative or relatives in Canada, such as a parent, grandparent, child, grandchild, child of a parent (Sibling), chi
+                                                    ld of a grandparent (aunt or uncle), or grandchild of parents (niece or nephew), who is 18 years or older and living
+                                                    in Canada, and who is a Canadian citizen or permanent resident)?If so, what is their status in Canada and where do they reside?</label>
+                                                <textarea name="question_7[]" class="form-control" ></textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_7[]"></td>
                                             <td style="width: 15%"><input type="checkbox" value="no" name="question_7[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_8[]" class="form-control" >Do you have friends in Canada? If so, please indicate their city of residence.
-                                                </textarea>
+                                                <label for="" class="text-left">Do you have friends in Canada? If so, please indicate their city of residence.</label>
+                                                <textarea name="question_8[]" class="form-control" ></textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_8[]"></td>
                                             <td style="width: 15%"><input type="checkbox" value="no" name="question_8[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_9[]" class="form-control" >Any other information that you think might be of assistance?
-                                                </textarea>
+                                                <label for="" class="text-left">Any other information that you think might be of assistance?</label>
+                                                <textarea name="question_9[]" class="form-control" ></textarea>
                                             </th>
                                             <td style="width: 15%"><input type="checkbox" value="yes" name="question_9[]"></td>
                                             <td style="width: 15%"><input type="checkbox" value="no" name="question_9[]"></td>
@@ -382,27 +438,27 @@
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_from[]" class="form-control" >Facebook:</textarea>
+                                                <textarea style="height: 40px;resize: none;color:#026837;margin: 0;overflow: hidden;" name="question_from[]" readonly class="form-control" >Facebook:</textarea>
                                             </th>
                                             <td style="width: 15%" colspan="2"><input type="checkbox" value="off" name="question_from[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_from[]" class="form-control" >Friends:</textarea>
+                                                <textarea  style="height: 40px;resize: none;color:#026837;margin: 0;overflow: hidden;"  name="question_from[]" readonly class="form-control" >Friends:</textarea>
                                             </th>
                                             <td style="width: 15%" colspan="2"><input type="checkbox" value="off" name="question_from[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_from[]" class="form-control" >Printed flyers:</textarea>
+                                                <textarea  style="height: 40px;resize: none;color:#026837;margin: 0;overflow: hidden;"  name="question_from[]" readonly class="form-control" >Printed flyers:</textarea>
                                             </th>
                                             <td style="width: 15%" colspan="2"><input type="checkbox" value="off" name="question_from[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
-                                                <textarea name="question_from[]" class="form-control" >Other: (pls specify)</textarea>
+                                                <textarea  style="height: 40px;resize: none;color:#026837;margin: 0;overflow: hidden;"  name="question_from[]" readonly class="form-control" >Other: (pls specify)</textarea>
                                             </th>
-                                            <td style="width: 15%" colspan="2"><input type="text" name="question_from[]"></td>
+                                            <td style="width: 15%" colspan="2"><input type="text" placeholder="write here" name="question_from[]"></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -427,6 +483,10 @@
             }
             input,select{
                 border: 1px solid #026837!important;
+            }
+            table tr th,
+            table tr td{
+                text-align: center
             }
         </style>
     </div>
