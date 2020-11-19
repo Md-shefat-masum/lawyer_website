@@ -34,7 +34,16 @@
                                 </div>
                                 <div class="address-text">
                                     <h5 class="contact-title">Office Phone</h5>
-                                    <a href="#">{{ $basic_information->mobile_1  }}</a>
+                                    <a href="#">{{ $basic_information->mobile_no_1  }}</a>
+                                </div>
+                            </div>
+                            <div class="address-item ml--5 mb-20">
+                                <div class="address-icon">
+                                    <i class="icon-basic-smartphone"></i>
+                                </div>
+                                <div class="address-text">
+                                    <h5 class="contact-title">Cell No</h5>
+                                    <a href="#">{{ $basic_information->mobile_no_2  }}</a>
                                 </div>
                             </div>
                             <div class="address-item ml--5 mb-20">

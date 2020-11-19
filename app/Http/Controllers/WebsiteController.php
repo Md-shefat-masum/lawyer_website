@@ -74,7 +74,7 @@ class WebsiteController extends Controller
         $to = 'info@njahanlaw.ca';
         Mail::send('mail.consultation', ['content' => '', 'logo' =>'',' title' => '', 'branch_name' => ''],
         function ($message) use ($subject, $to){
-            $message->from($to, 'Free Consultation');
+            $message->from($to, 'N.Jahan LPC Free Consultation');
             $message->to('info@njahanlaw.ca');
             $message->subject($subject);
         });

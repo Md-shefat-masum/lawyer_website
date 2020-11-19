@@ -12,6 +12,24 @@ use Illuminate\Support\Facades\Route;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
+
+    email : info@njahanlaw.ca
+    password :  LVo-TDX}#f5Z
+
+    email : nusrat.jahan@njahanlaw.ca
+    password :  zNUlBQjqfObt
+
+    email : emamul.haque@njahanlaw.ca
+    password :  (#&,A8c2vzS+
+
+    email : nityagopalg.debnath@njahanlaw.ca
+    password :  u1N9vT.^bSWP
+
+    email : immigration@njahanlaw.ca
+    password :  tL)ME_6lF#1s
+
+    email : admin@njahanlaw.ca
+    password :  u^Uiq2ihZROy
 |
  */
 

@@ -17,6 +17,12 @@
     </div>
     <!-- Breadcrumbs Section End -->
 
+    <style>
+        select{
+            margin-bottom: 30px;
+        }
+    </style>
+
     <!-- Contact Inner Sction Start -->
     <div class="rs-contact inner gray-bg pt-120 md-pt-80">
         <div class="container">
@@ -34,35 +40,37 @@
                         <form class="contact-inner-page" action="{{ route('website_contact_message_submit') }}" method="POST">
                             @csrf
                             <div class="row">
-                                <div class="col-md-6">
+                                {{-- <div class="col-md-12">
                                     <label for="">First Name</label>
                                     <input type="text" name="first_name" value="{{ old('first_name') }}" placeholder="First Name ( in capital letters )" required>
-                                </div>
-                                <div class="col-md-6">
+                                </div> --}}
+                                {{-- <div class="col-md-12">
                                     <label for="">Middle Name</label>
                                     <input type="text" name="middle_name" value="{{ old('middle_name') }}" placeholder="Middle Name ( in capital letters )" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="">Last Name</label>
+                                </div> --}}
+
+                                <div class="col-md-12">
+                                    <label for="">Last Name , Given Name(s)*</label>
                                     <input type="text" name="last_name" value="{{ old('last_name') }}" placeholder="Last Name ( in capital letters )" required>
                                 </div>
-                                <div class="col-md-6 col-sm-0"></div>
 
-                                <div class="col-md-6">
+                                {{-- <div class="col-md-12 col-sm-0"></div> --}}
+
+                                {{-- <div class="col-md-12">
                                     <label for="">Spouse First Name</label>
                                     <input type="text" name="spouse_first_name" value="{{ old('spouse_first_name') }}" placeholder="Spouse,s First Name ( in capital letters )" required>
-                                </div>
-                                <div class="col-md-6">
+                                </div> --}}
+                                {{-- <div class="col-md-12">
                                     <label for="">Spouse Middle Name</label>
                                     <input type="text" name="spouse_middle_name" value="{{ old('spouse_middle_name') }}" placeholder="Spouse,s Middle Name ( in capital letters )" required>
-                                </div>
-                                <div class="col-md-6">
+                                </div> --}}
+                                {{-- <div class="col-md-12">
                                     <label for="">Spouse Last Name</label>
                                     <input type="text" name="spouse_last_name" value="{{ old('spouse_last_name') }}" placeholder="Spouse,s Last Name ( in capital letters )" required>
-                                </div>
-                                <div class="col-md-6 col-sm-0"></div>
+                                </div> --}}
+                                {{-- <div class="col-md-12 col-sm-0"></div> --}}
 
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <label for="">Gender</label>
                                     <select name="gender" id="" class="form-control" required>
                                         <option value="male">male</option>
@@ -71,12 +79,12 @@
                                     </select>
                                 </div>
 
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <label for="">Date Of Birth</label>
                                     <input type="date" name="date_of_birth" value="{{ old('date_of_birth') }}" placeholder="date of birth" required>
                                 </div>
 
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <label for="">Marital Status</label>
                                     <select name="marital_status" id="" value="{{ old('marital_status') }}" class="form-control">
                                         <option value="single">Single</option>
@@ -86,24 +94,24 @@
                                     </select>
                                 </div>
 
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <label for="">Number Of Children</label>
                                     <input type="text" name="number_of_children" value="{{ old('number_of_children') }}" placeholder="Number Of Children">
                                 </div>
 
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <label for="">Email</label>
                                     <input type="email" name="email" value="{{ old('email') }}" placeholder="Your Email" required>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <label for="">Phone</label>
                                     <input type="text" name="phone" value="{{ old('phone') }}" placeholder="Your Phone" required>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <label for="">Citizenship</label>
                                     <input type="text" name="citizenship" value="{{ old('citizenship') }}" placeholder="Your citizenship" required>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <label for="">Residential Address</label>
                                     <input type="text" name="residential_address" value="{{ old('residential_address') }}" placeholder="Your residential address ( city &amp; country )" required>
                                 </div>
@@ -414,8 +422,11 @@
         </div>
         <style>
             label{
-                color: black;
+                color: #026837;
                 font-weight: 600;
+            }
+            input,select{
+                border: 1px solid #026837!important;
             }
         </style>
     </div>
