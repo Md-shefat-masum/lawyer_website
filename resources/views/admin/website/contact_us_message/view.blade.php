@@ -1,7 +1,7 @@
 
     <div class="table-responsive">
         <table class="table text-center">
-            <tr>
+            {{-- <tr>
                 <th>First name</th>
                 <th>:</th>
                 <th>{{ $data->first_name }}</th>
@@ -10,13 +10,13 @@
                 <th>middle name</th>
                 <th>:</th>
                 <th>{{ $data->middle_name }}</th>
-            </tr>
+            </tr> --}}
             <tr>
                 <th>Last name</th>
                 <th>:</th>
                 <th>{{ $data->last_name }}</th>
             </tr>
-            <tr>
+            {{-- <tr>
                 <th>Spouse First name</th>
                 <th>:</th>
                 <th>{{ $data->spouse_first_name }}</th>
@@ -30,7 +30,7 @@
                 <th>Spouse Last name</th>
                 <th>:</th>
                 <th>{{ $data->spouse_last_name }}</th>
-            </tr>
+            </tr> --}}
             <tr>
                 <th>gender</th>
                 <th>:</th>
@@ -152,13 +152,15 @@
                 <th colspan="5">Knowledge of English</th>
             </tr>
             <tr>
-                <th></th>
-                <th>High</th>
-                <th>Moderate</th>
-                <th>Basic</th>
+                <th>Title</th>
+                <th>Result</th>
+                {{-- <th></th>
+                <th>High</th> --}}
+                {{-- <th>Moderate</th> --}}
+                {{-- <th>Basic</th>
                 <th>None</th>
                 <th>IELTS-G</th>
-                <th>CELPIP-G</th>
+                <th>CELPIP-G</th> --}}
             </tr>
             <tr>
                 @php
@@ -203,13 +205,15 @@
                 <th colspan="5">Knowledge of French</th>
             </tr>
             <tr>
-                <th></th>
+                <th>Title</th>
+                <th>Result</th>
+                {{-- <th></th>
                 <th>High</th>
                 <th>Moderate</th>
                 <th>Basic</th>
                 <th>None</th>
                 <th>IELTS-G</th>
-                <th>CELPIP-G</th>
+                <th>CELPIP-G</th> --}}
             </tr>
             <tr>
                 @php
@@ -259,13 +263,30 @@
             </tr>
             @php
                 $datas = json_decode($data->questions);
-                // dd($datas)
+                // dd($datas);
+                $quetions = [
+                    'Have you ever been refused any kind of visa, admission, or been ordered to leave Canada or any other country? If “yes”, please provide details.',
+                    'Have you legally worked in Canada for one year or longer? If so, how long?',
+                    'Have you ever committed an offence or been charged with an offence in any country?',
+                    'What is your verifiable personal net worth in Canadian Dollar?',
+                    'Have you ever submitted an application for immigration to Canada in the past? If yes, please provide details.',
+                    'How much money you are able to bring for settling in Canada (Canadian Currency)?',
+                    'Do you have a relative or relatives in Canada, such as a parent, grandparent, child, grandchild, child of a parent (Sibling), chi ld of a grandparent (aunt or uncle), or grandchild of parents (niece or nephew), who is 18 years or older and living in Canada, and who is a Canadian citizen or permanent resident)?If so, what is their status in Canada and where do they reside?',
+                    'Do you have friends in Canada? If so, please indicate their city of residence.',
+                    'Any other information that you think might be of assistance?'
+                ];
             @endphp
             @for ($i = 1; $i < 10; $i++)
                 <tr>
                     {{-- @for ($j = 0; $j < 2; $j++) --}}
                         @if (isset($datas[$i][0]))
-                            <td style="text-align: center;width:70%;text-align: left;white-space: break-spaces;">{{ $datas[$i][0] }}</td>
+                            <td style="text-align: center;width:70%;text-align: left;white-space: break-spaces;">
+                                <h5>Question:</h5>
+                                {{ isset($quetions[$i])?$quetions[$i]:'' }}
+                                <br>
+                                <h5>Answer:</h5>
+                                {{ $datas[$i][0] }}
+                            </td>
                             <td style="text-align: center;width:30%">{{ $datas[$i][1] }}</td>
                         @endif
                     {{-- @endfor --}}
@@ -275,6 +296,40 @@
         </table>
 
 
+        <table class="table text-center table-bordered">
+            <tr>
+                <th colspan="5">How did you hear about us?</th>
+            </tr>
+            <tr>
+                <th>Question</th>
+                <th>Answer</th>
+            </tr>
+            <tr>
+                <td style="text-align: center;width:70%;text-align: left;white-space: break-spaces;">
+                    {{ $datas[10][0] }}
+                </td>
+                <td>{{ $datas[10][1] == 'on'? 'yes' : 'no' }}</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;width:70%;text-align: left;white-space: break-spaces;">
+                    {{ $datas[10][2] }}
+                </td>
+                <td>{{ $datas[10][3] == 'on'? 'yes' : 'no' }}</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;width:70%;text-align: left;white-space: break-spaces;">
+                    {{ $datas[10][4] }}
+                </td>
+                <td>{{ $datas[10][5] == 'on'? 'yes' : 'no' }}</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;width:70%;text-align: left;white-space: break-spaces;">
+                    {{ $datas[10][6] }}
+                </td>
+                <td>{{ $datas[10][7]}}</td>
+            </tr>
+
+        </table>
 
         <style>
             .table td, .table th{

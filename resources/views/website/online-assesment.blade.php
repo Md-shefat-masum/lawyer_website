@@ -203,39 +203,39 @@
                                         </tr>
                                         <tr>
                                             <td>Speak</td>
-                                            <td><input type="checkbox" placeholder="" name="english_speak[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_speak[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_speak[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_speak[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_speak[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="heigh" name="english_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="moderate" name="english_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="basic" name="english_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="none" name="english_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="ielts" name="english_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="celpip" name="english_speak[]"></td>
                                         </tr>
                                         <tr>
                                             <td>Listen</td>
-                                            <td><input type="checkbox" placeholder="" name="english_listen[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_listen[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_listen[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_listen[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_listen[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="heigh" name="english_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="moderate" name="english_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="basic" name="english_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="none" name="english_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="ielts" name="english_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="celpip" name="english_listen[]"></td>
                                         </tr>
                                         <tr>
                                             <td>Read</td>
-                                            <td><input type="checkbox" placeholder="" name="english_read[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_read[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_read[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_read[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_read[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="heigh" name="english_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="moderate" name="english_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="basic" name="english_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="none" name="english_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="ielts" name="english_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="celpip" name="english_read[]"></td>
                                         </tr>
                                         <tr>
                                             <td>Write</td>
-                                            <td><input type="checkbox" placeholder="" name="english_write[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_write[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_write[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_write[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_write[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="english_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="heigh" name="english_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="moderate" name="english_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="basic" name="english_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="none" name="english_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="ielts" name="english_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="celpip" name="english_write[]"></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -284,39 +284,39 @@
                                         </tr>
                                         <tr>
                                             <td>Speak</td>
-                                            <td><input type="checkbox" placeholder="" name="french_speak[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_speak[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_speak[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_speak[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_speak[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="heigh" name="french_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="moderate" name="french_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="basic" name="french_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="none" name="french_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="ielts" name="french_speak[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="celpip" name="french_speak[]"></td>
                                         </tr>
                                         <tr>
                                             <td>Listen</td>
-                                            <td><input type="checkbox" placeholder="" name="french_listen[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_listen[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_listen[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_listen[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_listen[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="heigh" name="french_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="moderate" name="french_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="basic" name="french_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="none" name="french_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="ielts" name="french_listen[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="celpip" name="french_listen[]"></td>
                                         </tr>
                                         <tr>
                                             <td>Read</td>
-                                            <td><input type="checkbox" placeholder="" name="french_read[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_read[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_read[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_read[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_read[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="heigh" name="french_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="moderate" name="french_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="basic" name="french_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="none" name="french_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="ielts" name="french_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="celpip" name="french_read[]"></td>
                                         </tr>
                                         <tr>
                                             <td>Write</td>
-                                            <td><input type="checkbox" placeholder="" name="french_write[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_write[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_write[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_write[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_write[]"></td>
-                                            <td><input type="checkbox" placeholder="" name="french_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="heigh" name="french_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="moderate" name="french_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="basic" name="french_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="none" name="french_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="ielts" name="french_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="celpip" name="french_write[]"></td>
                                         </tr>
                                     </table>
                                 </div>
