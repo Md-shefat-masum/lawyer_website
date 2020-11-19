@@ -27,7 +27,7 @@
 }
 .service_image {
   position: relative;
-  height: 230px;
+  height: 190px;
   overflow: hidden;
 }
 .service_image img {
@@ -39,7 +39,6 @@
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.4);
   padding: 5px;
   border-radius: 4px;
   color: white;
@@ -49,10 +48,8 @@
   margin: 0;
   font-size: 19px;
   padding: 0;
-  text-align: center;
 }
-@media only screen and (min-width: 768px) {
-    .service-box {
-        padding-right: 10px !important;
-    }
+.rs-services.style1 .service-inner .service-box,
+.rs-services.style1 .service-inner .service-box.dark-bg {
+  background: transparent;
 }

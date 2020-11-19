@@ -42,7 +42,7 @@ View()->share([
 ]);
 
 Route::get('/emails', function(){
-    return view('mail.consultation');
+    return view('mail.free_assesment');
 });
 
 Route::get('/', 'WebsiteController@index')->name('website_index');

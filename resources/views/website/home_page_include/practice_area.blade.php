@@ -7,10 +7,10 @@
         </div>
         <div class="row">
             @foreach (App\AreaOfPractice::where('status',1)->orderBy('serial','ASC')->get() as $item)
-                <div class="col-lg-4 col-md-6 mb-30">
-                    <div class="practice-inner">
+                <div class="col-lg-4 col-md-6 mb-30 h-100">
+                    <div class="practice-inner h-100" style="height: 261px!important;align-items: center">
                         <div class="icon-part">
-                            <img src="{{asset(''.$item->icon)}}" alt="">
+                            <img style="max-width: 70px; height: 70px;" src="{{asset(''.$item->icon)}}" alt="">
                         </div>
                         <div class="content-part">
                             <h4 class="title">

@@ -196,6 +196,27 @@ class WebsiteController extends Controller
         $message->save();
         $message->slug = $message->id.uniqid(10);
         $message->save();
+
+        Session::put('assesment',$message->id);
+
+        $subject = 'Free online assesment';
+        $to = 'emamul.haque@gmail.com';
+        Mail::send('mail.consultation', ['content' => '', 'logo' =>'',' title' => '', 'branch_name' => ''],
+        function ($message) use ($subject, $to){
+            $message->from($to, 'N.Jahan LPC Free Consultation');
+            $message->to('emamul.haque@gmail.com');
+            $message->subject($subject);
+        });
+
+        $subject = 'Free online assesment';
+        $to = 'info@njahanlaw.ca';
+        Mail::send('mail.consultation', ['content' => '', 'logo' =>'',' title' => '', 'branch_name' => ''],
+        function ($message) use ($subject, $to){
+            $message->from($to, 'N.Jahan LPC Free Consultation');
+            $message->to('info@njahanlaw.ca');
+            $message->subject($subject);
+        });
+
         return redirect()->back()->with('success','thanks for your valueable response.');
     }
 
