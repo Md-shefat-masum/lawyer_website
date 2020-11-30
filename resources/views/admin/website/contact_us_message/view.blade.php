@@ -218,10 +218,10 @@
             <tr>
                 @php
                     $datas = json_decode($data->french_speak);
-                    // dd($datas[0])
+                    //dd($datas);
                 @endphp
                 <td>Speak</td>
-                @for ($i = 1; $i < 7; $i++)
+                @for ($i = 0; $i < 6; $i++)
                     @if (isset($datas[1][$i]))
                         <td style="text-align: center;">{{ $datas[1][$i] }}</td>
                     @endif
@@ -263,33 +263,38 @@
             </tr>
             @php
                 $datas = json_decode($data->questions);
-                // dd($datas);
+                //dd($datas[3]);
                 $quetions = [
+                    'Have you ever remained beyond the validity of your status, attended school or worked without authorization in Canada or any other country? If “yes”, please provide details',
                     'Have you ever been refused any kind of visa, admission, or been ordered to leave Canada or any other country? If “yes”, please provide details.',
                     'Have you legally worked in Canada for one year or longer? If so, how long?',
                     'Have you ever committed an offence or been charged with an offence in any country?',
                     'What is your verifiable personal net worth in Canadian Dollar?',
                     'Have you ever submitted an application for immigration to Canada in the past? If yes, please provide details.',
                     'How much money you are able to bring for settling in Canada (Canadian Currency)?',
-                    'Do you have a relative or relatives in Canada, such as a parent, grandparent, child, grandchild, child of a parent (Sibling), chi ld of a grandparent (aunt or uncle), or grandchild of parents (niece or nephew), who is 18 years or older and living in Canada, and who is a Canadian citizen or permanent resident)?If so, what is their status in Canada and where do they reside?',
-                    'Do you have friends in Canada? If so, please indicate their city of residence.',
+                    "Do you have a relative or relatives in Canada, such as a parent, grandparent, child, grandchild, child of a parent (Sibling), 
+                    chi ld of a grandparent (aunt or uncle), or grandchild of parents (niece or nephew), who is 18 years or older and living in Canada
+                    , and who is a Canadian citizen or permanent resident)?If so, what is their status in Canada and where do they reside?",
+                    "Do you have friends in Canada? If so, please indicate their city of residence.",
                     'Any other information that you think might be of assistance?'
                 ];
             @endphp
             @for ($i = 1; $i < 10; $i++)
                 <tr>
-                    {{-- @for ($j = 0; $j < 2; $j++) --}}
-                        @if (isset($datas[$i][0]))
-                            <td style="text-align: center;width:70%;text-align: left;white-space: break-spaces;">
-                                <h5>Question:</h5>
-                                {{ isset($quetions[$i])?$quetions[$i]:'' }}
-                                <br>
-                                <h5>Answer:</h5>
-                                {{ $datas[$i][0] }}
-                            </td>
-                            <td style="text-align: center;width:30%">{{ $datas[$i][1] }}</td>
+                    @if (isset($datas[$i][0]))
+                        <td style="text-align: left;width:70%;text-align: left;white-space: break-spaces;">
+                            <h5>Question:</h5>
+                            {{ isset($quetions[$i-1])?$quetions[$i-1]:'' }}
+                            <br>
+                            <h5>Answer:</h5>
+                            {{ $datas[$i][0] }}
+                        </td>
+                        @if(isset( $datas[$i][1] ))
+                            <td style="text-align: left;width:30%">{{ $datas[$i][1] }}</td>
+                        @else
+                            <td></td>
                         @endif
-                    {{-- @endfor --}}
+                    @endif
                 </tr>
             @endfor
 
@@ -304,30 +309,28 @@
                 <th>Question</th>
                 <th>Answer</th>
             </tr>
-            <tr>
-                <td style="text-align: center;width:70%;text-align: left;white-space: break-spaces;">
-                    {{ $datas[10][0] }}
-                </td>
-                <td>{{ $datas[10][1] == 'on'? 'yes' : 'no' }}</td>
-            </tr>
-            <tr>
-                <td style="text-align: center;width:70%;text-align: left;white-space: break-spaces;">
-                    {{ $datas[10][2] }}
-                </td>
-                <td>{{ $datas[10][3] == 'on'? 'yes' : 'no' }}</td>
-            </tr>
-            <tr>
-                <td style="text-align: center;width:70%;text-align: left;white-space: break-spaces;">
-                    {{ $datas[10][4] }}
-                </td>
-                <td>{{ $datas[10][5] == 'on'? 'yes' : 'no' }}</td>
-            </tr>
-            <tr>
-                <td style="text-align: center;width:70%;text-align: left;white-space: break-spaces;">
-                    {{ $datas[10][6] }}
-                </td>
-                <td>{{ $datas[10][7]}}</td>
-            </tr>
+            @for($i=0;$i<8;$i++)
+                @if(isset($datas[11][$i] ) && isset($datas[11][$i+1]) )
+                    @if($datas[11][$i] != 'Other: (pls specify)')
+                        <tr>
+                            <td style="text-align: left;width:70%;text-align: left;white-space: break-spaces;">
+                                {{ $datas[11][$i] }}
+                            </td>
+                            <td>{{ $datas[11][$i+1] == 'on'? 'yes' : 'no' }}</td>
+                            @php
+                                if($datas[11][$i+1] == 'on')$i+=2;
+                            @endphp
+                        </tr>
+                    @else
+                        <tr>
+                            <td style="text-align: left;width:70%;text-align: left;white-space: break-spaces;">
+                                {{ $datas[11][$i] }}
+                            </td>
+                            <td>{{ $datas[11][$i+1]}}</td>
+                        </tr>
+                    @endif
+                @endif
+            @endfor
 
         </table>
 

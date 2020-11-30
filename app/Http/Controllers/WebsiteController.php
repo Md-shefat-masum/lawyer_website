@@ -99,7 +99,7 @@ class WebsiteController extends Controller
 
     public function contact_message_submit(Request $request){
 
-        // dd($request->request);
+        //dd($request->request);
 
         $cirtificate = [];
         $experience = [];
@@ -146,6 +146,7 @@ class WebsiteController extends Controller
         array_push($french_speak,($request->french_write));
 
         array_push($questions,($request->question_date));
+        array_push($questions,($request->question_0));
         array_push($questions,($request->question_1));
         array_push($questions,($request->question_2));
         array_push($questions,($request->question_3));
@@ -158,7 +159,7 @@ class WebsiteController extends Controller
         array_push($questions,($request->question_from));
 
         // dd($request,json_encode($english_speak,JSON_PRETTY_PRINT),$experience);
-
+        //dd($questions);
         $this->validate($request,[
             'email' => ['required'],
             'phone' => ['required'],
@@ -199,20 +200,30 @@ class WebsiteController extends Controller
 
         Session::put('assesment',$message->id);
 
+        
+        $subject = 'Free online assesment';
+        $to = 'myphoto204@gmail.com';
+        Mail::send('mail.free_assesment', ['content' => '', 'logo' =>'',' title' => '', 'branch_name' => ''],
+        function ($message) use ($subject, $to){
+            $message->from($to, 'N.Jahan LPC Free Assesment');
+            $message->to('myphoto204@gmail.com');
+            $message->subject($subject);
+        });
+        
         $subject = 'Free online assesment';
         $to = 'emamul.haque@gmail.com';
-        Mail::send('mail.consultation', ['content' => '', 'logo' =>'',' title' => '', 'branch_name' => ''],
+        Mail::send('mail.free_assesment', ['content' => '', 'logo' =>'',' title' => '', 'branch_name' => ''],
         function ($message) use ($subject, $to){
-            $message->from($to, 'N.Jahan LPC Free Consultation');
+            $message->from($to, 'N.Jahan LPC Free Assesment');
             $message->to('emamul.haque@gmail.com');
             $message->subject($subject);
         });
 
         $subject = 'Free online assesment';
         $to = 'info@njahanlaw.ca';
-        Mail::send('mail.consultation', ['content' => '', 'logo' =>'',' title' => '', 'branch_name' => ''],
+        Mail::send('mail.free_assesment', ['content' => '', 'logo' =>'',' title' => '', 'branch_name' => ''],
         function ($message) use ($subject, $to){
-            $message->from($to, 'N.Jahan LPC Free Consultation');
+            $message->from($to, 'N.Jahan LPC Free Assesment');
             $message->to('info@njahanlaw.ca');
             $message->subject($subject);
         });

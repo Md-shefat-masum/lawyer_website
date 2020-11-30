@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+		Fri Nov 20 2020 02:12:32 GMT+0600 (Bangladesh Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/WebsiteController.php
+* public/contents/website/css/custom.css
+* public/contents/website/css/custom.less
+* resources/views/website/home_page_include/practice_area.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-20-10-2020-1-42-12.txt
+* resources/views/mail/free_assesment.blade.php
+
+
+Deleted files:
+
+
+Renamed files:

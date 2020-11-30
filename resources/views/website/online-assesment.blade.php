@@ -31,11 +31,8 @@
                     <div class="contact-wrap">
                         <div class="sec-title mb-50">
 
-                            <h2 class="title mb-33">Get In Touch</h2>
-                            <h2 class="title mb-33">NJLPC</h2>
-                            <div class="desc">
-                                Your solutions start here. You have come to the right firm. We are privileged to accept the responsibility of serving you.
-                            </div>
+                            <h2 class="title mb-33">Your solutions start here. Check your eligibility, please fill it out and submit.</h2>
+                            
                         </div>
                         <form class="contact-inner-page" action="{{ route('website_contact_message_submit') }}" method="POST">
                             @csrf
@@ -223,19 +220,13 @@
                                             <td>Read</td>
                                             <td><input type="checkbox" placeholder="" value="heigh" name="english_read[]"></td>
                                             <td><input type="checkbox" placeholder="" value="moderate" name="english_read[]"></td>
-                                            <td><input type="checkbox" placeholder="" value="basic" name="english_read[]"></td>
-                                            <td><input type="checkbox" placeholder="" value="none" name="english_read[]"></td>
-                                            <td><input type="checkbox" placeholder="" value="ielts" name="english_read[]"></td>
-                                            <td><input type="checkbox" placeholder="" value="celpip" name="english_read[]"></td>
+                                             <td colspan="4"></td>
                                         </tr>
                                         <tr>
                                             <td>Write</td>
                                             <td><input type="checkbox" placeholder="" value="heigh" name="english_write[]"></td>
                                             <td><input type="checkbox" placeholder="" value="moderate" name="english_write[]"></td>
-                                            <td><input type="checkbox" placeholder="" value="basic" name="english_write[]"></td>
-                                            <td><input type="checkbox" placeholder="" value="none" name="english_write[]"></td>
-                                            <td><input type="checkbox" placeholder="" value="ielts" name="english_write[]"></td>
-                                            <td><input type="checkbox" placeholder="" value="celpip" name="english_write[]"></td>
+                                             <td colspan="4"></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -304,19 +295,13 @@
                                             <td>Read</td>
                                             <td><input type="checkbox" placeholder="" value="heigh" name="french_read[]"></td>
                                             <td><input type="checkbox" placeholder="" value="moderate" name="french_read[]"></td>
-                                            <td><input type="checkbox" placeholder="" value="basic" name="french_read[]"></td>
-                                            <td><input type="checkbox" placeholder="" value="none" name="french_read[]"></td>
-                                            <td><input type="checkbox" placeholder="" value="ielts" name="french_read[]"></td>
-                                            <td><input type="checkbox" placeholder="" value="celpip" name="french_read[]"></td>
+                                            <td colspan="4"></td>
                                         </tr>
                                         <tr>
                                             <td>Write</td>
                                             <td><input type="checkbox" placeholder="" value="heigh" name="french_write[]"></td>
                                             <td><input type="checkbox" placeholder="" value="moderate" name="french_write[]"></td>
-                                            <td><input type="checkbox" placeholder="" value="basic" name="french_write[]"></td>
-                                            <td><input type="checkbox" placeholder="" value="none" name="french_write[]"></td>
-                                            <td><input type="checkbox" placeholder="" value="ielts" name="french_write[]"></td>
-                                            <td><input type="checkbox" placeholder="" value="celpip" name="french_write[]"></td>
+                                            <td colspan="4"></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -353,10 +338,17 @@
                                 <div class="col-12">
                                     <table class="table table-bordered">
                                         <tr>
-                                            <th style="width: 70%">Have you ever remained beyond the validity of your status, attended school or worked without authorization in Canada or any other country? If “yes”, please provide details
-                                            </th>
+                                            <th style="width: 70%">Question</th>
                                             <td style="width: 15%; text-align: center;">YES</td>
                                             <td style="width: 15%; text-align: center;">NO</td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 70%">
+                                                <label for="" class="text-left">Have you ever remained beyond the validity of your status, attended school or worked without authorization in Canada or any other country? If “yes”, please provide details.</label>
+                                                <textarea name="question_0[]" class="form-control" ></textarea>
+                                            </th>
+                                            <td style="width: 15%"><input type="checkbox" value="yes" name="question_0[]"></td>
+                                            <td style="width: 15%"><input type="checkbox" value="no" name="question_0[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
@@ -440,19 +432,19 @@
                                             <th style="width: 70%">
                                                 <textarea style="height: 40px;resize: none;color:#026837;margin: 0;overflow: hidden;" name="question_from[]" readonly class="form-control" >Facebook:</textarea>
                                             </th>
-                                            <td style="width: 15%" colspan="2"><input type="checkbox" value="off" name="question_from[]"></td>
+                                            <td style="width: 15%" colspan="2"><input type="checkbox" value="on" name="question_from[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
                                                 <textarea  style="height: 40px;resize: none;color:#026837;margin: 0;overflow: hidden;"  name="question_from[]" readonly class="form-control" >Friends:</textarea>
                                             </th>
-                                            <td style="width: 15%" colspan="2"><input type="checkbox" value="off" name="question_from[]"></td>
+                                            <td style="width: 15%" colspan="2"><input type="checkbox" value="on" name="question_from[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
                                                 <textarea  style="height: 40px;resize: none;color:#026837;margin: 0;overflow: hidden;"  name="question_from[]" readonly class="form-control" >Printed flyers:</textarea>
                                             </th>
-                                            <td style="width: 15%" colspan="2"><input type="checkbox" value="off" name="question_from[]"></td>
+                                            <td style="width: 15%" colspan="2"><input type="checkbox" value="on" name="question_from[]"></td>
                                         </tr>
                                         <tr>
                                             <th style="width: 70%">
@@ -468,7 +460,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <textarea placeholder="Addional Message" name="message" required></textarea>
-                                    <button type="submit" class="readon upper">Submit Request</button>
+                                    <button type="submit" class="readon upper">Save and continue later</button>
                                 </div>
                             </div>
                         </form>

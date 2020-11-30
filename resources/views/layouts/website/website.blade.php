@@ -85,10 +85,11 @@
                     <div class="col-lg-6 col-md-5 col-sm-12">
                         <div class="toolbar-sl-share">
                             <ul>
-                                <li><a href="{{ $basic_information->facebook }}"><i class="fa fa-facebook"></i> Find Us On Facebook</a></li>
+                                <li><a target="_blank" href="{{ $basic_information->facebook }}"><i class="fa fa-facebook"></i> Find Us On Facebook</a></li>
                                 {{-- <li><a href="{{ $basic_information->twitter }}"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="{{ $basic_information->pinterest }}"><i class="fa fa-pinterest-p"></i></a></li>
                                 <li><a href="{{ $basic_information->linkedin }}"><i class="fa fa-linkedin"></i></a></li> --}}
+                                <li class="get-btn"><a target="_blank" href="https://njahanlaw.ca:2096/">Web Mail</a></li>
                                 <li class="get-btn"><a href="/contact">Free Consultation</a></li>
                             </ul>
                         </div>

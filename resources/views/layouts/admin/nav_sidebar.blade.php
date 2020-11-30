@@ -13,6 +13,12 @@
             <div class="menu-title">Dashboard</div>
         </a>
     </li>
+    <li>
+        <a href="https://njahanlaw.ca:2096/" target="_blank">
+            <div class="parent-icon"><i class="zmdi zmdi-email"></i></div>
+            <div class="menu-title">Web Mail</div>
+        </a>
+    </li>
 
     <li>
         <a class="has-arrow" href="#">
