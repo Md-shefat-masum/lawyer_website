@@ -50,13 +50,29 @@ class WebsiteController extends Controller
 
     public function online_assesment_save_for_later(Request $request){
         // session_start();
-        // dd($request->request);
+        $data = [];
+
+        foreach ($request->request as $key => $value) {
+            // dd($value,$key);
+            if($key !== '_token'){
+                $data[$key] = $value;
+            }
+        }
+        // dd($data,json_encode($data));
+
+        SaveForLater::where('email','')->delete();
+        SaveForLater::where('email',$request->user_set_email)->delete();
+
         $save_later = new SaveForLater();
-        $save_later->email = $request->email;
-        $save_later->form_data = $request->data;
+        $save_later->email = $request->user_set_email;
+        $save_later->form_data = json_encode($data);
         $save_later->created_at = Carbon::now()->toDateTimeString();
         $save_later->save();
-        return redirect()->back()->with('success','your data saved for later.');
+
+        return response()->json([
+            'response' => 'success'
+        ]);
+
     }
 
     public function online_assesment_get_data(Request $request){
@@ -75,7 +91,7 @@ class WebsiteController extends Controller
     }
 
     public function free_consultation_submit(Request $request){
-        dd($request);
+        // dd($request);
         $this->validate($request,[
             'name' => ['required'],
             'email' => ['required'],

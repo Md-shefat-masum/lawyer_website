@@ -81,20 +81,27 @@ $(function () {
             return false;
         });
 
-        // assesment_page
-        $('.loginModal').on('click',function(){
-            // sessionStorage.setItem('form_data',$('.assesment_page').html());
-            let form = $('.assesment_page');
-            let formData = new FormData(form[0]);
 
-            axios.post('/free-online-assesment-save-for-later',formData)
+        $('.save_data_for_later_use').on('click',function(e){
+            e.preventDefault();
+            $('.assesment_page').submit();
+        })
+
+        $('.assesment_page').on('submit',function(e){
+            e.preventDefault();
+            let formData = new FormData(this);
+            formData.set('user_set_email',$('.user_set_email').val());
+            axios.post(location.origin+'/free-online-assesment-save-for-later',formData)
                 .then((response)=>{
                     console.log(response);
+                    if(response.data.response === 'success'){
+                        Toast.fire({
+                            icon: 'success',
+                            title: 'your data saved successfully.'
+                        })
+                    }
                 })
-
-            console.log(form);
-            $('.save_form_Data_details').val($('.assesment_page').html())
-        });
+        })
 
         $('.load_data_btn').on('click',function(e){
             e.preventDefault();
@@ -105,8 +112,14 @@ $(function () {
                 .then((response)=>{
                     if(response.data !== null){
                         let html = response.data.data.form_data;
-                        console.log(html);
-                        $('.assesment_page .datas')[0].innerHTML = html;
+                        for (const key in html) {
+                            if (html.hasOwnProperty(key)) {
+                                const element = html[key];
+                                console.log(element);
+                            }
+                        }
+                        // console.log(html);
+                        // $('.assesment_page .datas')[0].innerHTML = html;
                     }
                 })
         })

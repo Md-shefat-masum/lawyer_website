@@ -539,18 +539,17 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="{{ route('website_online_assesment_save_for_later') }}" method="POST">
+                <form action="#" method="POST">
                     <div class="modal-body">
                         @csrf
                         <div class="form-group">
                             <label for="">type your email</label>
-                            <input type="email" name="email" class="form-control">
-                            <input type="text" name="data" class="save_form_Data_details">
+                            <input type="email" name="email" class="form-control user_set_email">
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save for later</button>
+                        <button type="button" class="btn btn-primary save_data_for_later_use">Save for later</button>
                     </div>
                 </form>
             </div>
@@ -562,7 +561,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="loadSavedModalLabel">Saved previous data.</h5>
+                    <h5 class="modal-title" id="loadSavedModalLabel">Load previous data.</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
