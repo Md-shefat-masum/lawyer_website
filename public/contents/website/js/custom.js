@@ -1,6 +1,8 @@
-$(function(){
-    $('.add_new_education_row').on('click',function(){
-        let row = `
+$(function () {
+    $(window).on('load', function () {
+
+        $('.add_new_education_row').on('click', function () {
+            let row = `
             <tr>
                 <td><input type="text" placeholder="" name="from_month_or_year[]"></td>
                 <td><input type="text" placeholder="" name="to_month_or_year[]"></td>
@@ -11,21 +13,22 @@ $(function(){
                 <td style="border-left: 0"><i class="fa fa-trash border border-success remove_this_education_row add_br_50"></i></td>
             </tr>
         `;
-        let parent = $(this).parents('table');
-        parent.append(row);
-        initRemoveNewEducationRow();
-        return false;
-    });
-    function initRemoveNewEducationRow(){
-        $('.remove_this_education_row').on('click',function(){
-            $(this).parents('tr').remove();
+            let parent = $(this).parents('table');
+            parent.append(row);
             initRemoveNewEducationRow();
-        })
-    }
-    initRemoveNewEducationRow();
+            return false;
+        });
 
-    $('.add_new_employment_row').on('click',function(){
-        let row = `
+        function initRemoveNewEducationRow() {
+            $('.remove_this_education_row').on('click', function () {
+                $(this).parents('tr').remove();
+                initRemoveNewEducationRow();
+            })
+        }
+        initRemoveNewEducationRow();
+
+        $('.add_new_employment_row').on('click', function () {
+            let row = `
             <tr>
                 <td><input type="text" placeholder="" name="experience_from_month_or_year[]" ></td>
                 <td><input type="text" placeholder="" name="experience_to_month_or_year[]" ></td>
@@ -36,14 +39,14 @@ $(function(){
                 <td style="border-left: 0"><i class="fa fa-trash border border-success remove_this_education_row add_br_50"></i></td>
             </tr>
         `;
-        let parent = $(this).parents('table');
-        parent.append(row);
-        initRemoveNewEducationRow();
-        return false;
-    });
+            let parent = $(this).parents('table');
+            parent.append(row);
+            initRemoveNewEducationRow();
+            return false;
+        });
 
-    $('.add_new_english_skill_row').on('click',function(){
-        let row = `
+        $('.add_new_english_skill_row').on('click', function () {
+            let row = `
             <tr>
                 <td><input type="text" placeholder="" name="english_test_name[]"></td>
                 <td><input type="text" placeholder="" name="english_test_date[]"></td>
@@ -54,14 +57,14 @@ $(function(){
                 <td style="border-left: 0"><i class="fa fa-trash border border-success remove_this_education_row add_br_50"></i></td>
             </tr>
         `;
-        let parent = $(this).parents('table');
-        parent.append(row);
-        initRemoveNewEducationRow();
-        return false;
-    });
+            let parent = $(this).parents('table');
+            parent.append(row);
+            initRemoveNewEducationRow();
+            return false;
+        });
 
-    $('.add_new_french_skill_row').on('click',function(){
-        let row = `
+        $('.add_new_french_skill_row').on('click', function () {
+            let row = `
             <tr>
                 <td><input type="text" placeholder="" name="french_test_name[]"></td>
                 <td><input type="text" placeholder="" name="french_test_date[]"></td>
@@ -72,9 +75,12 @@ $(function(){
                 <td style="border-left: 0"><i class="fa fa-trash border border-success remove_this_education_row add_br_50"></i></td>
             </tr>
         `;
-        let parent = $(this).parents('table');
-        parent.append(row);
-        initRemoveNewEducationRow();
-        return false;
-    });
+            let parent = $(this).parents('table');
+            parent.append(row);
+            initRemoveNewEducationRow();
+            return false;
+        });
+
+    })
+
 })

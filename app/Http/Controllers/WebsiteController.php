@@ -11,6 +11,7 @@ use App\AreaOfPractice;
 use function GuzzleHttp\json_encode;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
+use App\SaveForLater;
 
 class WebsiteController extends Controller
 {
@@ -45,6 +46,16 @@ class WebsiteController extends Controller
 
     public function online_assesment(Request $request){
         return view('website.online-assesment');
+    }
+
+    public function online_assesment_save_for_later(Request $request){
+        dd($request->request);
+        $save_later = new SaveForLater();
+        $save_later->email = $request->email;
+        $save_later->form_data = $request->form_data;
+        $save_later->created_at = Carbon::now()->toDateTimeString();
+        $save_later->save();
+        return redirect()->back()->with('success','your data saved for later.');
     }
 
     public function free_consultation_submit(Request $request){
@@ -99,7 +110,7 @@ class WebsiteController extends Controller
 
     public function contact_message_submit(Request $request){
 
-        //dd($request->request);
+        dd($request->request);
 
         $cirtificate = [];
         $experience = [];

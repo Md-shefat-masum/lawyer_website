@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Tue Dec 01 2020 23:16:45 GMT+0600 (Bangladesh Standard Time)
+------------------------------------------------------
+
+Modified files:
+* public/contents/website/css/custom.css
+* public/contents/website/css/custom.less
+* public/contents/website/js/custom.js
+* resources/views/website/online-assesment.blade.php
+
+
+Created files:
+* .autogit/logs/log-1-11-2020-22-46-24.txt
+
+
+Deleted files:
+
+
+Renamed files:

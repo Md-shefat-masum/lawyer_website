@@ -496,7 +496,12 @@
                                 </div>
                                 <div class="col-md-12">
                                     <textarea placeholder="Addional Message" name="message" required></textarea>
-                                    <button type="submit" class="readon upper">Save and continue later</button>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row justify-content-start">
+                                        <button type="submit" class="readon upper">Submit</button>
+                                        <button type="button" class="readon upper btn-warning" data-toggle="modal" data-target="#loginModal" style="margin-left: 30px">Save and continue later</button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -519,5 +524,31 @@
         </style>
     </div>
     <!-- Contact Inner Sction End -->
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Save data for later.</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="">type your email</label>
+                            <input type="email" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save for later</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     @endsection
