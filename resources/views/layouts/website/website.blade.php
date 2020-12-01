@@ -277,6 +277,7 @@
     <!-- contact form js -->
     <script src="{{asset('contents/website')}}/js/contact.form.js "></script>
     <!-- main js -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="{{asset('contents/website')}}/js/main.js "></script>
     <script src="{{asset('contents/website')}}/js/custom.js "></script>
     @stack('cjs')

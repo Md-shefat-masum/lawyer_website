@@ -49,13 +49,29 @@ class WebsiteController extends Controller
     }
 
     public function online_assesment_save_for_later(Request $request){
-        dd($request->request);
+        // session_start();
+        // dd($request->request);
         $save_later = new SaveForLater();
         $save_later->email = $request->email;
-        $save_later->form_data = $request->form_data;
+        $save_later->form_data = $request->data;
         $save_later->created_at = Carbon::now()->toDateTimeString();
         $save_later->save();
         return redirect()->back()->with('success','your data saved for later.');
+    }
+
+    public function online_assesment_get_data(Request $request){
+        $email = $request->email;
+        $data = '';
+        if(SaveForLater::where('email',$email)->exists()){
+            $data = SaveForLater::where('email',$email)->latest()->firstOrFail();
+            return response()->json([
+                'data' => $data
+            ]);
+        }else{
+            return response()->json([
+                'data' => NULL
+            ]);
+        }
     }
 
     public function free_consultation_submit(Request $request){

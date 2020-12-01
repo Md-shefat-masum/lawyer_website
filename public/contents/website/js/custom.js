@@ -81,6 +81,13 @@ $(function () {
             return false;
         });
 
+        // assesment_page
+        $('.loginModal').on('click',function(){
+            sessionStorage.setItem('form_data',$('.assesment_page').html());
+            $('.save_form_Data_details').val($('.assesment_page').html())
+        });
+
+        
     })
 
 })

@@ -30,11 +30,14 @@
                 <div class="col-lg-9 pr-30">
                     <div class="contact-wrap">
                         <div class="sec-title mb-50">
-
                             <h2 class="title mb-33">Your solutions start here. Check your eligibility, please fill it out and submit.</h2>
-
+                            <div class="row">
+                                <div class="col-6">
+                                    <button class="readon upper" data-toggle="modal" data-target="#loadSavedModal">Load Prevoious data if saveed.</button>
+                                </div>
+                            </div>
                         </div>
-                        <form class="contact-inner-page" action="{{ route('website_contact_message_submit') }}" method="POST">
+                        <form class="contact-inner-page assesment_page" action="{{ route('website_contact_message_submit') }}" method="POST">
                             @csrf
                             <div class="row">
                                 {{-- <div class="col-md-12">
@@ -500,7 +503,7 @@
                                 <div class="col-12">
                                     <div class="row justify-content-start">
                                         <button type="submit" class="readon upper">Submit</button>
-                                        <button type="button" class="readon upper btn-warning" data-toggle="modal" data-target="#loginModal" style="margin-left: 30px">Save and continue later</button>
+                                        <button type="button" class="readon upper btn-warning loginModal" data-toggle="modal" data-target="#loginModal" style="margin-left: 30px">Save and continue later</button>
                                     </div>
                                 </div>
                             </div>
@@ -534,18 +537,47 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <form action="">
+                <form action="{{ route('website_online_assesment_save_for_later') }}" method="POST">
+                    <div class="modal-body">
+                        @csrf
                         <div class="form-group">
                             <label for="">type your email</label>
-                            <input type="email" class="form-control">
+                            <input type="email" name="email" class="form-control">
+                            <input type="text" name="data" class="save_form_Data_details">
                         </div>
-                    </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save for later</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="loadSavedModal" tabindex="-1" aria-labelledby="loadSavedModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loadSavedModalLabel">Saved previous data.</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save for later</button>
-                </div>
+                <form action="{{ route('website_online_assesment_get_data') }}" method="POST">
+                    <div class="modal-body">
+                        @csrf
+                        <div class="form-group">
+                            <label for="">type your email</label>
+                            <input type="email" name="email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary load_data_btn">Load data</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

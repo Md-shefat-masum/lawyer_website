@@ -54,6 +54,7 @@ Route::get('/service/{id}/{name}', 'WebsiteController@service_single')->name('se
 Route::get('/about', 'WebsiteController@about')->name('website_about');
 Route::get('/free-online-assesment', 'WebsiteController@online_assesment')->name('website_online_assesment');
 Route::post('/free-online-assesment-save-for-later', 'WebsiteController@online_assesment_save_for_later')->name('website_online_assesment_save_for_later');
+Route::post('/free-online-assesment-get-data', 'WebsiteController@online_assesment_get_data')->name('website_online_assesment_get_data');
 
 Route::post('/free-consultation-submit', 'WebsiteController@free_consultation_submit')->name('website_free_consultation_submit');
 Route::post('/subscriber-submit', 'WebsiteController@subscriber_submit')->name('website_subscriber_submit');
