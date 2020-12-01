@@ -83,11 +83,33 @@ $(function () {
 
         // assesment_page
         $('.loginModal').on('click',function(){
-            sessionStorage.setItem('form_data',$('.assesment_page').html());
+            // sessionStorage.setItem('form_data',$('.assesment_page').html());
+            let form = $('.assesment_page');
+            let formData = new FormData(form[0]);
+
+            axios.post('/free-online-assesment-save-for-later',formData)
+                .then((response)=>{
+                    console.log(response);
+                })
+
+            console.log(form);
             $('.save_form_Data_details').val($('.assesment_page').html())
         });
 
-        
+        $('.load_data_btn').on('click',function(e){
+            e.preventDefault();
+            let email = $('#get_saved_data_email').val();
+            let formDAta = new FormData();
+            formDAta.set('email',email);
+            axios.post('free-online-assesment-get-data',formDAta)
+                .then((response)=>{
+                    if(response.data !== null){
+                        let html = response.data.data.form_data;
+                        console.log(html);
+                        $('.assesment_page .datas')[0].innerHTML = html;
+                    }
+                })
+        })
     })
 
 })

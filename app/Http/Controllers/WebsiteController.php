@@ -75,7 +75,7 @@ class WebsiteController extends Controller
     }
 
     public function free_consultation_submit(Request $request){
-        // dd($request);
+        dd($request);
         $this->validate($request,[
             'name' => ['required'],
             'email' => ['required'],
