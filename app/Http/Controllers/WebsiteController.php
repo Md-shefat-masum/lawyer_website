@@ -107,7 +107,7 @@ class WebsiteController extends Controller
         array_push($questions,($request->question_9));
         array_push($questions,($request->question_from));
 
-        // dd($request->request);
+        dd($request->request);
 
         $data = [];
 

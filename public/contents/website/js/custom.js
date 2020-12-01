@@ -119,6 +119,87 @@ $(function () {
                                 const element = html[key];
                                 $(`input[name=${key}]`).val(element);
                                 console.log(key, element);
+
+                                if(key === "question_0"){
+                                    $('#'+key).val(element[0]);
+                                    if(element[1] === 'yes'){
+                                        $('#'+key+'_yes').attr('checked','true');
+                                    }else{
+                                        $('#'+key+'_no').attr('checked','true');
+                                    }
+                                }
+                                if(key === "question_1"){
+                                    $('#'+key).val(element[0]);
+                                    if(element[1] === 'yes'){
+                                        $('#'+key+'_yes').attr('checked','true');
+                                    }else{
+                                        $('#'+key+'_no').attr('checked','true');
+                                    }
+                                }
+                                if(key === "question_2"){
+                                    $('#'+key).val(element[0]);
+                                    if(element[1] === 'yes'){
+                                        $('#'+key+'_yes').attr('checked','true');
+                                    }else{
+                                        $('#'+key+'_no').attr('checked','true');
+                                    }
+                                }
+                                if(key === "question_3"){
+                                    $('#'+key).val(element[0]);
+                                    if(element[1] === 'yes'){
+                                        $('#'+key+'_yes').attr('checked','true');
+                                    }else{
+                                        $('#'+key+'_no').attr('checked','true');
+                                    }
+                                }
+                                if(key === "question_4"){
+                                    $('#'+key).val(element[0]);
+                                    if(element[1] === 'yes'){
+                                        $('#'+key+'_yes').attr('checked','true');
+                                    }else{
+                                        $('#'+key+'_no').attr('checked','true');
+                                    }
+                                }
+                                if(key === "question_5"){
+                                    $('#'+key).val(element[0]);
+                                    if(element[1] === 'yes'){
+                                        $('#'+key+'_yes').attr('checked','true');
+                                    }else{
+                                        $('#'+key+'_no').attr('checked','true');
+                                    }
+                                }
+                                if(key === "question_6"){
+                                    $('#'+key).val(element[0]);
+                                    if(element[1] === 'yes'){
+                                        $('#'+key+'_yes').attr('checked','true');
+                                    }else{
+                                        $('#'+key+'_no').attr('checked','true');
+                                    }
+                                }
+                                if(key === "question_7"){
+                                    $('#'+key).val(element[0]);
+                                    if(element[1] === 'yes'){
+                                        $('#'+key+'_yes').attr('checked','true');
+                                    }else{
+                                        $('#'+key+'_no').attr('checked','true');
+                                    }
+                                }
+                                if(key === "question_8"){
+                                    $('#'+key).val(element[0]);
+                                    if(element[1] === 'yes'){
+                                        $('#'+key+'_yes').attr('checked','true');
+                                    }else{
+                                        $('#'+key+'_no').attr('checked','true');
+                                    }
+                                }
+                                if(key === "question_9"){
+                                    $('#'+key).val(element[0]);
+                                    if(element[1] === 'yes'){
+                                        $('#'+key+'_yes').attr('checked','true');
+                                    }else{
+                                        $('#'+key+'_no').attr('checked','true');
+                                    }
+                                }
                             }
                         }
                         // console.log(html);

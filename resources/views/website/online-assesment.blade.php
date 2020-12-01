@@ -385,85 +385,85 @@
                                             <tr>
                                                 <th style="width: 70%">
                                                     <label for="" class="text-left">Have you ever remained beyond the validity of your status, attended school or worked without authorization in Canada or any other country? If “yes”, please provide details.</label>
-                                                    <textarea name="question_0[]" class="form-control" ></textarea>
+                                                    <textarea name="question_0[]" id="question_0" class="form-control" ></textarea>
                                                 </th>
-                                                <td style="width: 15%"><input type="checkbox" value="yes" name="question_0[]"></td>
-                                                <td style="width: 15%"><input type="checkbox" value="no" name="question_0[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_0_no" value="yes" name="question_0[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_0_no" value="no" name="question_0[]"></td>
                                             </tr>
                                             <tr>
                                                 <th style="width: 70%">
                                                     <label for="" class="text-left">Have you ever been refused any kind of visa, admission, or
                                                         been ordered to leave Canada or any other country? If “yes”, please provide details.</label>
-                                                    <textarea name="question_1[]" class="form-control" ></textarea>
+                                                    <textarea name="question_1[]" id="question_1" class="form-control" ></textarea>
                                                 </th>
-                                                <td style="width: 15%"><input type="checkbox" value="yes" name="question_1[]"></td>
-                                                <td style="width: 15%"><input type="checkbox" value="no" name="question_1[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_1_yes" value="yes" name="question_1[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_1_no" value="no" name="question_1[]"></td>
                                             </tr>
                                             <tr>
                                                 <th style="width: 70%">
                                                     <label for="" class="text-left">Have you legally worked in Canada for one year or longer? If so, how long?</label>
-                                                    <textarea name="question_2[]" class="form-control" ></textarea>
+                                                    <textarea name="question_2[]" id="question_2" class="form-control" ></textarea>
                                                 </th>
-                                                <td style="width: 15%"><input type="checkbox" value="yes" name="question_2[]"></td>
-                                                <td style="width: 15%"><input type="checkbox" value="no" name="question_2[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_2_yes" value="yes" name="question_2[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_2_no" value="no" name="question_2[]"></td>
                                             </tr>
                                             <tr>
                                                 <th style="width: 70%">
                                                     <label for="" class="text-left">Have you ever committed an offence or been charged with an offence in any country?</label>
-                                                    <textarea name="question_3[]" class="form-control" ></textarea>
+                                                    <textarea name="question_3[]" id="question_3" class="form-control" ></textarea>
                                                 </th>
-                                                <td style="width: 15%"><input type="checkbox" value="yes" name="question_3[]"></td>
-                                                <td style="width: 15%"><input type="checkbox" value="no" name="question_3[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_3_yes" value="yes" name="question_3[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_3_no" value="no" name="question_3[]"></td>
                                             </tr>
                                             <tr>
                                                 <th style="width: 70%">
                                                     <label for="" class="text-left">What is your verifiable personal net worth in Canadian Dollar?</label>
-                                                    <textarea name="question_4[]" class="form-control" ></textarea>
+                                                    <textarea name="question_4[]" id="question_4" class="form-control" ></textarea>
                                                 </th>
-                                                <td style="width: 15%"><input type="checkbox" value="yes" name="question_4[]"></td>
-                                                <td style="width: 15%"><input type="checkbox" value="no" name="question_4[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_4_yes" value="yes" name="question_4[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_4_no" value="no" name="question_4[]"></td>
                                             </tr>
                                             <tr>
                                                 <th style="width: 70%">
                                                     <label for="" class="text-left">Have you ever submitted an application for immigration to Canada in the past? If yes, please provide details.</label>
-                                                    <textarea name="question_5[]" class="form-control" ></textarea>
+                                                    <textarea name="question_5[]" id="question_5" class="form-control" ></textarea>
                                                 </th>
-                                                <td style="width: 15%"><input type="checkbox" value="yes" name="question_5[]"></td>
-                                                <td style="width: 15%"><input type="checkbox" value="no" name="question_5[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_5_yes" value="yes" name="question_5[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_5_no" value="no" name="question_5[]"></td>
                                             </tr>
                                             <tr>
                                                 <th style="width: 70%">
                                                     <label for="" class="text-left">How much money you are able to bring for settling in Canada (Canadian Currency)?</label>
-                                                    <textarea name="question_6[]" class="form-control" ></textarea>
+                                                    <textarea name="question_6[]" id="question_6" class="form-control" ></textarea>
                                                 </th>
-                                                <td style="width: 15%"><input type="checkbox" value="yes" name="question_6[]"></td>
-                                                <td style="width: 15%"><input type="checkbox" value="no" name="question_6[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_6_yes" value="yes"  name="question_6[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_6_no" value="no" name="question_6[]"></td>
                                             </tr>
                                             <tr>
                                                 <th style="width: 70%">
                                                     <label for="" class="text-left">Do you have a relative or relatives in Canada, such as a parent, grandparent, child, grandchild, child of a parent (Sibling), chi
                                                         ld of a grandparent (aunt or uncle), or grandchild of parents (niece or nephew), who is 18 years or older and living
                                                         in Canada, and who is a Canadian citizen or permanent resident)?If so, what is their status in Canada and where do they reside?</label>
-                                                    <textarea name="question_7[]" class="form-control" ></textarea>
+                                                    <textarea name="question_7[]" id="question_7" class="form-control" ></textarea>
                                                 </th>
-                                                <td style="width: 15%"><input type="checkbox" value="yes" name="question_7[]"></td>
-                                                <td style="width: 15%"><input type="checkbox" value="no" name="question_7[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_7_yes" value="yes" name="question_7[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_7_no" value="no" name="question_7[]"></td>
                                             </tr>
                                             <tr>
                                                 <th style="width: 70%">
                                                     <label for="" class="text-left">Do you have friends in Canada? If so, please indicate their city of residence.</label>
-                                                    <textarea name="question_8[]" class="form-control" ></textarea>
+                                                    <textarea name="question_8[]" id="question_8" class="form-control" ></textarea>
                                                 </th>
-                                                <td style="width: 15%"><input type="checkbox" value="yes" name="question_8[]"></td>
-                                                <td style="width: 15%"><input type="checkbox" value="no" name="question_8[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_8_yes" value="yes" name="question_8[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_8_no" value="no" name="question_8[]"></td>
                                             </tr>
                                             <tr>
                                                 <th style="width: 70%">
                                                     <label for="" class="text-left">Any other information that you think might be of assistance?</label>
                                                     <textarea name="question_9[]" id="question_9" class="form-control" ></textarea>
                                                 </th>
-                                                <td style="width: 15%"><input type="checkbox" value="yes" name="question_9[]"></td>
-                                                <td style="width: 15%"><input type="checkbox" value="no" name="question_9[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_9_yes" value="yes" name="question_9[]"></td>
+                                                <td style="width: 15%"><input type="checkbox" id="question_9_no" value="no" name="question_9[]"></td>
                                             </tr>
                                             <tr>
                                                 <th colspan="3" style="text-align: center;">How did you hear about us?</th>
