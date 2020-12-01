@@ -87,12 +87,8 @@ $(function () {
 
         $('.save_data_for_later_use').on('click', function (e) {
             e.preventDefault();
-            $('.assesment_page').submit();
-        })
-
-        $('.assesment_page').on('submit', function (e) {
-            e.preventDefault();
-            let formData = new FormData(this);
+            // $('.assesment_page').submit();
+            let formData = new FormData($('.assesment_page')[0]);
             formData.set('user_set_email', $('.user_set_email').val());
             axios.post(location.origin + '/free-online-assesment-save-for-later', formData)
                 .then((response) => {
@@ -103,8 +99,25 @@ $(function () {
                             title: 'your data saved successfully.'
                         })
                     }
+                    $('.modal').modal('hide');
                 })
         })
+
+        // $('.assesment_page').on('submit', function (e) {
+        //     e.preventDefault();
+        //     let formData = new FormData(this);
+        //     formData.set('user_set_email', $('.user_set_email').val());
+        //     axios.post(location.origin + '/free-online-assesment-save-for-later', formData)
+        //         .then((response) => {
+        //             console.log(response);
+        //             if (response.data.response === 'success') {
+        //                 Toast.fire({
+        //                     icon: 'success',
+        //                     title: 'your data saved successfully.'
+        //                 })
+        //             }
+        //         })
+        // })
 
         $('.load_data_btn').on('click', function (e) {
             e.preventDefault();
@@ -124,7 +137,15 @@ $(function () {
                                 console.log(key, element);
 
                                 if(key === 'message'){
-                                    $(`input[name=${key}]`).html(element);
+                                    $(`#${key}`).val(element);
+                                }
+
+                                if(key === 'gender'){
+                                    $(`option[value=${element}]`).attr('selected',true);
+                                }
+
+                                if(key === 'marital_status'){
+                                    $(`option[value=${element}]`).attr('selected',true);
                                 }
 
                                 if(key === 'english_speak' || key === 'english_listen' || key === 'english_read' || key === 'english_write'){
@@ -360,13 +381,32 @@ $(function () {
                         // console.log(html);
                         // $('.assesment_page .datas')[0].innerHTML = html;
                     }
+                    $('.modal').modal('hide');
+                    initRemoveNewEducationRow();
+                    init_employment_skill_row();
+                    init_french_skill_row();
+                    init_english_skill_row();
                 })
+
         })
 
         initRemoveNewEducationRow();
         init_employment_skill_row();
         init_french_skill_row();
         init_english_skill_row();
+
+        $('.assesment_form_submit').on('click',function(){
+            // $('.assesment_page').submit();
+            axios.post(location.origin+"/contact-message-submit")
+                .then((response)=>{
+                    if (response.data.response === 'success') {
+                        Toast.fire({
+                            icon: 'success',
+                            title: 'your data saved successfully.'
+                        })
+                    }
+                })
+        })
     })
 
 

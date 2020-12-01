@@ -504,11 +504,11 @@
                                         <input type="text" name="website" placeholder="Your Website">
                                     </div>
                                     <div class="col-md-12">
-                                        <textarea placeholder="Addional Message" name="message" required></textarea>
+                                        <textarea placeholder="Addional Message" id="message" name="message" required></textarea>
                                     </div>
                                     <div class="col-12">
                                         <div class="row justify-content-start">
-                                            <button type="submit" class="readon upper">Submit</button>
+                                            <button type="submit" class="readon upper assesment_form_submit">Submit</button>
                                             <button type="button" class="readon upper btn-warning loginModal" data-toggle="modal" data-target="#loginModal" style="margin-left: 30px">Save and continue later</button>
                                         </div>
                                     </div>
