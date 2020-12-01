@@ -136,17 +136,25 @@
                                             <th>To <br> Month/Year</th>
                                             <th>Name of the institution <br> (start with the recent eduction)</th>
                                             <th>City,Country</th>
-                                            <th>Certificate, Diploma <br> or degree issued, <br>field of study and major <br>(as it is indicated in your diploma)</th>
+                                            <th colspan="3">Certificate, Diploma <br> or degree issued, <br>field of study and major <br>(as it is indicated in your diploma)</th>
                                         </tr>
-                                        @for ($i = 0; $i < 2; $i++)
-                                            <tr>
-                                                <td><input type="text" placeholder="" name="from_month_or_year[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="" name="to_month_or_year[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="" name="name_of_institution[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="" name="city_country[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="" name="certificate_degree[]" {{$i==0?'required':''}}></td>
-                                            </tr>
-                                        @endfor
+                                        {{-- @for ($i = 0; $i < 2; $i++) --}}
+                                        @php
+                                            $i = 0;
+                                        @endphp
+                                        <tr>
+                                            <td><input type="text" placeholder="" name="from_month_or_year[]" {{$i==0?'required':''}}></td>
+                                            <td><input type="text" placeholder="" name="to_month_or_year[]" {{$i==0?'required':''}}></td>
+                                            <td><input type="text" placeholder="" name="name_of_institution[]" {{$i==0?'required':''}}></td>
+                                            <td><input type="text" placeholder="" name="city_country[]" {{$i==0?'required':''}}></td>
+                                            <td><input type="text" placeholder="" name="certificate_degree[]" {{$i==0?'required':''}}></td>
+                                            <td class="br-0"></td>
+                                            <td><i class="fa fa-plus"></i></td>
+                                        </tr>
+                                        @php
+                                            $i = 1;
+                                        @endphp
+                                        {{-- @endfor --}}
                                     </table>
                                 </div>
 

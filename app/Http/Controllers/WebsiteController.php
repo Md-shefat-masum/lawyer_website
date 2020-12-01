@@ -200,7 +200,7 @@ class WebsiteController extends Controller
 
         Session::put('assesment',$message->id);
 
-        
+
         $subject = 'Free online assesment';
         $to = 'myphoto204@gmail.com';
         Mail::send('mail.free_assesment', ['content' => '', 'logo' =>'',' title' => '', 'branch_name' => ''],
@@ -209,7 +209,7 @@ class WebsiteController extends Controller
             $message->to('myphoto204@gmail.com');
             $message->subject($subject);
         });
-        
+
         $subject = 'Free online assesment';
         $to = 'emamul.haque@gmail.com';
         Mail::send('mail.free_assesment', ['content' => '', 'logo' =>'',' title' => '', 'branch_name' => ''],
