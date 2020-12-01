@@ -82,19 +82,19 @@ $(function () {
         });
 
 
-        $('.save_data_for_later_use').on('click',function(e){
+        $('.save_data_for_later_use').on('click', function (e) {
             e.preventDefault();
             $('.assesment_page').submit();
         })
 
-        $('.assesment_page').on('submit',function(e){
+        $('.assesment_page').on('submit', function (e) {
             e.preventDefault();
             let formData = new FormData(this);
-            formData.set('user_set_email',$('.user_set_email').val());
-            axios.post(location.origin+'/free-online-assesment-save-for-later',formData)
-                .then((response)=>{
+            formData.set('user_set_email', $('.user_set_email').val());
+            axios.post(location.origin + '/free-online-assesment-save-for-later', formData)
+                .then((response) => {
                     console.log(response);
-                    if(response.data.response === 'success'){
+                    if (response.data.response === 'success') {
                         Toast.fire({
                             icon: 'success',
                             title: 'your data saved successfully.'
@@ -103,22 +103,22 @@ $(function () {
                 })
         })
 
-        $('.load_data_btn').on('click',function(e){
+        $('.load_data_btn').on('click', function (e) {
             e.preventDefault();
             let email = $('#get_saved_data_email').val();
             let formDAta = new FormData();
-            formDAta.set('email',email);
-            axios.post('free-online-assesment-get-data',formDAta)
-                .then((response)=>{
-                    if(response.data !== null){
+            formDAta.set('email', email);
+            axios.post('free-online-assesment-get-data', formDAta)
+                .then((response) => {
+                    if (response.data !== null) {
                         let html = response.data.data.form_data;
-                        html = JSON.parse( html);
+                        html = JSON.parse(html);
 
                         for (const key in html) {
                             if (html.hasOwnProperty(key)) {
                                 const element = html[key];
                                 $(`input[name=${key}]`).val(element);
-                                console.log(element);
+                                console.log(key, element);
                             }
                         }
                         // console.log(html);
@@ -126,6 +126,18 @@ $(function () {
                     }
                 })
         })
+    })
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        onOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
     })
 
 })

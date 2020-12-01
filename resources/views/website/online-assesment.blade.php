@@ -460,7 +460,7 @@
                                             <tr>
                                                 <th style="width: 70%">
                                                     <label for="" class="text-left">Any other information that you think might be of assistance?</label>
-                                                    <textarea name="question_9[]" class="form-control" ></textarea>
+                                                    <textarea name="question_9[]" id="question_9" class="form-control" ></textarea>
                                                 </th>
                                                 <td style="width: 15%"><input type="checkbox" value="yes" name="question_9[]"></td>
                                                 <td style="width: 15%"><input type="checkbox" value="no" name="question_9[]"></td>

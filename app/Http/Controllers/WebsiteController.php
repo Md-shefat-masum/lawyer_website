@@ -50,6 +50,65 @@ class WebsiteController extends Controller
 
     public function online_assesment_save_for_later(Request $request){
         // session_start();
+        $cirtificate = [];
+        $experience = [];
+
+        $english_speak = [];
+        $french_speak = [];
+        $questions = [];
+
+        foreach ($request->from_month_or_year as $key => $item) {
+            if($item != null){
+                $data = [
+                    'from' => $request->from_month_or_year[$key],
+                    'to' => $request->to_month_or_year[$key],
+                    'name_of_institue' => $request->name_of_institution[$key],
+                    'city_country' => $request->city_country[$key],
+                    'certificate_degree' => $request->certificate_degree[$key],
+                ];
+                array_push($cirtificate,$data);
+            }
+        }
+
+        foreach ($request->experience_from_month_or_year as $key => $item) {
+            if($item != null){
+                $data = [
+                    'from' => $request->experience_from_month_or_year[$key],
+                    'to' => $request->experience_to_month_or_year[$key],
+                    'duties' => $request->experience_name_of_institution[$key],
+                    'city' => $request->experience_city_country[$key],
+                    'name' => $request->experience_certificate_degree[$key],
+                ];
+                array_push($experience,$data);
+            }
+        }
+
+        array_push($english_speak,($request->english_speak));
+        array_push($english_speak,($request->english_listen));
+        array_push($english_speak,($request->english_read));
+        array_push($english_speak,($request->english_write));
+
+        array_push($french_speak,($request->french_date));
+        array_push($french_speak,($request->french_speak));
+        array_push($french_speak,($request->french_listen));
+        array_push($french_speak,($request->french_read));
+        array_push($french_speak,($request->french_write));
+
+        array_push($questions,($request->question_date));
+        array_push($questions,($request->question_0));
+        array_push($questions,($request->question_1));
+        array_push($questions,($request->question_2));
+        array_push($questions,($request->question_3));
+        array_push($questions,($request->question_4));
+        array_push($questions,($request->question_5));
+        array_push($questions,($request->question_6));
+        array_push($questions,($request->question_7));
+        array_push($questions,($request->question_8));
+        array_push($questions,($request->question_9));
+        array_push($questions,($request->question_from));
+
+        // dd($request->request);
+
         $data = [];
 
         foreach ($request->request as $key => $value) {
@@ -58,6 +117,13 @@ class WebsiteController extends Controller
                 $data[$key] = $value;
             }
         }
+
+        $data['education'] = $cirtificate;
+        $data['employment'] = $experience;
+        $data['english_speak_skill'] = $english_speak;
+        $data['french_speak_skill'] = $french_speak;
+        $data['questions'] = $questions;
+
         // dd($data,json_encode($data));
 
         SaveForLater::where('email','')->delete();
@@ -142,7 +208,7 @@ class WebsiteController extends Controller
 
     public function contact_message_submit(Request $request){
 
-        dd($request->request);
+        // dd($request->request);
 
         $cirtificate = [];
         $experience = [];
