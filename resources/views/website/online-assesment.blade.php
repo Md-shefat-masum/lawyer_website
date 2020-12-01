@@ -32,7 +32,7 @@
                         <div class="sec-title mb-50">
 
                             <h2 class="title mb-33">Your solutions start here. Check your eligibility, please fill it out and submit.</h2>
-                            
+
                         </div>
                         <form class="contact-inner-page" action="{{ route('website_contact_message_submit') }}" method="POST">
                             @csrf
