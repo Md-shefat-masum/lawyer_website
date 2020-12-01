@@ -134,7 +134,7 @@ $(function () {
                             if (html.hasOwnProperty(key)) {
                                 const element = html[key];
                                 $(`input[name=${key}]`).val(element);
-                                console.log(key, element);
+                                // console.log(key, element);
 
                                 if(key === 'message'){
                                     $(`#${key}`).val(element);
@@ -268,11 +268,11 @@ $(function () {
                                             if(index == 0){
                                                 let row = `
                                                     <tr>
-                                                        <td><input type="text" placeholder="" value="${html['french_test_name'][0]}" name="french_test_name[]" {{$i==0?'required':''}}></td>
-                                                        <td><input type="text" placeholder="" value="${html['french_test_date'][0]}" name="french_test_date[]" {{$i==0?'required':''}}></td>
-                                                        <td><input type="text" placeholder="" value="${html['french_test_speak'][0]}" name="french_test_speak[]" {{$i==0?'required':''}}></td>
-                                                        <td><input type="text" placeholder="" value="${html['french_test_listen'][0]}" name="french_test_listen[]" {{$i==0?'required':''}}></td>
-                                                        <td><input type="text" placeholder="" value="${html['french_test_read_write'][0]}" name="french_test_read_write[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['french_test_name'][0]}" name="french_test_name[]"></td>
+                                                        <td><input type="text" placeholder="" value="${html['french_test_date'][0]}" name="french_test_date[]"></td>
+                                                        <td><input type="text" placeholder="" value="${html['french_test_speak'][0]}" name="french_test_speak[]"></td>
+                                                        <td><input type="text" placeholder="" value="${html['french_test_listen'][0]}" name="french_test_listen[]"></td>
+                                                        <td><input type="text" placeholder="" value="${html['french_test_read_write'][0]}" name="french_test_read_write[]"></td>
                                                         <td style="border-right: 0"></td>
                                                         <td style="border-left: 0"><i class="fa fa-plus border border-success add_new_french_skill_row add_br_50"></i></td>
                                                     </tr>
@@ -281,11 +281,11 @@ $(function () {
                                             }else{
                                                 let row = `
                                                     <tr>
-                                                        <td><input type="text" placeholder="" value="${html['french_test_name'][index]}" name="french_test_name[]" {{$i==0?'required':''}}></td>
-                                                        <td><input type="text" placeholder="" value="${html['french_test_date'][index]}" name="french_test_date[]" {{$i==0?'required':''}}></td>
-                                                        <td><input type="text" placeholder="" value="${html['french_test_speak'][index]}" name="french_test_speak[]" {{$i==0?'required':''}}></td>
-                                                        <td><input type="text" placeholder="" value="${html['french_test_listen'][index]}" name="french_test_listen[]" {{$i==0?'required':''}}></td>
-                                                        <td><input type="text" placeholder="" value="${html['french_test_read_write'][index]}" name="french_test_read_write[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['french_test_name'][index]}" name="french_test_name[]"></td>
+                                                        <td><input type="text" placeholder="" value="${html['french_test_date'][index]}" name="french_test_date[]"></td>
+                                                        <td><input type="text" placeholder="" value="${html['french_test_speak'][index]}" name="french_test_speak[]"></td>
+                                                        <td><input type="text" placeholder="" value="${html['french_test_listen'][index]}" name="french_test_listen[]"></td>
+                                                        <td><input type="text" placeholder="" value="${html['french_test_read_write'][index]}" name="french_test_read_write[]"></td>
                                                         <td style="border-right: 0"></td>
                                                         <td style="border-left: 0"><i class="fa fa-trash border border-success remove_this_education_row add_br_50"></i></td>
                                                     </tr>

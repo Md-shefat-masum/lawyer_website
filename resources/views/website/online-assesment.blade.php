@@ -38,7 +38,7 @@
                             <h2 class="title mb-33">Your solutions start here. Check your eligibility, please fill it out and submit.</h2>
                             <div class="row">
                                 <div class="col-6">
-                                    <button class="readon upper" data-toggle="modal" data-target="#loadSavedModal">Load Prevoious data if saveed.</button>
+                                    <button class="readon upper" data-toggle="modal" data-target="#loadSavedModal">Load Previous data if saved.</button>
                                 </div>
                             </div>
                         </div>
@@ -267,13 +267,16 @@
                                             If you indicated the score, please provide the date you took the test and copy of the test.
                                         </label>
                                         <table class="table table-bordered english_test_table">
-                                            <tr>
-                                                <th>Test Name</th>
-                                                <th>Date</th>
-                                                <th>Speak</th>
-                                                <th>Listen</th>
-                                                <th colspan="3">Read Write</th>
-                                            </tr>
+                                            <thead>
+                                                <tr>
+                                                    <th>Test Name</th>
+                                                    <th>Date</th>
+                                                    <th>Speak</th>
+                                                    <th>Listen</th>
+                                                    <th colspan="3">Read Write</th>
+                                                </tr>
+                                            </thead>
+
                                             {{-- @for ($i = 0; $i < 2; $i++) --}}
                                             @php $i=0; @endphp
                                                 <tr>
@@ -299,15 +302,15 @@
                                             Knowledge of English (Please mark “X” or indicate your IELTS-General or CELPIP-G score)
                                         </label>
                                         <table class="table table-bordered" class="text-center">
-                                            <tr>
-                                                <th></th>
-                                                <th>High</th>
-                                                <th>Moderate</th>
-                                                <th>Basic</th>
-                                                <th>None</th>
-                                                <th>IELTS-G</th>
-                                                <th>CELPIP-G</th>
-                                            </tr>
+                                            <thead>
+                                                <tr>
+                                                    <th>Test Name</th>
+                                                    <th>Date</th>
+                                                    <th>Speak</th>
+                                                    <th>Listen</th>
+                                                    <th colspan="3">Read Write</th>
+                                                </tr>
+                                            </thead>
                                             <tr>
                                                 <td>Speak</td>
                                                 <td><input type="checkbox" placeholder="" id="french_speakheigh" value="heigh" name="french_speak[]"></td>
