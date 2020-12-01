@@ -261,7 +261,7 @@
                                         <label for="">
                                             If you indicated the score, please provide the date you took the test and copy of the test.
                                         </label>
-                                        <table class="table table-bordered">
+                                        <table class="table table-bordered english_test_table">
                                             <tr>
                                                 <th>Test Name</th>
                                                 <th>Date</th>
@@ -346,7 +346,7 @@
                                         <label for="">
                                             If you indicated the score, please provide the date you took the test and copy of the test.
                                         </label>
-                                        <table class="table table-bordered">
+                                        <table class="table table-bordered french_test_table">
                                             <tr>
                                                 <th>Test Name</th>
                                                 <th>Date</th>
