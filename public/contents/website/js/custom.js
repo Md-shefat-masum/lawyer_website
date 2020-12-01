@@ -112,9 +112,12 @@ $(function () {
                 .then((response)=>{
                     if(response.data !== null){
                         let html = response.data.data.form_data;
+                        html = JSON.parse( html);
+
                         for (const key in html) {
                             if (html.hasOwnProperty(key)) {
                                 const element = html[key];
+                                $(`input[name=${key}]`).val(element);
                                 console.log(element);
                             }
                         }
