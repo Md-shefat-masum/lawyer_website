@@ -25,26 +25,26 @@ $(function () {
                 initRemoveNewEducationRow();
             })
         }
-        initRemoveNewEducationRow();
 
-        $('.add_new_employment_row').on('click', function () {
-            let row = `
-            <tr>
-                <td><input type="text" placeholder="" name="experience_from_month_or_year[]" ></td>
-                <td><input type="text" placeholder="" name="experience_to_month_or_year[]" ></td>
-                <td><input type="text" placeholder="" name="experience_name_of_institution[]" ></td>
-                <td><input type="text" placeholder="" name="experience_city_country[]" ></td>
-                <td><input type="text" placeholder="" name="experience_certificate_degree[]" ></td>
-                <td style="border-right: 0"></td>
-                <td style="border-left: 0"><i class="fa fa-trash border border-success remove_this_education_row add_br_50"></i></td>
-            </tr>
-        `;
-            let parent = $(this).parents('table');
-            parent.append(row);
-            initRemoveNewEducationRow();
-            return false;
-        });
-
+        function init_employment_skill_row(){
+            $('.add_new_employment_row').on('click', function () {
+                let row = `
+                <tr>
+                    <td><input type="text" placeholder="" name="experience_from_month_or_year[]" ></td>
+                    <td><input type="text" placeholder="" name="experience_to_month_or_year[]" ></td>
+                    <td><input type="text" placeholder="" name="experience_name_of_institution[]" ></td>
+                    <td><input type="text" placeholder="" name="experience_city_country[]" ></td>
+                    <td><input type="text" placeholder="" name="experience_certificate_degree[]" ></td>
+                    <td style="border-right: 0"></td>
+                    <td style="border-left: 0"><i class="fa fa-trash border border-success remove_this_education_row add_br_50"></i></td>
+                </tr>
+            `;
+                let parent = $(this).parents('table');
+                parent.append(row);
+                initRemoveNewEducationRow();
+                return false;
+            });
+        }
         function init_english_skill_row(){
             $('.add_new_english_skill_row').on('click', function () {
                 let row = `
@@ -123,41 +123,88 @@ $(function () {
                                 $(`input[name=${key}]`).val(element);
                                 console.log(key, element);
 
-                                if (key === "english_test_name") {
-                                    if (html["english_test_name"].length > 0) {
-                                        for (let index = 0; index < html["english_test_name"].length; index++) {
-                                            // const element = html["english_test_name"][index];
+                                if(key === 'message'){
+                                    $(`input[name=${key}]`).html(element);
+                                }
+
+                                if(key === 'english_speak' || key === 'english_listen' || key === 'english_read' || key === 'english_write'){
+                                    $(`#${key}${element}`).attr('checked','true');
+                                }
+
+                                if(key === 'french_speak' || key === 'french_listen' || key === 'french_read' || key === 'french_write'){
+                                    $(`#${key}${element}`).attr('checked','true');
+                                }
+
+                                if (key === "from_month_or_year") {
+                                    if (html["from_month_or_year"].length > 0) {
+                                        for (let index = 0; index < html["from_month_or_year"].length; index++) {
+                                            // const element = html["from_month_or_year"][index];
                                             if(index == 0){
                                                 let row = `
                                                     <tr>
-                                                        <td><input type="text" placeholder="" value="${html['english_test_name'][0]}" name="english_test_name[]" {{$i==0?'required':''}}></td>
-                                                        <td><input type="text" placeholder="" value="${html['english_test_date'][0]}" name="english_test_date[]" {{$i==0?'required':''}}></td>
-                                                        <td><input type="text" placeholder="" value="${html['english_test_speak'][0]}" name="english_test_speak[]" {{$i==0?'required':''}}></td>
-                                                        <td><input type="text" placeholder="" value="${html['english_test_listen'][0]}" name="english_test_listen[]" {{$i==0?'required':''}}></td>
-                                                        <td><input type="text" placeholder="" value="${html['english_test_read_write'][0]}" name="english_test_read_write[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['from_month_or_year'][0]}" name="from_month_or_year[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['to_month_or_year'][0]}" name="to_month_or_year[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['name_of_institution'][0]}" name="name_of_institution[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['city_country'][0]}" name="city_country[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['certificate_degree'][0]}" name="certificate_degree[]" {{$i==0?'required':''}}></td>
                                                         <td style="border-right: 0"></td>
                                                         <td style="border-left: 0"><i class="fa fa-plus border border-success add_new_english_skill_row add_br_50"></i></td>
                                                     </tr>
                                                 `;
-                                                $('.english_test_table tbody').html(row);
+                                                $('.education_table tbody').html(row);
                                             }else{
                                                 let row = `
                                                     <tr>
-                                                        <td><input type="text" placeholder="" value="${html['english_test_name'][index]}" name="english_test_name[]" {{$i==0?'required':''}}></td>
-                                                        <td><input type="text" placeholder="" value="${html['english_test_date'][index]}" name="english_test_date[]" {{$i==0?'required':''}}></td>
-                                                        <td><input type="text" placeholder="" value="${html['english_test_speak'][index]}" name="english_test_speak[]" {{$i==0?'required':''}}></td>
-                                                        <td><input type="text" placeholder="" value="${html['english_test_listen'][index]}" name="english_test_listen[]" {{$i==0?'required':''}}></td>
-                                                        <td><input type="text" placeholder="" value="${html['english_test_read_write'][index]}" name="english_test_read_write[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['from_month_or_year'][index]}" name="from_month_or_year[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['to_month_or_year'][index]}" name="to_month_or_year[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['name_of_institution'][index]}" name="name_of_institution[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['city_country'][index]}" name="city_country[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['certificate_degree'][index]}" name="certificate_degree[]" {{$i==0?'required':''}}></td>
                                                         <td style="border-right: 0"></td>
                                                         <td style="border-left: 0"><i class="fa fa-trash border border-success remove_this_education_row add_br_50"></i></td>
                                                     </tr>
                                                 `;
-                                                $('.english_test_table tbody').append(row);
+                                                $('.education_table tbody').append(row);
                                             }
                                         }
                                     }
                                 }
-                                
+
+                                if (key === "experience_from_month_or_year") {
+                                    if (html["experience_from_month_or_year"].length > 0) {
+                                        for (let index = 0; index < html["experience_from_month_or_year"].length; index++) {
+                                            // const element = html["experience_from_month_or_year"][index];
+                                            if(index == 0){
+                                                let row = `
+                                                    <tr>
+                                                        <td><input type="text" placeholder="" value="${html['experience_from_month_or_year'][0]}" name="experience_from_month_or_year[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['experience_to_month_or_year'][0]}" name="experience_to_month_or_year[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['experience_name_of_institution'][0]}" name="experience_name_of_institution[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['experience_city_country'][0]}" name="experience_city_country[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['experience_certificate_degree'][0]}" name="experience_certificate_degree[]" {{$i==0?'required':''}}></td>
+                                                        <td style="border-right: 0"></td>
+                                                        <td style="border-left: 0"><i class="fa fa-plus border border-success add_new_english_skill_row add_br_50"></i></td>
+                                                    </tr>
+                                                `;
+                                                $('.employment_table tbody').html(row);
+                                            }else{
+                                                let row = `
+                                                    <tr>
+                                                        <td><input type="text" placeholder="" value="${html['experience_from_month_or_year'][index]}" name="experience_from_month_or_year[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['experience_to_month_or_year'][index]}" name="experience_to_month_or_year[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['experience_name_of_institution'][index]}" name="experience_name_of_institution[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['experience_city_country'][index]}" name="experience_city_country[]" {{$i==0?'required':''}}></td>
+                                                        <td><input type="text" placeholder="" value="${html['experience_certificate_degree'][index]}" name="experience_certificate_degree[]" {{$i==0?'required':''}}></td>
+                                                        <td style="border-right: 0"></td>
+                                                        <td style="border-left: 0"><i class="fa fa-trash border border-success remove_this_education_row add_br_50"></i></td>
+                                                    </tr>
+                                                `;
+                                                $('.employment_table tbody').append(row);
+                                            }
+                                        }
+                                    }
+                                }
+
                                 if (key === "english_test_name") {
                                     if (html["english_test_name"].length > 0) {
                                         for (let index = 0; index < html["english_test_name"].length; index++) {
@@ -316,6 +363,8 @@ $(function () {
                 })
         })
 
+        initRemoveNewEducationRow();
+        init_employment_skill_row();
         init_french_skill_row();
         init_english_skill_row();
     })
