@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Tue Dec 01 2020 21:15:28 GMT+0600 (Bangladesh Standard Time)
+------------------------------------------------------
+
+Modified files:
+* public/contents/website/c.jpg
+* resources/views/website/online-assesment.blade.php
+
+
+Created files:
+* .autogit/logs/log-1-11-2020-1-46-35.txt
+* public/contents/website/cold.jpg
+
+
+Deleted files:
+
+
+Renamed files:

@@ -278,6 +278,7 @@
     <script src="{{asset('contents/website')}}/js/contact.form.js "></script>
     <!-- main js -->
     <script src="{{asset('contents/website')}}/js/main.js "></script>
+    <script src="{{asset('contents/website')}}/js/custom.js "></script>
     @stack('cjs')
 </body>
 
