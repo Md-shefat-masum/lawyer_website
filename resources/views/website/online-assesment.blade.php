@@ -148,8 +148,8 @@
                                             <td><input type="text" placeholder="" name="name_of_institution[]" {{$i==0?'required':''}}></td>
                                             <td><input type="text" placeholder="" name="city_country[]" {{$i==0?'required':''}}></td>
                                             <td><input type="text" placeholder="" name="certificate_degree[]" {{$i==0?'required':''}}></td>
-                                            <td class="br-0"></td>
-                                            <td><i class="fa fa-plus"></i></td>
+                                            <td style="border-right: 0"></td>
+                                            <td style="border-left: 0"><i class="fa fa-plus border border-success add_new_education_row add_br_50"></i></td>
                                         </tr>
                                         @php
                                             $i = 1;
@@ -174,17 +174,25 @@
                                             <th>To <br> M/D/Y <br> Present</th>
                                             <th>Title, duties and <br> responsibilities <br> (number of hours worked per week)</th>
                                             <th>City,Country</th>
-                                            <th>Name of the employer </th>
+                                            <th colspan="3">Name of the employer </th>
                                         </tr>
-                                        @for ($i = 0; $i < 2; $i++)
-                                            <tr>
-                                                <td><input type="text" placeholder="" name="experience_from_month_or_year[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="" name="experience_to_month_or_year[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="" name="experience_name_of_institution[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="" name="experience_city_country[]" {{$i==0?'required':''}}></td>
-                                                <td><input type="text" placeholder="" name="experience_certificate_degree[]" {{$i==0?'required':''}}></td>
-                                            </tr>
-                                        @endfor
+                                        {{-- @for ($i = 0; $i < 2; $i++) --}}
+                                            @php
+                                                $i=0;
+                                            @endphp
+                                                <tr>
+                                                    <td><input type="text" placeholder="" name="experience_from_month_or_year[]" {{$i==0?'required':''}}></td>
+                                                    <td><input type="text" placeholder="" name="experience_to_month_or_year[]" {{$i==0?'required':''}}></td>
+                                                    <td><input type="text" placeholder="" name="experience_name_of_institution[]" {{$i==0?'required':''}}></td>
+                                                    <td><input type="text" placeholder="" name="experience_city_country[]" {{$i==0?'required':''}}></td>
+                                                    <td><input type="text" placeholder="" name="experience_certificate_degree[]" {{$i==0?'required':''}}></td>
+                                                    <td style="border-right: 0"></td>
+                                                    <td style="border-left: 0"><i class="fa fa-plus border border-success add_new_employment_row add_br_50"></i></td>
+                                                </tr>
+                                            @php
+                                                $i=1;
+                                            @endphp
+                                        {{-- @endfor --}}
                                     </table>
                                 </div>
 
@@ -228,13 +236,19 @@
                                             <td>Read</td>
                                             <td><input type="checkbox" placeholder="" value="heigh" name="english_read[]"></td>
                                             <td><input type="checkbox" placeholder="" value="moderate" name="english_read[]"></td>
-                                             <td colspan="4"></td>
+                                            <td><input type="checkbox" placeholder="" value="basic" name="english_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="none" name="english_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="ielts" name="english_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="celpip" name="english_read[]"></td>
                                         </tr>
                                         <tr>
                                             <td>Write</td>
                                             <td><input type="checkbox" placeholder="" value="heigh" name="english_write[]"></td>
                                             <td><input type="checkbox" placeholder="" value="moderate" name="english_write[]"></td>
-                                             <td colspan="4"></td>
+                                            <td><input type="checkbox" placeholder="" value="basic" name="english_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="none" name="english_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="ielts" name="english_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="celpip" name="english_write[]"></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -249,17 +263,21 @@
                                             <th>Date</th>
                                             <th>Speak</th>
                                             <th>Listen</th>
-                                            <th>Read Write</th>
+                                            <th colspan="3">Read Write</th>
                                         </tr>
-                                        @for ($i = 0; $i < 2; $i++)
+                                        {{-- @for ($i = 0; $i < 2; $i++) --}}
+                                        @php $i=0; @endphp
                                             <tr>
                                                 <td><input type="text" placeholder="" name="english_test_name[]" {{$i==0?'required':''}}></td>
                                                 <td><input type="text" placeholder="" name="english_test_date[]" {{$i==0?'required':''}}></td>
                                                 <td><input type="text" placeholder="" name="english_test_speak[]" {{$i==0?'required':''}}></td>
                                                 <td><input type="text" placeholder="" name="english_test_listen[]" {{$i==0?'required':''}}></td>
                                                 <td><input type="text" placeholder="" name="english_test_read_write[]" {{$i==0?'required':''}}></td>
+                                                <td style="border-right: 0"></td>
+                                                <td style="border-left: 0"><i class="fa fa-plus border border-success add_new_english_skill_row add_br_50"></i></td>
                                             </tr>
-                                        @endfor
+                                        @php $i=1; @endphp
+                                        {{-- @endfor --}}
                                     </table>
                                 </div>
 
@@ -303,13 +321,19 @@
                                             <td>Read</td>
                                             <td><input type="checkbox" placeholder="" value="heigh" name="french_read[]"></td>
                                             <td><input type="checkbox" placeholder="" value="moderate" name="french_read[]"></td>
-                                            <td colspan="4"></td>
+                                            <td><input type="checkbox" placeholder="" value="basic" name="french_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="none" name="french_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="ielts" name="french_read[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="celpip" name="french_read[]"></td>
                                         </tr>
                                         <tr>
                                             <td>Write</td>
                                             <td><input type="checkbox" placeholder="" value="heigh" name="french_write[]"></td>
                                             <td><input type="checkbox" placeholder="" value="moderate" name="french_write[]"></td>
-                                            <td colspan="4"></td>
+                                            <td><input type="checkbox" placeholder="" value="basic" name="french_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="none" name="french_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="ielts" name="french_write[]"></td>
+                                            <td><input type="checkbox" placeholder="" value="celpip" name="french_write[]"></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -324,17 +348,21 @@
                                             <th>Date</th>
                                             <th>Speak</th>
                                             <th>Listen</th>
-                                            <th>Read Write</th>
+                                            <th colspan="3">Read Write</th>
                                         </tr>
-                                        @for ($i = 0; $i < 2; $i++)
+                                        {{-- @for ($i = 0; $i < 2; $i++) --}}
+                                        @php $i=0; @endphp
                                             <tr>
                                                 <td><input type="text" placeholder="" name="french_test_name[]" {{$i==0?'required':''}}></td>
                                                 <td><input type="text" placeholder="" name="french_test_date[]" {{$i==0?'required':''}}></td>
                                                 <td><input type="text" placeholder="" name="french_test_speak[]" {{$i==0?'required':''}}></td>
                                                 <td><input type="text" placeholder="" name="french_test_listen[]" {{$i==0?'required':''}}></td>
                                                 <td><input type="text" placeholder="" name="french_test_read_write[]" {{$i==0?'required':''}}></td>
+                                                <td style="border-right: 0"></td>
+                                                <td style="border-left: 0"><i class="fa fa-plus border border-success add_new_french_skill_row add_br_50"></i></td>
                                             </tr>
-                                        @endfor
+                                        @php $i=1; @endphp
+                                        {{-- @endfor --}}
                                     </table>
                                 </div>
 

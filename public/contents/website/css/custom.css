@@ -53,3 +53,13 @@
 .rs-services.style1 .service-inner .service-box.dark-bg {
   background: transparent;
 }
+.add_br_50 {
+  border-radius: 50%;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 11px;
+  cursor: pointer;
+}
