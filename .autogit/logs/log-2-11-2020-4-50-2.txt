@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Wed Dec 02 2020 04:50:02 GMT+0600 (Bangladesh Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/WebsiteController.php
+* public/contents/website/js/custom.js
+* resources/views/website/online-assesment.blade.php
+
+
+Created files:
+* .autogit/logs/log-2-11-2020-4-19-35.txt
+
+
+Deleted files:
+
+
+Renamed files:
+* [object Object]
