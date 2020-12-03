@@ -214,7 +214,9 @@ class WebsiteController extends Controller
         $experience = [];
 
         $english_speak = [];
+        $english_test = [];
         $french_speak = [];
+        $french_test = [];
         $questions = [];
 
         foreach ($request->from_month_or_year as $key => $item) {
@@ -243,6 +245,34 @@ class WebsiteController extends Controller
             }
         }
 
+        foreach ($request->english_test_name as $key => $item) {
+            if($item != null){
+                $data = [
+                    'english_test_name' => $request->english_test_name[$key],
+                    'english_test_date' => $request->english_test_date[$key],
+                    'english_test_speak' => $request->english_test_speak[$key],
+                    'english_test_listen' => $request->english_test_listen[$key],
+                    'english_test_read' => $request->english_test_read[$key],
+                    'english_test_write' => $request->english_test_write[$key],
+                ];
+                array_push($english_test,$data);
+            }
+        }
+
+        foreach ($request->french_test_name as $key => $item) {
+            if($item != null){
+                $data = [
+                    'french_test_name' => $request->french_test_name[$key],
+                    'french_test_date' => $request->french_test_date[$key],
+                    'french_test_speak' => $request->french_test_speak[$key],
+                    'french_test_listen' => $request->french_test_listen[$key],
+                    'french_test_read' => $request->french_test_read[$key],
+                    'french_test_write' => $request->french_test_write[$key],
+                ];
+                array_push($french_test,$data);
+            }
+        }
+
         array_push($english_speak,($request->english_speak));
         array_push($english_speak,($request->english_listen));
         array_push($english_speak,($request->english_read));
@@ -268,7 +298,8 @@ class WebsiteController extends Controller
         array_push($questions,($request->question_from));
 
         // dd($request,json_encode($english_speak,JSON_PRETTY_PRINT),$experience);
-        //dd($questions);
+        dd($english_test,$french_test);
+
         $this->validate($request,[
             'email' => ['required'],
             'phone' => ['required'],

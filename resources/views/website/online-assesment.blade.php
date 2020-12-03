@@ -273,7 +273,8 @@
                                                     <th>Date</th>
                                                     <th>Speak</th>
                                                     <th>Listen</th>
-                                                    <th colspan="3">Read Write</th>
+                                                    <th>Read</th>
+                                                    <th colspan="3">Write</th>
                                                 </tr>
                                             </thead>
 
@@ -284,7 +285,8 @@
                                                     <td><input type="text" placeholder="" name="english_test_date[]" {{$i==0?'required':''}}></td>
                                                     <td><input type="text" placeholder="" name="english_test_speak[]" {{$i==0?'required':''}}></td>
                                                     <td><input type="text" placeholder="" name="english_test_listen[]" {{$i==0?'required':''}}></td>
-                                                    <td><input type="text" placeholder="" name="english_test_read_write[]" {{$i==0?'required':''}}></td>
+                                                    <td><input type="text" placeholder="" name="english_test_read[]" {{$i==0?'required':''}}></td>
+                                                    <td><input type="text" placeholder="" name="english_test_write[]" {{$i==0?'required':''}}></td>
                                                     <td style="border-right: 0"></td>
                                                     <td style="border-left: 0"><i class="fa fa-plus border border-success add_new_english_skill_row add_br_50"></i></td>
                                                 </tr>
@@ -304,11 +306,13 @@
                                         <table class="table table-bordered" class="text-center">
                                             <thead>
                                                 <tr>
-                                                    <th>Test Name</th>
-                                                    <th>Date</th>
-                                                    <th>Speak</th>
-                                                    <th>Listen</th>
-                                                    <th colspan="3">Read Write</th>
+                                                    <th></th>
+                                                    <th>High</th>
+                                                    <th>Moderate</th>
+                                                    <th>Basic</th>
+                                                    <th>None</th>
+                                                    <th>IELTS-G</th>
+                                                    <th>CELPIP-G</th>
                                                 </tr>
                                             </thead>
                                             <tr>
@@ -355,13 +359,16 @@
                                             If you indicated the score, please provide the date you took the test and copy of the test.
                                         </label>
                                         <table class="table table-bordered french_test_table">
-                                            <tr>
-                                                <th>Test Name</th>
-                                                <th>Date</th>
-                                                <th>Speak</th>
-                                                <th>Listen</th>
-                                                <th colspan="3">Read Write</th>
-                                            </tr>
+                                            <thead>
+                                                <tr>
+                                                    <th>Test Name</th>
+                                                    <th>Date</th>
+                                                    <th>Speak</th>
+                                                    <th>Listen</th>
+                                                    <th>Read</th>
+                                                    <th colspan="3">Write</th>
+                                                </tr>
+                                            </thead>
                                             {{-- @for ($i = 0; $i < 2; $i++) --}}
                                             @php $i=0; @endphp
                                                 <tr>
@@ -369,7 +376,8 @@
                                                     <td><input type="text" placeholder="" name="french_test_date[]" {{$i==0?'required':''}}></td>
                                                     <td><input type="text" placeholder="" name="french_test_speak[]" {{$i==0?'required':''}}></td>
                                                     <td><input type="text" placeholder="" name="french_test_listen[]" {{$i==0?'required':''}}></td>
-                                                    <td><input type="text" placeholder="" name="french_test_read_write[]" {{$i==0?'required':''}}></td>
+                                                    <td><input type="text" placeholder="" name="french_test_read[]" {{$i==0?'required':''}}></td>
+                                                    <td><input type="text" placeholder="" name="french_test_write[]" {{$i==0?'required':''}}></td>
                                                     <td style="border-right: 0"></td>
                                                     <td style="border-left: 0"><i class="fa fa-plus border border-success add_new_french_skill_row add_br_50"></i></td>
                                                 </tr>
