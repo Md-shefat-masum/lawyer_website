@@ -602,6 +602,36 @@
                                                                 </table>
 
                                                                 <table class="table text-center">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th colspan="6">If you indicated the score, please provide the date you took the test and copy of the test.</th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Test Name</th>
+                                                                            <th>Date</th>
+                                                                            <th>Speak</th>
+                                                                            <th>Listen</th>
+                                                                            <th>Read</th>
+                                                                            <th colspan="3">Write</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    @php
+                                                                        $cirtificates = json_decode($data->english_test);
+                                                                        // dd($cirtificates);
+                                                                    @endphp
+                                                                    @foreach ($cirtificates as $cirtificate)
+                                                                        <tr>
+                                                                            <td>{{ $cirtificate->english_test_name }}</td>
+                                                                            <td>{{ $cirtificate->english_test_date }}</td>
+                                                                            <td>{{ $cirtificate->english_test_speak }}</td>
+                                                                            <td>{{ $cirtificate->english_test_listen }}</td>
+                                                                            <td>{{ $cirtificate->english_test_read }}</td>
+                                                                            <td>{{ $cirtificate->english_test_write }}</td>
+                                                                        </tr>
+                                                                    @endforeach
+                                                                </table>
+
+                                                                <table class="table text-center">
                                                                     <tr>
                                                                         <th colspan="5">Knowledge of French</th>
                                                                     </tr>
@@ -654,6 +684,36 @@
                                                                     </tr>
                                                                 </table>
 
+                                                                <table class="table text-center">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th colspan="6">If you indicated the score, please provide the date you took the test and copy of the test.</th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Test Name</th>
+                                                                            <th>Date</th>
+                                                                            <th>Speak</th>
+                                                                            <th>Listen</th>
+                                                                            <th>Read</th>
+                                                                            <th colspan="3">Write</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    @php
+                                                                        $cirtificates = json_decode($data->french_test);
+                                                                        // dd($cirtificates);
+                                                                    @endphp
+                                                                    @foreach ($cirtificates as $cirtificate)
+                                                                        <tr>
+                                                                            <td>{{ $cirtificate->french_test_name }}</td>
+                                                                            <td>{{ $cirtificate->french_test_date }}</td>
+                                                                            <td>{{ $cirtificate->french_test_speak }}</td>
+                                                                            <td>{{ $cirtificate->french_test_listen }}</td>
+                                                                            <td>{{ $cirtificate->french_test_read }}</td>
+                                                                            <td>{{ $cirtificate->french_test_write }}</td>
+                                                                        </tr>
+                                                                    @endforeach
+                                                                </table>
+
                                                                 <table class="table text-center table-bordered">
                                                                     <tr>
                                                                         <th colspan="5">Questions</th>
@@ -673,7 +733,7 @@
                                                                             'What is your verifiable personal net worth in Canadian Dollar?',
                                                                             'Have you ever submitted an application for immigration to Canada in the past? If yes, please provide details.',
                                                                             'How much money you are able to bring for settling in Canada (Canadian Currency)?',
-                                                                            "Do you have a relative or relatives in Canada, such as a parent, grandparent, child, grandchild, child of a parent (Sibling), 
+                                                                            "Do you have a relative or relatives in Canada, such as a parent, grandparent, child, grandchild, child of a parent (Sibling),
                                                                             chi ld of a grandparent (aunt or uncle), or grandchild of parents (niece or nephew), who is 18 years or older and living in Canada
                                                                             , and who is a Canadian citizen or permanent resident)?If so, what is their status in Canada and where do they reside?",
                                                                             "Do you have friends in Canada? If so, please indicate their city of residence.",
@@ -698,10 +758,10 @@
                                                                             @endif
                                                                         </tr>
                                                                     @endfor
-                                                        
+
                                                                 </table>
-                                                        
-                                                        
+
+
                                                                 <table class="table text-center table-bordered">
                                                                     <tr>
                                                                         <th colspan="5">How did you hear about us?</th>
@@ -732,7 +792,7 @@
                                                                             @endif
                                                                         @endif
                                                                     @endfor
-                                                        
+
                                                                 </table>
 
                                                                 <style>

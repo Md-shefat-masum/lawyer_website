@@ -140,13 +140,15 @@
 
                                     <div class="col-12">
                                         <table class="table table-bordered education_table">
-                                            <tr>
-                                                <th>From <br> Month/Year</th>
-                                                <th>To <br> Month/Year</th>
-                                                <th>Name of the institution <br> (start with the recent eduction)</th>
-                                                <th>City,Country</th>
-                                                <th colspan="3">Certificate, Diploma <br> or degree issued, <br>field of study and major <br>(as it is indicated in your diploma)</th>
-                                            </tr>
+                                            <thead>
+                                                <tr>
+                                                    <th>From <br> Month/Year</th>
+                                                    <th>To <br> Month/Year</th>
+                                                    <th>Name of the institution <br> (start with the recent eduction)</th>
+                                                    <th>City,Country</th>
+                                                    <th colspan="3">Certificate, Diploma <br> or degree issued, <br>field of study and major <br>(as it is indicated in your diploma)</th>
+                                                </tr>
+                                            </thead>
                                             {{-- @for ($i = 0; $i < 2; $i++) --}}
                                             @php
                                                 $i = 0;
@@ -178,13 +180,16 @@
                                             day of his or her life since 18 years of age (if you were unemployed or travelling, please indicate so, as no time gaps are permitted).
                                         </label>
                                         <table class="table table-bordered employment_table">
-                                            <tr>
-                                                <th>From <br> M/D/Y</th>
-                                                <th>To <br> M/D/Y <br> Present</th>
-                                                <th>Title, duties and <br> responsibilities <br> (number of hours worked per week)</th>
-                                                <th>City,Country</th>
-                                                <th colspan="3">Name of the employer </th>
-                                            </tr>
+                                            <thead>
+                                                <tr>
+                                                    <th>From <br> M/D/Y</th>
+                                                    <th>To <br> M/D/Y <br> Present</th>
+                                                    <th>Title, duties and <br> responsibilities <br> (number of hours worked per week)</th>
+                                                    <th>City,Country</th>
+                                                    <th colspan="3">Name of the employer </th>
+                                                </tr>
+                                            </thead>
+
                                             {{-- @for ($i = 0; $i < 2; $i++) --}}
                                                 @php
                                                     $i=0;

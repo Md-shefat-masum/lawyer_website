@@ -298,7 +298,7 @@ class WebsiteController extends Controller
         array_push($questions,($request->question_from));
 
         // dd($request,json_encode($english_speak,JSON_PRETTY_PRINT),$experience);
-        dd($english_test,$french_test);
+        // dd($english_test,$french_test);
 
         $this->validate($request,[
             'email' => ['required'],
@@ -331,6 +331,8 @@ class WebsiteController extends Controller
         $message->experience = json_encode($experience);
         $message->english_speak = json_encode($english_speak);
         $message->french_speak = json_encode($french_speak);
+        $message->english_test = json_encode($english_test);
+        $message->french_test = json_encode($french_test);
         $message->questions = json_encode($questions);
 
         $message->created_at = Carbon::now()->toDateTimeString();

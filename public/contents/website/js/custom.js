@@ -1,23 +1,26 @@
 $(function () {
     $(window).on('load', function () {
 
-        $('.add_new_education_row').on('click', function () {
-            let row = `
-            <tr>
-                <td><input type="text" placeholder="" name="from_month_or_year[]"></td>
-                <td><input type="text" placeholder="" name="to_month_or_year[]"></td>
-                <td><input type="text" placeholder="" name="name_of_institution[]"></td>
-                <td><input type="text" placeholder="" name="city_country[]"></td>
-                <td><input type="text" placeholder="" name="certificate_degree[]"></td>
-                <td style="border-right: 0"></td>
-                <td style="border-left: 0"><i class="fa fa-trash border border-success remove_this_education_row add_br_50"></i></td>
-            </tr>
-        `;
-            let parent = $(this).parents('table');
-            parent.append(row);
-            initRemoveNewEducationRow();
-            return false;
-        });
+        function initEducationRow(){
+            $('.add_new_education_row').on('click', function () {
+                let row = `
+                <tr>
+                    <td><input type="text" placeholder="" name="from_month_or_year[]"></td>
+                    <td><input type="text" placeholder="" name="to_month_or_year[]"></td>
+                    <td><input type="text" placeholder="" name="name_of_institution[]"></td>
+                    <td><input type="text" placeholder="" name="city_country[]"></td>
+                    <td><input type="text" placeholder="" name="certificate_degree[]"></td>
+                    <td style="border-right: 0"></td>
+                    <td style="border-left: 0"><i class="fa fa-trash border border-success remove_this_education_row add_br_50"></i></td>
+                </tr>
+            `;
+                console.log(row);
+                let parent = $(this).parents('table');
+                parent.append(row);
+                initRemoveNewEducationRow();
+                return false;
+            });
+        }
 
         function initRemoveNewEducationRow() {
             $('.remove_this_education_row').on('click', function () {
@@ -74,7 +77,8 @@ $(function () {
                     <td><input type="text" placeholder="" name="french_test_date[]"></td>
                     <td><input type="text" placeholder="" name="french_test_speak[]"></td>
                     <td><input type="text" placeholder="" name="french_test_listen[]"></td>
-                    <td><input type="text" placeholder="" name="french_test_read_write[]"></td>
+                    <td><input type="text" placeholder="" name="french_test_read[]"></td>
+                    <td><input type="text" placeholder="" name="french_test_write[]"></td>
                     <td style="border-right: 0"></td>
                     <td style="border-left: 0"><i class="fa fa-trash border border-success remove_this_education_row add_br_50"></i></td>
                 </tr>
@@ -170,7 +174,7 @@ $(function () {
                                                         <td><input type="text" placeholder="" value="${html['city_country'][0]}" name="city_country[]" {{$i==0?'required':''}}></td>
                                                         <td><input type="text" placeholder="" value="${html['certificate_degree'][0]}" name="certificate_degree[]" {{$i==0?'required':''}}></td>
                                                         <td style="border-right: 0"></td>
-                                                        <td style="border-left: 0"><i class="fa fa-plus border border-success add_new_english_skill_row add_br_50"></i></td>
+                                                        <td style="border-left: 0"><i class="fa fa-plus border border-success add_new_education_row add_br_50"></i></td>
                                                     </tr>
                                                 `;
                                                 $('.education_table tbody').html(row);
@@ -205,7 +209,7 @@ $(function () {
                                                         <td><input type="text" placeholder="" value="${html['experience_city_country'][0]}" name="experience_city_country[]" {{$i==0?'required':''}}></td>
                                                         <td><input type="text" placeholder="" value="${html['experience_certificate_degree'][0]}" name="experience_certificate_degree[]" {{$i==0?'required':''}}></td>
                                                         <td style="border-right: 0"></td>
-                                                        <td style="border-left: 0"><i class="fa fa-plus border border-success add_new_english_skill_row add_br_50"></i></td>
+                                                        <td style="border-left: 0"><i class="fa fa-plus border border-success add_new_employment_row add_br_50"></i></td>
                                                     </tr>
                                                 `;
                                                 $('.employment_table tbody').html(row);
@@ -391,11 +395,13 @@ $(function () {
                     init_employment_skill_row();
                     init_french_skill_row();
                     init_english_skill_row();
+                    initEducationRow();
                 })
 
         })
 
         initRemoveNewEducationRow();
+        initEducationRow();
         init_employment_skill_row();
         init_french_skill_row();
         init_english_skill_row();
